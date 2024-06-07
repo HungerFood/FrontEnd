@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'HungerFood';
+  title = 'HungerFood_FrontEnd';
+    constructor(public route: ActivatedRoute){}
+  ngOnInit(): void { }
 }

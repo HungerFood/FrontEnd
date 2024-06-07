@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "HungerFood": {
+    "HungerFood_FrontEnd": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/hunger-food",
+            "outputPath": "dist/hunger-food-front-end",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "HungerFood:build:production"
+              "buildTarget": "HungerFood_FrontEnd:build:production"
             },
             "development": {
-              "buildTarget": "HungerFood:build:development"
+              "buildTarget": "HungerFood_FrontEnd:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "HungerFood:build"
+            "buildTarget": "HungerFood_FrontEnd:build"
           }
         },
         "test": {

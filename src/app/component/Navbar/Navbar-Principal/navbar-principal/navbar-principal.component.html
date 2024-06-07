@@ -1,0 +1,10 @@
+<mat-toolbar color="transparent">
+    <mat-toolbar-row>
+      <img src="./assets/Images/Logo/HungerFood.png" mat-icon-button [routerLink]="'/principal/home'" alt="HungerFood Logo">
+      <button mat-raised-button [routerLink]="'/principal/sobre-nosotros'">Sobre Nosotros</button>
+      <button mat-raised-button [routerLink]="'/principal/donar'">Donar</button>
+      <button mat-raised-button [routerLink]="'/principal/contactenos'">Contáctenos</button>
+      <button mat-raised-button [routerLink]="'/principal/hola-inicia-sesion'">HOLA, Inicia Sesión</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <router-outlet></router-outlet>

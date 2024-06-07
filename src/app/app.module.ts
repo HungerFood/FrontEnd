@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 //importar tus componentes
-
+import { UsersListarComponent } from './component/Users/Users-Listar/users-listar/users-listar.component';
+import { FooddonationListarComponent } from './component/FoodDonation/FoodDonation-Listar/fooddonation-listar/fooddonation-listar.component';
 
 //importar los modulos de angular material
 import { AppRoutingModule } from './app-routing.module';
@@ -21,9 +22,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    UsersListarComponent,
+    FooddonationListarComponent,
+    
 //colocar tus componentes que creas
   ],
   imports: [

@@ -49,7 +49,7 @@ import { ContentComponent } from './component/Principal/content/content.componen
 import { DonacionAlimentoComponent } from './component/Principal/donacion-alimento/donacion-alimento.component';
 import { DonacionEconomicaComponent } from './component/Principal/donacion-economica/donacion-economica.component';
 import { DialogComponent } from './component/Admin/TypeOfFood/type-of-food-listar/dialog/dialog.component';
-import { MatDialog, MatDialogContent } from '@angular/material/dialog';
+import { MatDialog, MatDialogContent, MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -110,7 +110,8 @@ import { MatDialog, MatDialogContent } from '@angular/material/dialog';
     MatMomentDateModule,
     MatSelectModule,
     MatDialogContent,
-    MatSelect
+    MatSelect,
+    MatDialogModule
   ],
   providers: [
     provideAnimationsAsync()

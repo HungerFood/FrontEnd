@@ -18,16 +18,16 @@ export class TypeOfFoodService {
     return this.http.get<TypeOfFood[]> (this.url + "/TypeOfFood/findAll");
   }
   listId(id:number){
-    return this.http.get<TypeOfFood>(this.url+"/type_of_food/"+id);
+    return this.http.get<TypeOfFood>(this.url+"/TypeOfFood/find/"+id);
   }
   insert(typeoffood:TypeOfFood){
     return this.http.post(this.url+ '/TypeOfFood/save', typeoffood);
   }
   update(tof: TypeOfFood){
-    return this.http.put(this.url + "/type_of_food", tof);
+    return this.http.put(this.url + "/TypeOfFood/update", tof);
   }
   delete(id:string){
-    return this.http.delete(this.url + "/type_of_food/" + id);
+    return this.http.delete(this.url + "/TypeOfFood/delete/" + id);
   }
   setList(listaNueva : TypeOfFood[]){
     this.listaCambio.next(listaNueva);

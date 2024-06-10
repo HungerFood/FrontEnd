@@ -7,6 +7,7 @@ import { MAINComponent } from './component/Principal/main/main.component';
 import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros.component';
 import { FooddonationCrearComponent } from './component/User/FoodDonation/fooddonation-crear/fooddonation-crear.component';
 import { FooddonationComponent } from './component/User/FoodDonation/fooddonation/fooddonation.component';
+import { MoneyDonationCrearComponent } from './component/User/MoneyDonation/money-donation-crear/money-donation-crear.component';
 import { MoneyDonationComponent } from './component/User/MoneyDonation/money-donation/money-donation.component';
 import { PerfilComponent } from './component/User/Perfil/perfil/perfil.component';
 import { PerfilDatosComponent } from './component/User/PerfilDatos/perfil-datos/perfil-datos.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'principal/donacionesComida', component: FooddonationComponent},
   { path: 'principal/donacionesDinero', component: MoneyDonationComponent},
   { path: 'principal/crearDonacionComida', component: FooddonationCrearComponent},
+  { path: 'principal/crearDonacionDinero', component: MoneyDonationCrearComponent},
   { path: '', redirectTo: 'principal/home', pathMatch: 'full' }, // Ruta por defecto
   { path: '**', redirectTo: '/principal/home' },
 ];

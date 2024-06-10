@@ -53,6 +53,7 @@ import { TransactionvoucherCrearComponent } from './component/User/TransactionVo
 import { TransactionvoucherListarComponent } from './component/User/TransactionVoucher/transactionvoucher-listar/transactionvoucher-listar.component';
 import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
 import { MoneyDonationComponent } from './component/User/MoneyDonation/money-donation/money-donation.component';
+import { MoneyDonationCrearComponent } from './component/User/MoneyDonation/money-donation-crear/money-donation-crear.component';
 
 
 
@@ -92,6 +93,7 @@ import { MoneyDonationComponent } from './component/User/MoneyDonation/money-don
     PerfilComponent,
     PerfilDatosComponent,
     MoneyDonationComponent,
+    MoneyDonationCrearComponent,
 
     //colocar tus componentes que creas
   ],

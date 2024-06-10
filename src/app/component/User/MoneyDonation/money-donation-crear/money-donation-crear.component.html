@@ -1,0 +1,35 @@
+<div class="registrarse">
+    <form [formGroup]="form" (submit)="aceptar()">
+        <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput hidden placeholder="Id" formControlName="id">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Monto Total</mat-label>
+            <input matInput required placeholder="Total Amount" formControlName="total_amount">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Fecha de pago</mat-label>
+            <input matInput [matDatepicker]="picker1" formControlName="payment_date">
+            <mat-hint>DD/MM/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Metodo de pago</mat-label>
+            <mat-select formControlName="paymentMethod" [(value)]="id" required>
+                <mat-option *ngFor="let a of lista" [value]="a.id">
+                    {{a.type}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button type="submit">Registrar donacion</button>
+        <button mat-raised-button routerLink="/principal/donacionesDinero">Volver a Mis Donaciones Dinero</button>
+
+    </form>
+</div>

@@ -1,0 +1,11 @@
+.tablaDonaciones {
+    width: 100%;
+}
+
+.botonesDonaciones {
+    padding-bottom: 16px;
+}
+
+.demo-button+.demo-button {
+    margin-left: 8px;
+}

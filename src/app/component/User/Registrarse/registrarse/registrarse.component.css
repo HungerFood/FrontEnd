@@ -1,4 +1,4 @@
-.inicioSesion {
+.registrarse {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,7 +6,11 @@
     height: 85vh;
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
+    text-align: center;
+    /* Centra los elementos inline, como los botones */
 }
+
+/* Resto del código... */
 
 mat-form-field {
     width: 100%;
@@ -38,6 +42,14 @@ button:hover {
     background-color: #72c49d;
 }
 
-#registrate {
+#paginaPrincipal {
     margin-top: 0.5rem;
+}
+
+#registrarUsuario,
+#paginaPrincipal {
+    display: block;
+    /* Hace que los botones se muestren uno debajo del otro */
+    margin-bottom: 1rem;
+    /* Ajusta la distancia entre los botones */
 }

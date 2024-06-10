@@ -6,22 +6,18 @@ import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sob
 import { ContactenosComponent } from './component/Principal/contactenos/contactenos.component';
 import { HolaIniciaSesionComponent } from './component/Principal/hola-inicia-sesion/hola-inicia-sesion.component';
 import { PrincipalComponent } from './component/Principal/principal/principal.component';
+import { MAINComponent } from './component/Principal/main/main.component';
 
 
 const routes: Routes = [
-  {path: 'principal', component: NavbarPrincipalComponent, children: 
-    [
-      { path: 'home', component: PrincipalComponent},
-      { path: 'donar', component: DonarComponent },
-      { path: 'sobre-nosotros', component: SobreNosotrosComponent },
-      { path: 'contactenos', component: ContactenosComponent },
-      { path: 'hola-inicia-sesion', component: HolaIniciaSesionComponent },
-      { path: '', redirectTo: 'home', pathMatch: 'full' }  // Ruta por defecto
-    ]
-  },
-  {path: '**', redirectTo: '/principal/home'}, // Ruta por defecto
-  { path: '', redirectTo: 'home', pathMatch: 'full' }, // Ruta por defecto
-  
+
+  { path: 'principal/donar', component: DonarComponent },
+  { path: 'principal/sobre-nosotros', component: SobreNosotrosComponent },
+  { path: 'principal/contactenos', component: ContactenosComponent },
+  { path: 'principal/hola-inicia-sesion', component: HolaIniciaSesionComponent },
+  { path: 'principal/home', component: MAINComponent },
+  { path: '', redirectTo: 'principal/home', pathMatch: 'full' }, // Ruta por defecto
+  { path: '**', redirectTo: '/principal/home' },
 ];
 
 

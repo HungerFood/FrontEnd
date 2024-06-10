@@ -1,10 +1,42 @@
-<mat-toolbar color="transparent">
-    <mat-toolbar-row>
-      <img src="./assets/Images/Logo/HungerFood.png" mat-icon-button [routerLink]="'/principal/home'" alt="HungerFood Logo">
-      <button mat-raised-button [routerLink]="'/principal/sobre-nosotros'">Sobre Nosotros</button>
-      <button mat-raised-button [routerLink]="'/principal/donar'">Donar</button>
-      <button mat-raised-button [routerLink]="'/principal/contactenos'">Contáctenos</button>
-      <button mat-raised-button [routerLink]="'/principal/hola-inicia-sesion'">HOLA, Inicia Sesión</button>
-    </mat-toolbar-row>
-  </mat-toolbar>
-  <router-outlet></router-outlet>
+
+<mat-toolbar color="transparent"></mat-toolbar>
+
+<!--navbar-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <div class="container">
+    <!--Logo-->
+    <img src="./assets/Images/Logo/HungerFood.png" mat-icon-button [routerLink]="'/principal/home'" alt="HungerFood Logo">
+    <!--Toggle Btn-->
+    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--SileBar-->
+    <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <!--Slidebar Header-->
+      <div class="offcanvas-header text-dark border-bottom">
+        <button  [routerLink]="'/principal/home'">HUNGERFOOD</button>
+        <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <!--Slidebar Body-->
+      <div class="offcanvas-body d-flex flex-column flex-lg-row p-3 p-lg-0">
+        <ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" [routerLink]="'/principal/sobre-nosotros'">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" [routerLink]="'/principal/donar'">Donar</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" [routerLink]="'/principal/contactenos'">Contáctenos</a>
+          </li>
+        </ul>
+        <!-- Login / Sign up -->
+        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4">
+          <a [routerLink]="'/principal/hola-inicia-sesion'" class="text-dark">HOLA, Inicia Sesión</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

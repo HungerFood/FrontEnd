@@ -1,15 +1,5 @@
+
 img {
     width: 200px; /* ajusta el valor según tus necesidades */
     height: auto; /* esto mantendrá la proporción de la imagen */
-}
-mat-toolbar-row {
-    justify-content: space-between;
-  }
-  
-mat-toolbar-row > img {
-    margin-right: auto;
-}
-
-mat-toolbar-row > button {
-    margin-left: 41px;
 }

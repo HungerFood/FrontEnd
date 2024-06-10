@@ -43,6 +43,11 @@ import { PaymentMethodListarComponent } from './component/Admin/PaymentMethod/pa
 import { TypeOfFoodComponent } from './component/Admin/TypeOfFood/type-of-food/type-of-food.component';
 import { TypeOfFoodCrearComponent } from './component/Admin/TypeOfFood/type-of-food-crear/type-of-food-crear.component';
 import { TypeOfFoodListarComponent } from './component/Admin/TypeOfFood/type-of-food-listar/type-of-food-listar.component';
+import { TestimoniosComponent } from './component/Principal/testimonios/testimonios.component';
+import { MAINComponent } from './component/Principal/main/main.component';
+import { ContentComponent } from './component/Principal/content/content.component';
+import { DonacionAlimentoComponent } from './component/Principal/donacion-alimento/donacion-alimento.component';
+import { DonacionEconomicaComponent } from './component/Principal/donacion-economica/donacion-economica.component';
 
 
 
@@ -74,6 +79,11 @@ import { TypeOfFoodListarComponent } from './component/Admin/TypeOfFood/type-of-
     TypeOfFoodComponent,
     TypeOfFoodCrearComponent,
     TypeOfFoodListarComponent,
+    TestimoniosComponent,
+    MAINComponent,
+    ContentComponent,
+    DonacionAlimentoComponent,
+    DonacionEconomicaComponent,
 
 //colocar tus componentes que creas
   ],

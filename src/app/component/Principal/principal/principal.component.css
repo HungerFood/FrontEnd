@@ -1,0 +1,87 @@
+/* Estilos para pantalla de computadora (desktop) */
+h1{
+  font-family: var(--body-font);
+  font-weight: var(--h1-font-size);
+  font-size: var(--h1-font-size);
+  text-align: left;
+}
+p{
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.text-content {
+    text-align: left; 
+}
+
+.text-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+
+/*Colores de los texto h1*/
+.a{
+    color: var(--third-color);
+}
+
+.b {
+    color: var(--second-color);
+}
+
+.c {
+    color: var(--primary-color);
+}
+
+
+/*Imagen*/
+.image-content {
+    width: 50%;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media query para tablet */
+@media (max-width: 1024px) {
+  .container {
+        flex-direction: column;
+    }
+  .image-content {
+        width: 70%;
+    }
+  .text-content h1 {
+        text-align: center;
+        font-size: 3rem;
+    }
+  .text-content p{
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+/* Media query para celular */
+@media (max-width: 768px) {
+  .container {
+        flex-direction: column;
+    }
+  .image-content {
+        width: 100%;
+    }
+  .text-content h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+  .text-content p{
+        text-align: center;
+        font-size: 15px;
+    }
+}

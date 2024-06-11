@@ -16,8 +16,9 @@ const routes: Routes = [
   { path: 'principal/contactenos', component: ContactenosComponent },
   { path: 'principal/hola-inicia-sesion', component: HolaIniciaSesionComponent },
   { path: 'principal/home', component: MAINComponent },
-  { path: '', redirectTo: 'principal/home', pathMatch: 'full' }, // Ruta por defecto
-  { path: '**', redirectTo: '/principal/home' },
+  //{ path: '', redirectTo: 'principal/home', pathMatch: 'full' }, // Ruta por defecto
+  //{ path: '**', redirectTo: '/principal/home' },
+  
 ];
 
 

@@ -7,10 +7,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './transactionvoucher.component.css'
 })
 export class TransactionvoucherComponent implements OnInit{
-  
-    constructor(public route:ActivatedRoute) { }
-  
-    ngOnInit(): void {
-    }
+  constructor(public route:ActivatedRoute){}
 
+  ngOnInit(): void {     
+  }
 }

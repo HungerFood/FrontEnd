@@ -10,6 +10,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   styleUrl: './transactionvoucher-crear.component.css'
 })
 export class TransactionvoucherCrearComponent implements OnInit{
+  
   form: FormGroup = new FormGroup({});
   transactionvoucher: TransactionVoucher = new TransactionVoucher();
   mensaje: string = '';
@@ -23,15 +24,15 @@ export class TransactionvoucherCrearComponent implements OnInit{
 
   ngOnInit(): void {
     this.route.params.subscribe((data:Params)=>
-    {
-      this.id = data['id']; 
-      this.init();
-     });
-
-    this.form = new FormGroup({
-      id: new FormControl(),
-      total_amount: new FormControl('', [Validators.required]),
-    })
+      {
+        this.id = data['id']; 
+        this.init();
+       });
+  
+      this.form = new FormGroup({
+        id: new FormControl(),
+        total_amount: new FormControl('', [Validators.required]),
+      })
   }
 
   init() {
@@ -42,7 +43,7 @@ export class TransactionvoucherCrearComponent implements OnInit{
      });
      });
     }
-
+    
     aceptar(){
       this.transactionvoucher.id = this.form.value['id'];
       this.transactionvoucher.total_amount = this.form.value['total_amount'];
@@ -54,11 +55,10 @@ export class TransactionvoucherCrearComponent implements OnInit{
             this.TransactionVoucherService.setList(data); 
           });
         });
-        this.router.navigate(['/PaymentMethod/findAll']);
+        this.router.navigate(['/TransactionVoucher/findAll/listar']);
       } else {
         this.mensaje = "Agregue campos omitidos";
       }
     }
-
 
 }

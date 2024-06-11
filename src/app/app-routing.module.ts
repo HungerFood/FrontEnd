@@ -21,10 +21,10 @@ const routes: Routes = [
   { path: 'principal/home', component: MAINComponent },
   { path: '', redirectTo: 'principal/home', pathMatch: 'full' }, // Ruta por defecto
   { path: '**', redirectTo: '/principal/home' },
-
-  {path: 'listar', component: TypeOfFoodListarComponent},
-  {path: 'crear', component: TypeOfFoodCrearComponent},
-  {path: 'TypeOfFood', component: TypeOfFoodComponent},
+  //prueba de typeoffood:
+  // {path: 'listar', component: TypeOfFoodListarComponent},
+  // {path: 'crear', component: TypeOfFoodCrearComponent},
+  // {path: 'TypeOfFood', component: TypeOfFoodComponent},
 
 
 

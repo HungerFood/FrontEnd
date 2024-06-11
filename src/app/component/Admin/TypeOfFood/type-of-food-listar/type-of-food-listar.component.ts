@@ -8,6 +8,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
 
+
 @Component({
   selector: 'app-type-of-food-listar',
   templateUrl: './type-of-food-listar.component.html',

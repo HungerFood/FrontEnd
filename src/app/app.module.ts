@@ -48,6 +48,11 @@ import { MAINComponent } from './component/Principal/main/main.component';
 import { ContentComponent } from './component/Principal/content/content.component';
 import { DonacionAlimentoComponent } from './component/Principal/donacion-alimento/donacion-alimento.component';
 import { DonacionEconomicaComponent } from './component/Principal/donacion-economica/donacion-economica.component';
+import { DialogComponent } from './component/Admin/TypeOfFood/type-of-food-listar/dialog/dialog.component';
+import { MatDialog, MatDialogContent, MatDialogModule } from '@angular/material/dialog';
+import { MainAdmComponent } from './component/Admin/main-adm/main-adm.component';
+
+
 
 
 
@@ -84,7 +89,9 @@ import { DonacionEconomicaComponent } from './component/Principal/donacion-econo
     ContentComponent,
     DonacionAlimentoComponent,
     DonacionEconomicaComponent,
-
+    DialogComponent,
+    MainAdmComponent,
+    
 //colocar tus componentes que creas
   ],
   imports: [
@@ -103,7 +110,10 @@ import { DonacionEconomicaComponent } from './component/Principal/donacion-econo
     MatDatepickerModule,
     MatToolbarModule,
     MatMomentDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogContent,
+    MatSelect,
+    MatDialogModule
   ],
   providers: [
     provideAnimationsAsync()

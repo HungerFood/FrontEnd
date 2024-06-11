@@ -50,6 +50,7 @@ import { DonacionAlimentoComponent } from './component/Principal/donacion-alimen
 import { DonacionEconomicaComponent } from './component/Principal/donacion-economica/donacion-economica.component';
 import { DialogComponent } from './component/Admin/TypeOfFood/type-of-food-listar/dialog/dialog.component';
 import { MatDialog, MatDialogContent, MatDialogModule } from '@angular/material/dialog';
+import { MainAdmComponent } from './component/Admin/main-adm/main-adm.component';
 
 
 
@@ -89,6 +90,7 @@ import { MatDialog, MatDialogContent, MatDialogModule } from '@angular/material/
     DonacionAlimentoComponent,
     DonacionEconomicaComponent,
     DialogComponent,
+    MainAdmComponent,
     
 //colocar tus componentes que creas
   ],

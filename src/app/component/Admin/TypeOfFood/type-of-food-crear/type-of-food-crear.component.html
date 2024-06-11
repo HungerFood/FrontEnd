@@ -1,1 +1,19 @@
-<p>type-of-food-crear works!</p>
+<div class="contenedor">
+    <form [formGroup]="form" (submit)="aceptar()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput hidden placeholder="Id" formControlName="id">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Nombre del Alimento</mat-label>
+        <input matInput required placeholder="Nombre del Alimento" formControlName="food_type_name">
+      </mat-form-field>
+      <br>
+     
+      <button mat-raised-button type="submit" color="primary">Aceptar</button>
+      <button mat-raised-button color="warn" routerLink="/TypeOfFood">Cancelar</button>
+      <p>{{mensaje}}</p>
+  
+    </form>
+  </div>

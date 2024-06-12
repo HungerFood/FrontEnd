@@ -25,6 +25,9 @@ export class FoodDonationService {
   delete(id: string) {
     return this.http.delete(this.url + "/FoodDonation/delete/" + id);
   }
+  listById(id: number) {
+    return this.http.get<FoodDonation>(this.url + "/FoodDonation/findById/" + id);
+  }
   setList(listaNueva: FoodDonation[]) {
     this.listaCambio.next(listaNueva);
   }

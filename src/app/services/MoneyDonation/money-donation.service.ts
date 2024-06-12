@@ -26,6 +26,9 @@ export class MoneyDonationService {
   delete(id: string) {
     return this.http.delete(this.url + "/MoneyDonation/delete/" + id);
   }
+  listById(id: number) {
+    return this.http.get<MoneyDonation>(this.url + "/MoneyDonation/findById/" + id);
+  }
   setList(listaNueva: MoneyDonation[]) {
     this.listaCambio.next(listaNueva);
   }

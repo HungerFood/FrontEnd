@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { MoneyDonation } from '../../../../model/MoneyDonation/money-donation';
 import { PaymentMethod } from '../../../../model/PaymentMethod/payment-method';
 import { MoneyDonationService } from '../../../../services/MoneyDonation/money-donation.service';
@@ -17,6 +17,7 @@ export class MoneyDonationCrearComponent implements OnInit {
   mensaje: string = '';
   lista: PaymentMethod[] = [];
   public id: number = 0;
+  edicion: boolean = false;
 
   constructor(
     private moneyDonationService: MoneyDonationService,
@@ -27,12 +28,31 @@ export class MoneyDonationCrearComponent implements OnInit {
   ngOnInit(): void {
     this.paymentMethod.list().subscribe(data => { this.lista = data; });
 
+    this.route.params.subscribe((data: Params) => {
+      this.id = data['id'];
+      this.edicion = data['id'] != null;
+      this.initForm();
+    });
+
     this.form = new FormGroup({
-      id: new FormControl(),
-      total_amount: new FormControl(),
-      payment_date: new FormControl(),
-      paymentMethod: new FormControl(),
-    })
+      id: new FormControl(null),
+      total_amount: new FormControl('', [Validators.required]),
+      payment_date: new FormControl('', [Validators.required]),
+      paymentMethod: new FormControl('', [Validators.required]),
+    });
+  }
+
+  initForm(): void {
+    if (this.edicion) {
+      this.moneyDonationService.listById(this.id).subscribe((data) => {
+        this.form = new FormGroup({
+          id: new FormControl(data.id),
+          total_amount: new FormControl(data.total_amount),
+          payment_date: new FormControl(data.payment_date),
+          paymentMethod: new FormControl(data.paymentMethod.type),
+        });
+      });
+    }
   }
 
   aceptar() {
@@ -47,13 +67,26 @@ export class MoneyDonationCrearComponent implements OnInit {
       console.log(a);
       this.moneyDonation.paymentMethod = a;
       console.log(this.moneyDonation);
-      this.moneyDonationService.insert(this.moneyDonation).subscribe(() => {
-        this.moneyDonationService.list().subscribe(data => {
-          this.moneyDonationService.setList(data);
-        })
-      })
 
-      this.router.navigate(['principal/donacionesDinero']);
+      if (this.form.valid) {
+        if (this.edicion) {
+          this.moneyDonationService.update(this.moneyDonation).subscribe((data) => {
+            this.moneyDonationService.list().subscribe(data => {
+              this.moneyDonationService.setList(data);//(enviando el listado al suscriptor)
+            })
+          });
+        } else {
+          console.log(this.moneyDonation);
+          this.moneyDonationService.insert(this.moneyDonation).subscribe((data) => {
+            this.moneyDonationService.list().subscribe(data => {
+              this.moneyDonationService.setList(data);
+            })
+          });
+        }
+        this.router.navigate(['principal/donacionesDineroListar']);
+      } else {
+        this.mensaje = "Agrege campos omitidos";
+      }
 
     }
 

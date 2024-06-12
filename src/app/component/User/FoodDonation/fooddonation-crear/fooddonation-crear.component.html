@@ -1,1 +1,47 @@
-<p>fooddonation-crear works!</p>
+<div class="registrarse">
+    <form [formGroup]="form" (submit)="aceptar()">
+        <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput hidden placeholder="Id" formControlName="id">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre de alimento</mat-label>
+            <input matInput required placeholder="Food Name" formControlName="food_name">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Descripcion</mat-label>
+            <input matInput required placeholder="Specific Description" formControlName="specific_description">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Fecha de elaboracion</mat-label>
+            <input matInput [matDatepicker]="picker1" formControlName="broadcast_date">
+            <mat-hint>DD/MM/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Fecha de expiracion</mat-label>
+            <input matInput [matDatepicker]="picker2" formControlName="expiration_date">
+            <mat-hint>DD/MM/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Tipo de comida</mat-label>
+            <mat-select formControlName="foodType" [(value)]="id" required>
+                <mat-option *ngFor="let a of lista" [value]="a.id">
+                    {{a.food_type_name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button type="submit">Registrar donacion</button>
+        <button mat-raised-button routerLink="/principal/donacionesComidaListar">Volver a Mis Donaciones Alimentos</button>
+
+    </form>
+</div>

@@ -44,14 +44,19 @@ import { DonacionEconomicaComponent } from './component/Principal/donacion-econo
 import { MAINComponent } from './component/Principal/main/main.component';
 import { TestimoniosComponent } from './component/Principal/testimonios/testimonios.component';
 import { FooddonationCrearComponent } from './component/User/FoodDonation/fooddonation-crear/fooddonation-crear.component';
+import { DialogoFoodListarComponent } from './component/User/FoodDonation/fooddonation-listar/dialogo-food-listar/dialogo-food-listar.component';
 import { FooddonationListarComponent } from './component/User/FoodDonation/fooddonation-listar/fooddonation-listar.component';
 import { FooddonationComponent } from './component/User/FoodDonation/fooddonation/fooddonation.component';
 import { FooddonationbydonorCrearComponent } from './component/User/FoodDonationByDonor/fooddonationbydonor-crear/fooddonationbydonor-crear.component';
 import { FooddonationbydonorListarComponent } from './component/User/FoodDonationByDonor/fooddonationbydonor-listar/fooddonationbydonor-listar.component';
 import { FooddonationbydonorComponent } from './component/User/FoodDonationByDonor/fooddonationbydonor/fooddonationbydonor.component';
 import { MoneyDonationCrearComponent } from './component/User/MoneyDonation/money-donation-crear/money-donation-crear.component';
+import { DialogoMoneyListarComponent } from './component/User/MoneyDonation/money-donation-listar/dialogo-money-listar/dialogo-money-listar.component';
+import { MoneyDonationListarComponent } from './component/User/MoneyDonation/money-donation-listar/money-donation-listar.component';
 import { MoneyDonationComponent } from './component/User/MoneyDonation/money-donation/money-donation.component';
+import { PerfilListarComponent } from './component/User/Perfil/perfil-listar/perfil-listar.component';
 import { PerfilComponent } from './component/User/Perfil/perfil/perfil.component';
+import { RegistrarseComponent } from './component/User/Registrarse/registrarse/registrarse.component';
 import { TransactionvoucherCrearComponent } from './component/User/TransactionVoucher/transactionvoucher-crear/transactionvoucher-crear.component';
 import { TransactionvoucherListarComponent } from './component/User/TransactionVoucher/transactionvoucher-listar/transactionvoucher-listar.component';
 import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
@@ -96,7 +101,12 @@ import { TransactionvoucherComponent } from './component/User/TransactionVoucher
     MainAdmComponent,
     MoneyDonationComponent,
     MoneyDonationCrearComponent,
-    PerfilComponent
+    PerfilComponent,
+    RegistrarseComponent,
+    MoneyDonationListarComponent,
+    PerfilListarComponent,
+    DialogoFoodListarComponent,
+    DialogoMoneyListarComponent
     
 //colocar tus componentes que creas
   ],

@@ -33,9 +33,9 @@
         <br>
         <mat-form-field appearance="fill">
             <mat-label>Tipo de comida</mat-label>
-            <mat-select formControlName="foodType" [(value)]="id" required>
-                <mat-option *ngFor="let a of lista" [value]="a.id">
-                    {{a.food_type_name}}
+            <mat-select formControlName="typeOfFood" [(value)]="id" required>
+                <mat-option *ngFor="let t of lista" [value]="t.id">
+                    {{t.food_type_name}}
                 </mat-option>
             </mat-select>
         </mat-form-field>

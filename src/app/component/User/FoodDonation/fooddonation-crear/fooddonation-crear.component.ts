@@ -35,7 +35,7 @@ export class FooddonationCrearComponent implements OnInit {
     });
 
     this.form = new FormGroup({
-      id: new FormControl(null),
+      id: new FormControl(),
       food_name: new FormControl('', [Validators.required]),
       specific_description: new FormControl('', [Validators.required]),
       broadcast_date: new FormControl('', [Validators.required]),
@@ -81,16 +81,24 @@ export class FooddonationCrearComponent implements OnInit {
       if (this.form.valid) {
         if (this.edicion) {
           this.foodDonationService.update(this.foodDonation).subscribe((data) => {
+            console.log(data);
             this.foodDonationService.list().subscribe(data => {
+              console.log(data);
               this.foodDonationService.setList(data);//(enviando el listado al suscriptor)
             })
+          }, (error) => {
+            console.log(error);
           });
         } else {
           console.log(this.foodDonation);
           this.foodDonationService.insert(this.foodDonation).subscribe((data) => {
+            console.log(data);
             this.foodDonationService.list().subscribe(data => {
+              console.log(data);
               this.foodDonationService.setList(data);
             })
+          }, (error) => {
+            console.log(error);
           });
         }
         this.router.navigate(['principal/donacionesComidaListar']);

@@ -35,7 +35,7 @@ export class MoneyDonationCrearComponent implements OnInit {
     });
 
     this.form = new FormGroup({
-      id: new FormControl(null),
+      id: new FormControl(),
       total_amount: new FormControl('', [Validators.required]),
       payment_date: new FormControl('', [Validators.required]),
       paymentMethod: new FormControl('', [Validators.required]),

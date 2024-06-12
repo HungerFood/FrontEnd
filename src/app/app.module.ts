@@ -107,8 +107,8 @@ import { TransactionvoucherComponent } from './component/User/TransactionVoucher
     PerfilListarComponent,
     DialogoFoodListarComponent,
     DialogoMoneyListarComponent
-    
-//colocar tus componentes que creas
+
+    //colocar tus componentes que creas
   ],
   imports: [
     BrowserModule,

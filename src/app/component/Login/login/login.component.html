@@ -1,1 +1,44 @@
-<p>login works!</p>
+<div class="container py-5 d-flex justify-content-center">
+    <form class="w-100" style="max-width: 25rem;" #form="ngForm" (ngSubmit)="login(form)">
+        <h1 class="mb-5 text-center">HungerFood</h1>
+        
+        <div class="mb-3">
+            <label for="email" class="form-label">Usuario</label>
+            <input 
+                id="email" 
+                name="email" 
+                type="text" 
+                class="form-control" 
+                aria-describedby="emailHelp" 
+                [(ngModel)]="creds.username" 
+                required
+                #username="ngModel">
+            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="invalid-feedback">
+            </div>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input 
+                id="password" 
+                name="password" 
+                type="password" 
+                class="form-control" 
+                [(ngModel)]="creds.password" 
+                required
+                #password="ngModel">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="invalid-feedback">
+            </div>
+        </div>
+        <br>
+        <div class="mb-3">
+            <a href="/register" class="link-primary">No tengo cuenta, deseo crear una cuenta en HungerFood</a>
+        </div>
+        <br>
+        <div class="d-grid">
+            <button type="submit" class="btn btn-lg btn-primary" [disabled]="form.invalid">Ingresar</button>
+        </div>
+    </form>
+</div>
+
+

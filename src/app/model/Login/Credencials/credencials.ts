@@ -1,2 +1,5 @@
-export class Credencials {
-}
+export interface Credentials{
+    username:string
+    password: string
+  }
+  

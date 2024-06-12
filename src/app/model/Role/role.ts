@@ -3,6 +3,7 @@ export enum NameRole {
     DONANTE = 'DONANTE'
 }
 
+
 export class Role {
     id: number;
     nameRole: NameRole;

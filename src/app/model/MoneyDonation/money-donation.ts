@@ -1,4 +1,4 @@
-import { PaymentMethod } from "./payment-method";
+import { PaymentMethod } from "../PaymentMethod/payment-method"
 
 export class MoneyDonation {
     id: number

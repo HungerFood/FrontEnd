@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MoneyDonation } from '../../../../model/money-donation';
-import { PaymentMethod } from '../../../../model/payment-method';
-import { MoneyDonationService } from '../../../../service/money-donation.service';
-import { PaymentMethodService } from '../../../../service/payment-method.service';
+import { MoneyDonation } from '../../../../model/MoneyDonation/money-donation';
+import { PaymentMethod } from '../../../../model/PaymentMethod/payment-method';
+import { MoneyDonationService } from '../../../../services/MoneyDonation/money-donation.service';
+import { PaymentMethodService } from '../../../../services/PaymentMethod/payment-method.service';
 
 @Component({
   selector: 'app-money-donation-crear',
@@ -35,13 +35,13 @@ export class MoneyDonationCrearComponent implements OnInit {
     })
   }
 
-  aceptar(){
+  aceptar() {
     this.moneyDonation.id = this.form.value['id'];
     this.moneyDonation.total_amount = this.form.value['total_amount'];
     this.moneyDonation.payment_date = this.form.value['payment_date'];
     this.moneyDonation.paymentMethod = this.form.value['paymentMethod'];
 
-    if (this.id>0) {
+    if (this.id > 0) {
       let a = new PaymentMethod();
       a.id = this.id;
       console.log(a);

@@ -12,7 +12,7 @@ import { PrincipalComponent } from './component/Principal/principal/principal.co
 import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros.component';
 
 //importar los modulos de angular material
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatButtonModule } from '@angular/material/button';
@@ -61,6 +61,7 @@ import { TransactionvoucherCrearComponent } from './component/User/TransactionVo
 import { TransactionvoucherListarComponent } from './component/User/TransactionVoucher/transactionvoucher-listar/transactionvoucher-listar.component';
 import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
 import { LoginComponent } from './component/Login/login/login.component';
+import { TokenInterceptor } from './services/Login/Token/token-interceptor';
 
 
 
@@ -135,7 +136,7 @@ import { LoginComponent } from './component/Login/login/login.component';
     MatExpansionModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(), { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

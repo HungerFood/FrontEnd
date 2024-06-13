@@ -57,8 +57,8 @@ const routes: Routes = [
   //  ]
   //},
 
-  { path: '', redirectTo: 'principal/home', pathMatch: 'full' }, // Ruta por defecto
-  { path: '**', redirectTo: '/principal/home' },
+  // { path: '', redirectTo: 'principal/home', pathMatch: 'full' }, // Ruta por defecto
+  // { path: '**', redirectTo: '/principal/home' },
 
   //{ path: 'admin/home', component:MainAdmComponent },
   { path: 'TypeOfFood/findAll/listar', component: TypeOfFoodListarComponent },

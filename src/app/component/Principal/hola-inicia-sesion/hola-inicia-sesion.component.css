@@ -1,0 +1,43 @@
+.inicioSesion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+mat-form-field {
+    width: 100%;
+    max-width: 300px;
+    margin: 0.8rem 0;
+}
+
+mat-form-field mat-label {
+    color: #333;
+}
+
+input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #72c49d;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #72c49d;
+}
+
+#registrate {
+    margin-top: 0.5rem;
+}

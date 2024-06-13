@@ -51,21 +51,21 @@ body {
     color: #dc3545;
 }
 
-.link-primary {
+.link {
     color: #007bff;
     text-decoration: none;
 }
 
-.link-primary:hover {
+.link:hover {
     text-decoration: underline;
 }
 
-btn1 {
+.btn-IniciarSesion button {
     background-color: #FF5722;
     border-color: #FF5722;
 }
 
-btn2 {
+.btn-CrearCuenta button{
     background-color: #72C49D;
     border-color: #72C49D;
     color: white;

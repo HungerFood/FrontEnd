@@ -30,7 +30,7 @@ login(form:NgForm){
   console.log('form value', form.value);
    this.LoginService.login(this.creds)
     .subscribe(response => {
-      this.router.navigate(['/TypeOfFood/findAll/nuevo']);
+      this.router.navigate(['/admin/login']);
     });
 }
 

@@ -62,6 +62,7 @@ import { TransactionvoucherListarComponent } from './component/User/TransactionV
 import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
 import { LoginComponent } from './component/Login/login/login.component';
 import { TokenInterceptor } from './services/Login/Token/token-interceptor';
+import { TypeOfFoodNavbarComponent } from './component/Admin/TypeOfFood/type-of-food-navbar/type-of-food-navbar.component';
 
 
 
@@ -109,7 +110,8 @@ import { TokenInterceptor } from './services/Login/Token/token-interceptor';
     PerfilListarComponent,
     DialogoFoodListarComponent,
     DialogoMoneyListarComponent,
-    LoginComponent
+    LoginComponent,
+    TypeOfFoodNavbarComponent
 
     //colocar tus componentes que creas
   ],

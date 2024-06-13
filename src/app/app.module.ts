@@ -60,6 +60,7 @@ import { RegistrarseComponent } from './component/User/Registrarse/registrarse/r
 import { TransactionvoucherCrearComponent } from './component/User/TransactionVoucher/transactionvoucher-crear/transactionvoucher-crear.component';
 import { TransactionvoucherListarComponent } from './component/User/TransactionVoucher/transactionvoucher-listar/transactionvoucher-listar.component';
 import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
+import { LoginComponent } from './component/Login/login/login.component';
 
 
 
@@ -106,7 +107,8 @@ import { TransactionvoucherComponent } from './component/User/TransactionVoucher
     MoneyDonationListarComponent,
     PerfilListarComponent,
     DialogoFoodListarComponent,
-    DialogoMoneyListarComponent
+    DialogoMoneyListarComponent,
+    LoginComponent
 
     //colocar tus componentes que creas
   ],

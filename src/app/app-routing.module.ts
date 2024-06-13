@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TypeOfFoodCrearComponent } from './component/Admin/TypeOfFood/type-of-food-crear/type-of-food-crear.component';
 import { TypeOfFoodListarComponent } from './component/Admin/TypeOfFood/type-of-food-listar/type-of-food-listar.component';
 import { TypeOfFoodComponent } from './component/Admin/TypeOfFood/type-of-food/type-of-food.component';
+import { LoginComponent } from './component/Login/login/login.component';
 import { ContactenosComponent } from './component/Principal/contactenos/contactenos.component';
 import { DonarComponent } from './component/Principal/donar/donar.component';
 import { HolaIniciaSesionComponent } from './component/Principal/hola-inicia-sesion/hola-inicia-sesion.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'principal/donacionesDineroListar', component: MoneyDonationComponent },// MUESTRA Y LISTA LAS DONACIONES DE DINERO
   { path: 'principal/donacionesDineroCrear', component: MoneyDonationCrearComponent },// REGISTRAR DONACIONES DE DINERO
   { path: 'principal/donacionesDineroEditar/:id', component: MoneyDonationCrearComponent },// EDITAR DONACIONES DE DINERO
+  { path: 'principal/login', component: LoginComponent },// INICIAR SESION
 
 
   //---------------------APLICANDO EL CHILDREN-------------------------------------
@@ -55,8 +57,8 @@ const routes: Routes = [
   //  ]
   //},
 
-  //{ path: '', redirectTo: 'principal/home', pathMatch: 'full' }, // Ruta por defecto
-  //{ path: '**', redirectTo: '/principal/home' },
+  { path: '', redirectTo: 'principal/home', pathMatch: 'full' }, // Ruta por defecto
+  { path: '**', redirectTo: '/principal/home' },
 
   //{ path: 'admin/home', component:MainAdmComponent },
   { path: 'TypeOfFood/findAll/listar', component: TypeOfFoodListarComponent },

@@ -10,6 +10,6 @@ export class HolaIniciaSesionComponent {
   constructor(private router: Router) {}
 
   iniciarSesion() {
-    this.router.navigate(['/principal/perfil']);
+    this.router.navigate(['principal/perfil']);
   }
 }

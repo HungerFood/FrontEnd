@@ -2,8 +2,8 @@
 
 export class User {
     id: number;
-    firstName: string;
-    lastName: string;
+    firstname: string;
+    lastname: string;
     password: string;
     email: string;
     enabled: boolean = true;

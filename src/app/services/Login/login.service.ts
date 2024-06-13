@@ -19,7 +19,7 @@ export class LoginService {
 
   login(creds: Credentials)
   {
-      return this.http.post('http://localhost:8080/authenticate', creds, {
+      return this.http.post('http://localhost:8080/api/auth/login', creds, {
         observe:'response'
       }).pipe(map((response: HttpResponse<any>) => {
         const body = response.body;

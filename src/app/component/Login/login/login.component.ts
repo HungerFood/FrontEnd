@@ -11,26 +11,26 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
   creds: Credentials= {
-    username: "",
+    email: "",
     password: ""
  }
 
- constructor(private LoginService: LoginService,
+  constructor(private LoginService: LoginService,
   private router: Router){};
 
-getAuthors(form: NgForm){
-console.log('Form Value:',form.value);
-return this.LoginService.login(this.creds)
+  getUsers(form: NgForm){
+  console.log('Form Value:',form.value);
+  return this.LoginService.login(this.creds)
                 .subscribe(response => {
-                this.router.navigate(['/authors']);
+                this.router.navigate(['/TypeOfFood/findAll/nuevo']);
                 })
-}
+  }
 
-login(form: NgForm){
+login(form:NgForm){
   console.log('form value', form.value);
    this.LoginService.login(this.creds)
     .subscribe(response => {
-      this.router.navigate(['/authors']);
+      this.router.navigate(['/TypeOfFood/findAll/nuevo']);
     });
 }
 

@@ -14,7 +14,7 @@ import { FooterPrincipalComponent } from './component/Footer/footer-principal/fo
 //importar los modulos de angular material
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -52,12 +52,10 @@ import { DialogComponent } from './component/Admin/TypeOfFood/type-of-food-lista
 import { MatDialog, MatDialogContent, MatDialogModule } from '@angular/material/dialog';
 import { MainAdmComponent } from './component/Admin/main-adm/main-adm.component';
 import { LoginComponent } from './component/Login/login/login.component';
+import { FooterAdminComponent } from './component/Footer/Footer-Admin/footer-admin/footer-admin.component';
+import { TokenInterceptor } from './services/Login/Token/token-interceptor';
 
-
-
-
-
-
+//importar los modulos de angular material
 @NgModule({
   declarations: [
     AppComponent,
@@ -93,6 +91,8 @@ import { LoginComponent } from './component/Login/login/login.component';
     DialogComponent,
     MainAdmComponent,
     LoginComponent,
+    FooterAdminComponent,
+
     
 //colocar tus componentes que creas
   ],
@@ -118,7 +118,7 @@ import { LoginComponent } from './component/Login/login/login.component';
     MatDialogModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(), { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

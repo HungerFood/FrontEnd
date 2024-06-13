@@ -1,0 +1,53 @@
+.perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.perfil button {
+    font-size: 1.5rem;
+    /* Ajusta el tamaño de la fuente */
+    padding: 1rem 2rem;
+    /* Ajusta el relleno del botón */
+    margin-bottom: 5rem;
+}
+
+button:hover {
+    background-color: #72c49d;
+}
+
+mat-expansion-panel {
+    width: 20%;
+    margin: 1rem auto;
+    /* Ajusta el margen del mat-expansion-panel */
+}
+
+mat-expansion-panel:hover {
+    background-color: #72c49d;
+}
+
+mat-expansion-panel p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-expansion-panel button {
+    margin-bottom: 0.005rem;
+    padding: 0.5em 1em
+        /* Ajusta el margen inferior de los botones */
+}
+
+mat-panel-title {
+    text-align: center;
+    /* Centra el título */
+    font-size: 1.5rem;
+    /* Ajusta el tamaño del título */
+}
+
+mat-expansion-panel button:hover {
+    background-color: #cccccc;
+    /* Cambia el color de fondo al pasar el cursor */
+}

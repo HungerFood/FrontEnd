@@ -15,7 +15,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class TransactionvoucherListarComponent implements OnInit{
   lista:TransactionVoucher[] = [];
-  displayedColumns = ['id', 'total_amount'];
+  displayedColumns = ['id', 'total_amount', 'eliminar'];
   dataSource = new MatTableDataSource<TransactionVoucher>();
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

@@ -1,37 +1,41 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { TransactionVoucher } from '../../model/TransactionVoucher/transaction-voucher';
 import { environment } from '../../../environments/environments';
+import { TransactionVoucher } from '../../model/TransactionVoucher/transaction-voucher';
+
 const base_url = environment.base
 
 @Injectable({
   providedIn: 'root'
 })
 export class TransactionVoucherService {
-  private url = `${base_url}` 
+  private url = `${base_url}`
   private listaCambio = new Subject<TransactionVoucher[]>()
+
   constructor(private http: HttpClient) { }
 
-  list() : Observable<any>{
-    return this.http.get<TransactionVoucher[]> (this.url + "/TransactionVoucher/findAll");
+  list(): Observable<any> {
+    return this.http.get<TransactionVoucher[]>(this.url + "/TransactionVoucher/findAll");
   }
-  listId(id:number){
-    return this.http.get<TransactionVoucher>(this.url+"/TransactionVoucher/firstByUser/"+id);
+
+  listId(id: number) {
+    return this.http.get<TransactionVoucher>(this.url + "/TransactionVoucher/firstByUser/" + id);
   }
-  insert(transactionvoucher:TransactionVoucher){
-    return this.http.post(this.url+ '/TransactionVoucher/save', transactionvoucher);
+
+  insert(transactionVoucher: TransactionVoucher) {
+    return this.http.post(this.url + '/TransactionVoucher/save', transactionVoucher);
   }
-  update(tv: TransactionVoucher){
-    return this.http.put(this.url + "/TransactionVoucher/update", tv);
+  update(transactionVoucher: TransactionVoucher) {
+    return this.http.put(this.url + "/TransactionVoucher/update", transactionVoucher);
   }
-  delete(id:string){
+  delete(id: string) {
     return this.http.delete(this.url + "/TransactionVoucher/delete/" + id);
   }
-  setList(listaNueva : TransactionVoucher[]){
+  setList(listaNueva: TransactionVoucher[]) {
     this.listaCambio.next(listaNueva);
   }
-  getList(){
+  getList() {
     return this.listaCambio.asObservable();
   }
 }

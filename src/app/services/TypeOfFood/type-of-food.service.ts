@@ -1,38 +1,38 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { TypeOfFood } from '../../model/TypeOfFood/type-of-food';
 import { environment } from '../../../environments/environments';
+import { TypeOfFood } from '../../model/TypeOfFood/type-of-food';
 const base_url = environment.base
 
 @Injectable({
   providedIn: 'root'
 })
 export class TypeOfFoodService {
-  private url = `${base_url}` 
+  private url = `${base_url}`
   private listaCambio = new Subject<TypeOfFood[]>()
   constructor(private http: HttpClient) { }
 
   // <!-- modificar y tiene que ser igual al del backend::----------------------- -->
-  list() : Observable<any>{
-    return this.http.get<TypeOfFood[]> (this.url + "/TypeOfFood/findAll");
+  list(): Observable<any> {
+    return this.http.get<TypeOfFood[]>(this.url + "/TypeOfFood/findAll");
   }
-  listId(id:number){
-    return this.http.get<TypeOfFood>(this.url+"/TypeOfFood/find/"+id);
+  listId(id: number) {
+    return this.http.get<TypeOfFood>(this.url + "/TypeOfFood/find/" + id);
   }
-  insert(typeoffood:TypeOfFood){
-    return this.http.post(this.url+ '/TypeOfFood/save', typeoffood);
+  insert(typeoffood: TypeOfFood) {
+    return this.http.post(this.url + '/TypeOfFood/save', typeoffood);
   }
-  update(tof: TypeOfFood){
+  update(tof: TypeOfFood) {
     return this.http.put(this.url + "/TypeOfFood/update", tof);
   }
-  delete(id:string){
+  delete(id: string) {
     return this.http.delete(this.url + "/TypeOfFood/delete/" + id);
   }
-  setList(listaNueva : TypeOfFood[]){
+  setList(listaNueva: TypeOfFood[]) {
     this.listaCambio.next(listaNueva);
   }
-  getList(){
+  getList() {
     return this.listaCambio.asObservable();
   }
 }

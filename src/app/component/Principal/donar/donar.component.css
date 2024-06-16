@@ -1,0 +1,60 @@
+/* Estilo general */
+.value-section {
+    padding: 5px 0; /* Ajuste de relleno superior e inferior */
+    min-height: 100vh; /* Altura mínima igual al viewport */
+    display: flex;
+    align-items: center; /* Centrar verticalmente el contenido */
+}
+
+.container {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 0 15px; /* Relleno lateral */
+}
+
+
+
+.descr h2 {
+    font-size: var(--h2-font-size); /* Tamaño de fuente */
+    font-weight: var(--font-semi-bold); /* Peso de fuente */
+    color: var(--third-color); /* Color de fuente */
+    margin-bottom: 20px; /* Ajuste de margen inferior */
+}
+
+.descr p {
+    font-size: var(--normal-font-size); /* Tamaño de fuente */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #666; /* Color de fuente */
+}
+
+.img {
+    text-align: center; /* Centrar la imagen */
+    margin-top: 30px; /* Espaciado superior */
+}
+
+.img img {
+    max-width: 100%; /* Imagen ajustada al 100% del contenedor */
+}
+
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 992px) {
+    .descr,
+    .img {
+        margin-top: 30px; /* Ajuste de margen superior en dispositivos más pequeños */
+    }
+}
+
+@media (max-width: 768px) {
+    .descr {
+        padding: 20px; /* Reducir el espaciado interno en dispositivos más pequeños */
+    }
+
+    .descr h2 {
+        font-size: 2rem; /* Ajustar tamaño de fuente del título para dispositivos más pequeños */
+    }
+
+    .descr p {
+        font-size: 1rem; /* Ajustar tamaño de fuente del texto para dispositivos más pequeños */
+    }
+}

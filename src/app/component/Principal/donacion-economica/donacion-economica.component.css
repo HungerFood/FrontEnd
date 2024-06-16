@@ -24,7 +24,7 @@
   }
   
   h1 {
-    color: #ff6600;
+    color:var(--primary-color);
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -73,3 +73,41 @@
     width: 300px;
 
   }
+  /* Media queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .container {
+      padding: 20px; /* Reducir el padding para dispositivos más pequeños */
+  }
+
+  h1 {
+      font-size: 2rem; /* Reducir el tamaño de fuente para títulos grandes */
+  }
+
+  h2 {
+      font-size: 1.5rem; /* Reducir el tamaño de fuente para subtítulos grandes */
+  }
+
+  p {
+      font-size: 1.4rem; /* Reducir el tamaño de fuente para párrafos grandes */
+  }
+}
+
+/* Media queries para dispositivos muy pequeños (como smartphones) */
+@media (max-width: 480px) {
+  .container {
+      width: 90%; /* Ajustar el ancho máximo del contenedor */
+      padding: 10px; /* Reducir el padding para dispositivos muy pequeños */
+  }
+
+  h1 {
+      font-size: 1.8rem; /* Reducir el tamaño de fuente para títulos muy grandes */
+  }
+
+  h2 {
+      font-size: 1.3rem; /* Reducir el tamaño de fuente para subtítulos muy grandes */
+  }
+
+  p {
+      font-size: 1.2rem; /* Reducir el tamaño de fuente para párrafos muy grandes */
+  }
+}

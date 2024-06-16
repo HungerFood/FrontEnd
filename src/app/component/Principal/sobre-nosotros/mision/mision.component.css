@@ -1,0 +1,102 @@
+/* Estilos mejorados para el HTML proporcionado */
+
+/* Estilo general */
+.value-section {
+    padding: 5px 0; /* Ajuste de relleno superior e inferior */
+    min-height: 100vh; /* Altura mínima igual al viewport */
+    display: flex;
+    align-items: center; /* Centrar verticalmente el contenido */
+  }
+  
+  .container {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 0 15px; /* Relleno lateral */
+  }
+  
+  
+  
+  .descr h2 {
+    font-size: var(--h2-font-size); /* Tamaño de fuente */
+    font-weight: var(--font-semi-bold); /* Peso de fuente */
+    color: var(--third-color); /* Color de fuente */
+    margin-bottom: 20px; /* Ajuste de margen inferior */
+  }
+  
+  .descr p {
+    font-size: var(--normal-font-size); /* Tamaño de fuente */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #666; /* Color de fuente */
+  }
+  
+  .img {
+    text-align: center; /* Centrar la imagen */
+    margin-top: 30px; /* Espaciado superior */
+  }
+  
+  .img img {
+    max-width: 100%; /* Imagen ajustada al 100% del contenedor */
+  }
+  
+  
+  
+  /* Estilos para la sección de Fundadores */
+  
+  #fundadores {
+    padding: 60px 0; /* Ajuste de relleno superior e inferior */
+  }
+  
+  .founder {
+    text-align: center; /* Centrar contenido dentro de cada columna */
+    margin-bottom: 30px; /* Espaciado inferior entre fundadores */
+  }
+  
+  .founder img {
+    width: 100%; /* Ajustar todas las imágenes al 100% del ancho del contenedor */
+    max-width: 200px; /* Ancho máximo para las imágenes */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Asegurar que la imagen se centre correctamente */
+    border-radius: 50%; /* Borde redondeado para las imágenes de los fundadores */
+    margin: 0 auto 15px; /* Centrar la imagen horizontalmente y agregar margen inferior */
+  }
+  
+  .founder h3 {
+    font-size: var(--h2-font-size); /* Tamaño del nombre del fundador */
+    font-family: var(--body-font);
+    font-weight: bold; /* Peso de la fuente */
+    margin-bottom: 10px; /* Espaciado inferior entre el nombre y la descripción */
+    color: var(--third-color); /* Color del nombre del fundador */
+    
+  }
+  
+  .founder p {
+    font-size: 1rem; /* Tamaño del texto de descripción */
+    color: #666; /* Color del texto */
+  }
+  
+  
+  
+  
+  
+  /* Media queries para pantallas más pequeñas */
+  @media (max-width: 992px) {
+    .descr,
+    .img {
+        margin-top: 30px; /* Ajuste de margen superior en dispositivos más pequeños */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .descr {
+        padding: 20px; /* Reducir el espaciado interno en dispositivos más pequeños */
+    }
+  
+    .descr h2 {
+        font-size: 2rem; /* Ajustar tamaño de fuente del título para dispositivos más pequeños */
+    }
+  
+    .descr p {
+        font-size: 1rem; /* Ajustar tamaño de fuente del texto para dispositivos más pequeños */
+    }
+  }
+  

@@ -1,60 +1,75 @@
-/* Estilo general */
-.value-section {
-    padding: 5px 0; /* Ajuste de relleno superior e inferior */
-    min-height: 100vh; /* Altura mínima igual al viewport */
-    display: flex;
-    align-items: center; /* Centrar verticalmente el contenido */
+/* typewriter.component.css */
+
+/* Estilo básico para asegurar que el componente ocupe toda la pantalla */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura del viewport */
+  overflow: hidden; /* Para asegurar que las imágenes no se desborden */
 }
 
-.container {
-    max-width: 1200px; /* Ancho máximo del contenido */
-    margin: 0 auto; /* Centrado horizontal */
-    padding: 0 15px; /* Relleno lateral */
+/* Estilo para las imágenes */
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  transition: opacity 1s ease-in-out; /* Transición suave de opacidad */
 }
 
-
-
-.descr h2 {
-    font-size: var(--h2-font-size); /* Tamaño de fuente */
-    font-weight: var(--font-semi-bold); /* Peso de fuente */
-    color: var(--third-color); /* Color de fuente */
-    margin-bottom: 20px; /* Ajuste de margen inferior */
+/* Estilo para la superposición de texto */
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  color: white; /* Color de texto blanco para mejor contraste */
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra de texto para mejorar legibilidad */
 }
 
-.descr p {
-    font-size: var(--normal-font-size); /* Tamaño de fuente */
-    line-height: 1.6; /* Espaciado entre líneas */
-    color: #666; /* Color de fuente */
+/* Estilo para el texto dinámico */
+#text {
+  font-size: 6vw; /* Tamaño de fuente relativo */
+  max-width: 90%; /* Ancho máximo del texto */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  line-height: 1.2; /* Altura de línea */
 }
 
-.img {
-    text-align: center; /* Centrar la imagen */
-    margin-top: 30px; /* Espaciado superior */
+/* Estilo para el cursor de consola */
+.console-underscore {
+  display: inline-block;
+  width: 8px;
+  background-color: white;
+  animation: blink 1s infinite;
 }
 
-.img img {
-    max-width: 100%; /* Imagen ajustada al 100% del contenedor */
+@keyframes blink {
+  50% {
+      opacity: 0;
+  }
 }
 
-
-/* Media queries para pantallas más pequeñas */
-@media (max-width: 992px) {
-    .descr,
-    .img {
-        margin-top: 30px; /* Ajuste de margen superior en dispositivos más pequeños */
-    }
+/* Clase para ocultar elementos */
+.hidden {
+  visibility: hidden;
 }
 
-@media (max-width: 768px) {
-    .descr {
-        padding: 20px; /* Reducir el espaciado interno en dispositivos más pequeños */
-    }
+/* Media queries para dispositivos móviles y pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  #text {
+      font-size: 10vw; /* Tamaño de fuente mayor para dispositivos móviles */
+  }
+}
 
-    .descr h2 {
-        font-size: 2rem; /* Ajustar tamaño de fuente del título para dispositivos más pequeños */
-    }
-
-    .descr p {
-        font-size: 1rem; /* Ajustar tamaño de fuente del texto para dispositivos más pequeños */
-    }
+@media screen and (max-width: 480px) {
+  #text {
+      font-size: 12vw; /* Aumentar tamaño de fuente para dispositivos más pequeños */
+      letter-spacing: 2px; /* Aumentar espaciado entre letras */
+      line-height: 1.5; /* Ajustar altura de línea */
+  }
 }

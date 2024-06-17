@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environments';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { HttpClient,  HttpHeaders,  HttpResponse } from '@angular/common/http';
 import { Subject, map } from 'rxjs';
 import { Credentials } from '../../model/Login/Credencials/credencials';
 import { TypeOfFood } from '../../model/TypeOfFood/type-of-food';

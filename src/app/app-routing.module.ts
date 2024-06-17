@@ -17,6 +17,7 @@ import { PerfilListarComponent } from './component/User/Perfil/perfil-listar/per
 import { PerfilComponent } from './component/User/Perfil/perfil/perfil.component';
 import { RegistrarseComponent } from './component/User/Registrarse/registrarse/registrarse.component';
 import { MainAdmComponent } from './component/Admin/main-adm/main-adm.component';
+import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
 ;
 
 const routes: Routes = [
@@ -35,6 +36,7 @@ const routes: Routes = [
   { path: 'principal/donacionesDineroCrear', component: MoneyDonationCrearComponent },// REGISTRAR DONACIONES DE DINERO
   { path: 'principal/donacionesDineroEditar/:id', component: MoneyDonationCrearComponent },// EDITAR DONACIONES DE DINERO
   { path: 'principal/login', component: LoginComponent },// INICIAR SESION
+  { path: 'TransactionVoucher/findAll/:id', component: TransactionvoucherComponent },// MUESTRA Y LISTA LOS COMPROBANTES DE TRANSACCIONES
 
 
   //---------------------APLICANDO EL CHILDREN-------------------------------------

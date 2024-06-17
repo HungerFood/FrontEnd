@@ -1,88 +1,108 @@
 /* Estilos para pantalla de computadora (desktop) */
 
-h1{
+h1 {
   font-family: var(--body-font);
   font-weight: var(--h1-font-size);
   font-size: var(--h1-font-size);
   text-align: left;
 }
-p{
+
+p {
   font-family: var(--body-font);
   font-size: var(--small-font-size);
 }
+
 .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  scroll-snap-align: start;
+
 }
 
 .text-content {
-    text-align: left; 
+  text-align: left;
 }
 
 .text-content h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-
-/*Colores de los texto h1*/
-.a{
-    color: var(--third-color);
+.text-content h1.a {
+  color: var(--third-color);
+  transition-delay: 0.2s;
 }
 
-.b {
-    color: var(--second-color);
+.text-content h1.b {
+  color: var(--second-color);
+  transition-delay: 0.4s;
 }
 
-.c {
-    color: var(--primary-color);
+.text-content h1.c {
+  color: var(--primary-color);
+  transition-delay: 0.6s;
 }
 
+.text-content p {
+  font-size: var(--small-font-size);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out 0.8s, transform 0.6s ease-out 0.8s;
+}
 
-/*Imagen*/
+/* Imagen */
 .image-content {
-    width: 50%;
+  width: 50%;
 }
 
 .image-content img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+}
+
+.container.visible .text-content h1,
+.container.visible .text-content p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Media query para tablet */
 @media (max-width: 1024px) {
   .container {
-        flex-direction: column;
-    }
+    flex-direction: column;
+  }
   .image-content {
-        width: 70%;
-    }
+    width: 70%;
+  }
   .text-content h1 {
-        text-align: center;
-        font-size: 3rem;
-    }
-  .text-content p{
-        text-align: center;
-        font-size: 18px;
-    }
+    text-align: center;
+    font-size: 3rem;
+  }
+  .text-content p {
+    text-align: center;
+    font-size: 18px;
+  }
 }
 
 /* Media query para celular */
 @media (max-width: 768px) {
   .container {
-        flex-direction: column;
-    }
+    flex-direction: column;
+  }
   .image-content {
-        width: 100%;
-    }
-  .text-content h1{
-        font-size: 2rem;
-        text-align: center;
-    }
-  .text-content p{
-        text-align: center;
-        font-size: 15px;
-    }
+    width: 100%;
+  }
+  .text-content h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .text-content p {
+    text-align: center;
+    font-size: 15px;
+  }
 }

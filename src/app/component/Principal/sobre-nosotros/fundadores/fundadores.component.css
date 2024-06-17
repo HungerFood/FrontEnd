@@ -27,6 +27,7 @@
     font-size: var(--normal-font-size); /* Tamaño de fuente */
     line-height: 1.6; /* Espaciado entre líneas */
     color: #666; /* Color de fuente */
+    margin-bottom: 2vh;
   }
   
   .img {
@@ -61,7 +62,7 @@
   }
   
   .founder h3 {
-    font-size: var(--h2-font-size); /* Tamaño del nombre del fundador */
+    font-size: 1.98vh; /* Tamaño del nombre del fundador */
     font-family: var(--body-font);
     font-weight: bold; /* Peso de la fuente */
     margin-bottom: 10px; /* Espaciado inferior entre el nombre y la descripción */

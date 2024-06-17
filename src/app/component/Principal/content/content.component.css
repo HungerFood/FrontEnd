@@ -7,16 +7,23 @@
     flex-direction: column;
     background: var(--background-gradient);
     border-radius: 10px;
+	scroll-snap-align: start;
+
 }
 
 .text {
     text-align: center;
+}
+p{
+	cursor: default; /* Mantener el cursor predeterminado sobre los párrafos */
 }
 
 h1{
     font-size: var(--h2-font-size);
     font-weight: var(--font-medium);
     color: var(--white);
+	cursor: default; /* Mantener el cursor predeterminado sobre los párrafos */
+
 }
 
 body{

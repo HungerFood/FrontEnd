@@ -1,32 +1,33 @@
-/* Estilos para pantalla de computadora (desktop) */
-
+/* Estilos base para todos los tamaños de pantalla */
 h1 {
   font-family: var(--body-font);
-  font-weight: var(--h1-font-size);
+  font-weight: var(--h1-font-weight);
   font-size: var(--h1-font-size);
-  text-align: left;
+  text-align: center; /* Alineación central por defecto */
 }
 
 p {
   font-family: var(--body-font);
   font-size: var(--small-font-size);
+  text-align: center; /* Alineación central por defecto */
 }
 
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  height: 100vh;
-  scroll-snap-align: start;
-
+  flex-direction: column;
+  height: 100vh; /* Ajusta según necesidades */
+  padding: 20px; /* Espaciado interior general */
 }
 
 .text-content {
-  text-align: left;
+  max-width: 600px; /* Ancho máximo del contenido de texto */
+  text-align: center; /* Alineación central por defecto */
 }
 
 .text-content h1 {
-  font-size: 4rem;
+  font-size: 3.5rem; /* Tamaño de fuente grande para títulos */
   margin-bottom: 1rem;
   opacity: 0;
   transform: translateY(20px);
@@ -49,7 +50,7 @@ p {
 }
 
 .text-content p {
-  font-size: var(--small-font-size);
+  font-size: 1.2rem; /* Tamaño de fuente para párrafos */
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out 0.8s, transform 0.6s ease-out 0.8s;
@@ -57,7 +58,7 @@ p {
 
 /* Imagen */
 .image-content {
-  width: 50%;
+  max-width: 100%; /* Imagen con ancho máximo */
 }
 
 .image-content img {
@@ -71,38 +72,24 @@ p {
   transform: translateY(0);
 }
 
-/* Media query para tablet */
+/* Media query para tablet y dispositivos grandes */
 @media (max-width: 1024px) {
-  .container {
-    flex-direction: column;
-  }
-  .image-content {
-    width: 70%;
-  }
   .text-content h1 {
-    text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem; /* Reducir tamaño de título para tabletas */
   }
+
   .text-content p {
-    text-align: center;
-    font-size: 18px;
+    font-size: 1rem; /* Reducir tamaño de párrafo para tabletas */
   }
 }
 
-/* Media query para celular */
+/* Media query para dispositivos móviles */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  .image-content {
-    width: 100%;
-  }
   .text-content h1 {
-    font-size: 2rem;
-    text-align: center;
+    font-size: 2rem; /* Tamaño de fuente más pequeño para móviles */
   }
+
   .text-content p {
-    text-align: center;
-    font-size: 15px;
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño para móviles */
   }
 }

@@ -1,8 +1,8 @@
-/* Estilos mejorados para el HTML proporcionado */
+/* Estilos mejorados para la sección de Visión */
 
 /* Estilo general */
 .value-section {
-  padding: 5px 0; /* Ajuste de relleno superior e inferior */
+  padding: 50px 0; /* Ajuste de relleno superior e inferior */
   min-height: 100vh; /* Altura mínima igual al viewport */
   display: flex;
   align-items: center; /* Centrar verticalmente el contenido */
@@ -59,21 +59,24 @@
   transform: translateY(0); /* Devolver a posición original */
 }
 
+/* Media query para dispositivos móviles */
 @media (max-width: 768px) {
-  /* Estilos para dispositivos móviles */
-    .descr {
-      text-align: center; /* Alinear texto al centro */
-    }
-  
-    .descr h2 {
-      font-size: 3rem; /* Tamaño de fuente */
-    }
-  
-    .descr p {
-      font-size: 1rem; /* Tamaño de fuente */
-    }
-  
-    .img {
-      text-align: center; /* Alinear imagen al centro */
-    } 
+  .descr {
+    text-align: center; /* Alinear texto al centro */
   }
+
+  .descr h2 {
+    font-size: 2.5rem; /* Tamaño de fuente reducido para dispositivos móviles */
+    margin-bottom: 15px; /* Ajuste de margen inferior */
+  }
+
+  .descr p {
+    font-size: 1rem; /* Tamaño de fuente reducido para dispositivos móviles */
+    line-height: 1.5; /* Espaciado entre líneas ajustado */
+  }
+
+  .img {
+    text-align: center; /* Alinear imagen al centro */
+    margin-top: 20px; /* Espaciado superior reducido */
+  }
+}

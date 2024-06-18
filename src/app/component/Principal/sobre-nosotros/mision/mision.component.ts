@@ -1,21 +1,17 @@
-import { Component, ElementRef, Renderer2, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Renderer2, AfterViewInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-mision',
   templateUrl: './mision.component.html',
   styleUrls: ['./mision.component.css']
 })
-export class MisionComponent implements OnInit {
+export class MisionComponent implements AfterViewInit {
 
   @ViewChild('valueSection') valueSection!: ElementRef;
 
   constructor(private renderer: Renderer2) {}
 
-  ngOnInit(): void {
-    // Hacer scroll hacia arriba al iniciar el componente
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    // Verificar posición de la sección en caso de animaciones adicionales
+  ngAfterViewInit(): void {
     this.checkScroll();
   }
 

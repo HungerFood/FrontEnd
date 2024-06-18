@@ -16,8 +16,6 @@ import { MoneyDonationComponent } from './component/User/MoneyDonation/money-don
 import { PerfilListarComponent } from './component/User/Perfil/perfil-listar/perfil-listar.component';
 import { PerfilComponent } from './component/User/Perfil/perfil/perfil.component';
 import { RegistrarseComponent } from './component/User/Registrarse/registrarse/registrarse.component';
-import { MainAdmComponent } from './component/Admin/main-adm/main-adm.component';
-import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
 ;
 
 const routes: Routes = [
@@ -36,7 +34,6 @@ const routes: Routes = [
   { path: 'principal/donacionesDineroCrear', component: MoneyDonationCrearComponent },// REGISTRAR DONACIONES DE DINERO
   { path: 'principal/donacionesDineroEditar/:id', component: MoneyDonationCrearComponent },// EDITAR DONACIONES DE DINERO
   { path: 'principal/login', component: LoginComponent },// INICIAR SESION
-  { path: 'TransactionVoucher/findAll/:id', component: TransactionvoucherComponent },// MUESTRA Y LISTA LOS COMPROBANTES DE TRANSACCIONES
 
 
   //---------------------APLICANDO EL CHILDREN-------------------------------------
@@ -60,23 +57,19 @@ const routes: Routes = [
   //  ]
   //},
 
-  // { path: '', redirectTo: 'principal/home', pathMatch: 'full' }, // Ruta por defecto
-  // { path: '**', redirectTo: '/principal/home' },
+  { path: '', redirectTo: 'principal/home', pathMatch: 'full' }, // Ruta por defecto
+  { path: '**', redirectTo: '/principal/home' },
 
   //{ path: 'admin/home', component:MainAdmComponent },
-
   { path: 'TypeOfFood/findAll/listar', component: TypeOfFoodListarComponent },
   { path: 'TypeOfFood/findAll/nuevo', component: TypeOfFoodCrearComponent },
   { path: 'TypeOfFood', component: TypeOfFoodComponent },
-  { path: 'admin/login', component: MainAdmComponent },
-
-
   //{ path: '', redirectTo: 'admin/home', pathMatch: 'full' }, // Ruta por defecto
   //{ path: '**', redirectTo: '/admin/home' },
 
 
 
-  // { path: 'principal/home', component: MAINComponent },
+  { path: 'principal/home', component: MAINComponent },
   //{ path: 'principal/adim', component: MainAdmComponent },
 ];
 

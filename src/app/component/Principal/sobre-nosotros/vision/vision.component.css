@@ -58,3 +58,22 @@
   opacity: 1; /* Mostrar elemento */
   transform: translateY(0); /* Devolver a posición original */
 }
+
+@media (max-width: 768px) {
+  /* Estilos para dispositivos móviles */
+    .descr {
+      text-align: center; /* Alinear texto al centro */
+    }
+  
+    .descr h2 {
+      font-size: 3rem; /* Tamaño de fuente */
+    }
+  
+    .descr p {
+      font-size: 1rem; /* Tamaño de fuente */
+    }
+  
+    .img {
+      text-align: center; /* Alinear imagen al centro */
+    } 
+  }

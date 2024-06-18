@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, Renderer2, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-mision',
@@ -7,28 +7,26 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class MisionComponent implements OnInit {
 
-  isVisible: boolean = false;
+  @ViewChild('valueSection') valueSection!: ElementRef;
 
-  constructor() { }
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {
-    this.checkScroll(); // Verificar el desplazamiento inicial
+    // Hacer scroll hacia arriba al iniciar el componente
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Verificar posición de la sección en caso de animaciones adicionales
+    this.checkScroll();
   }
 
-  @HostListener('window:scroll', ['$event'])
-  checkScroll() {
+  checkScroll(): void {
+    const componentPosition = this.valueSection.nativeElement.offsetTop;
     const scrollPosition = window.pageYOffset + window.innerHeight;
-    const elementPosition = (document.querySelector('.value-section') as HTMLElement)?.offsetTop || 0;
-    const elementHeight = (document.querySelector('.value-section') as HTMLElement)?.offsetHeight || 0;
 
-    // Calcula la posición de inicio y fin de la sección de misión
-    const startOffset = elementPosition - window.innerHeight;
-    const endOffset = elementPosition + elementHeight;
-
-    if (scrollPosition > startOffset && scrollPosition < endOffset) {
-      this.isVisible = true;
+    if (scrollPosition > componentPosition) {
+      this.renderer.addClass(this.valueSection.nativeElement, 'visible');
     } else {
-      this.isVisible = false;
+      this.renderer.removeClass(this.valueSection.nativeElement, 'visible');
     }
   }
 

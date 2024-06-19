@@ -9,7 +9,6 @@ import { ContactenosComponent } from './component/Principal/contactenos/contacte
 import { DonarComponent } from './component/Principal/donar/donar.component';
 import { HolaIniciaSesionComponent } from './component/Principal/hola-inicia-sesion/hola-inicia-sesion.component';
 import { PrincipalComponent } from './component/Principal/principal/principal.component';
-import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros.component';
 
 //importar los modulos de angular material
 import { HttpClientModule } from '@angular/common/http';
@@ -61,6 +60,10 @@ import { TransactionvoucherCrearComponent } from './component/User/TransactionVo
 import { TransactionvoucherListarComponent } from './component/User/TransactionVoucher/transactionvoucher-listar/transactionvoucher-listar.component';
 import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
 import { LoginComponent } from './component/Login/login/login.component';
+import { MisionComponent } from './component/Principal/sobre-nosotros/mision/mision.component';
+import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros/sobre-nosotros.component';
+import { VisionComponent } from './component/Principal/sobre-nosotros/vision/vision.component';
+import { FundadoresComponent } from './component/Principal/sobre-nosotros/fundadores/fundadores.component';
 
 
 
@@ -73,7 +76,6 @@ import { LoginComponent } from './component/Login/login/login.component';
     NavbarDonanteComponent,
     NavbarPrincipalComponent,
     DonarComponent,
-    SobreNosotrosComponent,
     ContactenosComponent,
     HolaIniciaSesionComponent,
     PrincipalComponent,
@@ -108,7 +110,11 @@ import { LoginComponent } from './component/Login/login/login.component';
     PerfilListarComponent,
     DialogoFoodListarComponent,
     DialogoMoneyListarComponent,
-    LoginComponent
+    LoginComponent,
+    MisionComponent,
+    SobreNosotrosComponent,
+    VisionComponent,
+    FundadoresComponent
 
     //colocar tus componentes que creas
   ],

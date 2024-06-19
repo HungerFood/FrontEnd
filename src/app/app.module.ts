@@ -38,6 +38,10 @@ import { DialogComponent } from './component/Admin/TypeOfFood/type-of-food-lista
 import { TypeOfFoodListarComponent } from './component/Admin/TypeOfFood/type-of-food-listar/type-of-food-listar.component';
 import { TypeOfFoodComponent } from './component/Admin/TypeOfFood/type-of-food/type-of-food.component';
 import { MainAdmComponent } from './component/Admin/main-adm/main-adm.component';
+import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/libro-de-reclamos/libro-de-reclamos.component';
+import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
+import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Privacidad/politica-de-privacidad/politica-de-privacidad.component';
+import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Condiciones/terminos-y-condiciones/terminos-y-condiciones.component';
 import { LoginComponent } from './component/Login/login/login.component';
 import { ContentComponent } from './component/Principal/content/content.component';
 import { DonacionAlimentoComponent } from './component/Principal/donacion-alimento/donacion-alimento.component';
@@ -114,7 +118,11 @@ import { TransactionvoucherComponent } from './component/User/TransactionVoucher
     LoginComponent,
     FundadoresComponent,
     MisionComponent,
-    VisionComponent
+    VisionComponent,
+    LibroDeReclamosComponent,
+    PoliticaDeCookiesComponent,
+    PoliticaDePrivacidadComponent,
+    TerminosYCondicionesComponent
 
     //colocar tus componentes que creas
   ],

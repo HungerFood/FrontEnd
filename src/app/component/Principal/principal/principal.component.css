@@ -1,87 +1,133 @@
-/* Estilos para pantalla de computadora (desktop) */
-h1{
+/* Estilos base para todos los tamaños de pantalla */
+h1 {
   font-family: var(--body-font);
-  font-weight: var(--h1-font-size);
+  font-weight: var(--h1-font-weight);
   font-size: var(--h1-font-size);
-  text-align: left;
+  text-align: center; /* Alineación central por defecto */
 }
-p{
+
+p {
   font-family: var(--body-font);
   font-size: var(--small-font-size);
+  text-align: center; /* Alineación central por defecto */
 }
+
 .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100vh; /* altura completa de la ventana */
 }
 
 .text-content {
-    text-align: left; 
+  max-width: 100%; /* Ancho máximo del contenido de texto */
+  text-align: center; /* Alineación central por defecto */
 }
 
 .text-content h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+  font-size: 3.5rem; /* Tamaño de fuente grande para títulos */
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-
-/*Colores de los texto h1*/
-.a{
-    color: var(--third-color);
+.text-content h1.a {
+  color: var(--third-color);
+  transition-delay: 0.2s;
 }
 
-.b {
-    color: var(--second-color);
+.text-content h1.b {
+  color: var(--second-color);
+  transition-delay: 0.4s;
 }
 
-.c {
-    color: var(--primary-color);
+.text-content h1.c {
+  color: var(--primary-color);
+  transition-delay: 0.6s;
 }
 
+.text-content p {
+  font-size: 1.2rem; /* Tamaño de fuente para párrafos */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out 0.8s, transform 0.6s ease-out 0.8s;
+}
 
-/*Imagen*/
+/* Imagen */
 .image-content {
-    width: 50%;
+  max-width: 100%; /* Imagen con ancho máximo */
 }
 
 .image-content img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
-/* Media query para tablet */
-@media (max-width: 1024px) {
+.container.visible .text-content h1,
+.container.visible .text-content p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 1280px) {
   .container {
-        flex-direction: column;
-    }
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh; /* altura completa de la ventana */
+  }
+
+  .text-content {
+    max-width: 50%;
+    order: 1; /* Cambia el orden del elemento en la fila */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+
   .image-content {
-        width: 70%;
-    }
+    max-width: 50%;
+    order: 2; /* Cambia el orden del elemento en la fila */
+  }
+
   .text-content h1 {
-        text-align: center;
-        font-size: 3rem;
-    }
-  .text-content p{
-        text-align: center;
-        font-size: 18px;
-    }
+    font-size: 2.5rem; /* Tamaño de fuente para títulos en pantallas grandes */
+  }
+
+  .text-content p {
+    font-size: 1rem; /* Tamaño de fuente para párrafos en pantallas grandes */
+  }
 }
 
-/* Media query para celular */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .container {
-        flex-direction: column;
-    }
+    flex-direction: column;
+    height: auto;
+    height: 100vh; /* altura completa de la ventana */
+  }
+
+  .text-content {
+    max-width: 100%;
+    text-align: center;
+    order: 1; /* Cambia el orden del elemento en la columna */
+    margin-bottom: 20px; /* Espacio entre el texto y la imagen */
+  }
+
   .image-content {
-        width: 100%;
-    }
-  .text-content h1{
-        font-size: 2rem;
-        text-align: center;
-    }
-  .text-content p{
-        text-align: center;
-        font-size: 15px;
-    }
+    max-width: 100%;
+    order: 2; /* Cambia el orden del elemento en la columna */
+  }
+
+  .text-content h1 {
+    font-size: 2rem; /* Tamaño de fuente para títulos en dispositivos móviles */
+    margin-bottom: 5px; /* Espacio inferior más pequeño */
+  }
+
+  .text-content p {
+    font-size: 0.9rem; /* Tamaño de fuente para párrafos en dispositivos móviles */
+    line-height: 1.4; /* Espaciado entre líneas */
+  }
+  
 }

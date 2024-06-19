@@ -9,10 +9,9 @@ import { ContactenosComponent } from './component/Principal/contactenos/contacte
 import { DonarComponent } from './component/Principal/donar/donar.component';
 import { HolaIniciaSesionComponent } from './component/Principal/hola-inicia-sesion/hola-inicia-sesion.component';
 import { PrincipalComponent } from './component/Principal/principal/principal.component';
-import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros.component';
 
 //importar los modulos de angular material
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatButtonModule } from '@angular/material/button';
@@ -61,8 +60,14 @@ import { TransactionvoucherCrearComponent } from './component/User/TransactionVo
 import { TransactionvoucherListarComponent } from './component/User/TransactionVoucher/transactionvoucher-listar/transactionvoucher-listar.component';
 import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
 import { LoginComponent } from './component/Login/login/login.component';
-import { TokenInterceptor } from './services/Login/Token/token-interceptor';
-import { TypeOfFoodNavbarComponent } from './component/Admin/TypeOfFood/type-of-food-navbar/type-of-food-navbar.component';
+import { MisionComponent } from './component/Principal/sobre-nosotros/mision/mision.component';
+import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros/sobre-nosotros.component';
+import { VisionComponent } from './component/Principal/sobre-nosotros/vision/vision.component';
+import { FundadoresComponent } from './component/Principal/sobre-nosotros/fundadores/fundadores.component';
+import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Privacidad/politica-de-privacidad/politica-de-privacidad.component';
+import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
+import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Condiciones/terminos-y-condiciones/terminos-y-condiciones.component';
+import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/libro-de-reclamos/libro-de-reclamos.component';
 
 
 
@@ -75,7 +80,6 @@ import { TypeOfFoodNavbarComponent } from './component/Admin/TypeOfFood/type-of-
     NavbarDonanteComponent,
     NavbarPrincipalComponent,
     DonarComponent,
-    SobreNosotrosComponent,
     ContactenosComponent,
     HolaIniciaSesionComponent,
     PrincipalComponent,
@@ -111,7 +115,14 @@ import { TypeOfFoodNavbarComponent } from './component/Admin/TypeOfFood/type-of-
     DialogoFoodListarComponent,
     DialogoMoneyListarComponent,
     LoginComponent,
-    TypeOfFoodNavbarComponent
+    MisionComponent,
+    SobreNosotrosComponent,
+    VisionComponent,
+    FundadoresComponent,
+    PoliticaDePrivacidadComponent,
+    PoliticaDeCookiesComponent,
+    TerminosYCondicionesComponent,
+    LibroDeReclamosComponent
 
     //colocar tus componentes que creas
   ],
@@ -138,7 +149,7 @@ import { TypeOfFoodNavbarComponent } from './component/Admin/TypeOfFood/type-of-
     MatExpansionModule
   ],
   providers: [
-    provideAnimationsAsync(), { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

@@ -1,75 +1,167 @@
+/* Estilos generales */
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
 
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* Añadido para separar los elementos */
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 1200px; /* Ancho máximo para evitar que se extienda demasiado */
+  margin: 40px auto;
+  border: 1px solid #dddddd;
+  transition: transform 0.6s ease-out; /* Transición para ajustes responsivos */
+}
+
+.image {
+  flex: 1;
+  text-align: right;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.text {
+  flex: 1;
+  text-align: left;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+button {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out 0.4s, transform 0.6s ease-out 0.4s;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left; /* Ajuste para alinear a la izquierda en dispositivos grandes */
+  letter-spacing: 2px;
+}
+
+h2 {
+  color: #666666;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left; /* Ajuste para alinear a la izquierda en dispositivos grandes */
+  letter-spacing: 1px;
+}
+
+p {
+  color: #666666;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left; /* Ajuste para alinear a la izquierda en dispositivos grandes */
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: transparent;
+  color: var(--black);
+  border: 0.5px solid var(--primary-color); /* Ajuste para color de borde en hover */
+}
+
+img {
+  max-width: 100%; /* Ajuste para que la imagen no se desborde */
+  height: auto; /* Mantener la proporción de la imagen */
+  display: block; /* Asegura que la imagen no tenga espacio extra */
+  margin-left: auto; /* Alineación de la imagen a la derecha */
+  margin-right: auto; /* Alineación de la imagen a la derecha */
+}
+
+.container.visible .image {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container.visible .text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.container.visible button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    margin: 40px auto;
-    border: 1px solid #dddddd;
+    flex-direction: column; /* Cambio a dirección columna para pantallas pequeñas */
+    padding: 20px;
   }
-  
-  .text {
-    flex: 1;
-    text-align: left;
-    margin-right: 20px;
-  }
-  
-  .image {
-    flex: 1;
-    text-align: right;
-  }
-  
-  h1 {
-    color: #ff6600;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: left;
-    letter-spacing: 2px;
-  }
-  
-  h2 {
-    color: #666666;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: left;
-    letter-spacing: 1px;
-  }
-  
-  p {
-    color: #666666;
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: left;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-  }
-  
-  button {
-    background-color: var(--primary-color);
-    color: #ffffff;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  button:hover {
-    background-color: transparent;
-    color:var(--black);
-    border: 0.5px solid var(--primary-color);
-  }
-  
-  img {
-    width: 300px;
 
+  .text, .image, button {
+    text-align: center; /* Alineación centrada en dispositivos pequeños */
+    margin: 0;
   }
+
+  h1, h2, p {
+    text-align: center; /* Alineación centrada en dispositivos pequeños */
+  }
+
+  h1 {
+    font-size: 2rem; /* Reducir el tamaño de fuente para títulos grandes */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Reducir el tamaño de fuente para subtítulos grandes */
+  }
+
+  p {
+    font-size: 1.4rem; /* Reducir el tamaño de fuente para párrafos grandes */
+  }
+}
+
+/* Media queries para dispositivos muy pequeños (como smartphones) */
+@media (max-width: 480px) {
+  .container {
+    width: 90%; /* Ajustar el ancho máximo del contenedor */
+    padding: 10px; /* Reducir el padding para dispositivos muy pequeños */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Reducir el tamaño de fuente para títulos muy grandes */
+  }
+
+  h2 {
+    font-size: 1.3rem; /* Reducir el tamaño de fuente para subtítulos muy grandes */
+  }
+
+  p {
+    font-size: 1.2rem; /* Reducir el tamaño de fuente para párrafos muy grandes */
+  }
+}

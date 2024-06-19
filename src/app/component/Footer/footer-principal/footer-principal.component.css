@@ -4,6 +4,8 @@
     padding: 30px 0;
     border-top: 1px solid #ddd;
     padding-left: center;
+    cursor: default; /* Mantener el cursor predeterminado sobre los párrafos */
+
 }
 
 .footer-content {

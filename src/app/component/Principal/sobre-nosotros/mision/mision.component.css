@@ -1,0 +1,82 @@
+/* Estilos mejorados para la sección de Misión */
+
+/* Estilo general */
+.value-section {
+  padding: 50px 0; /* Ajuste de relleno superior e inferior */
+  min-height: 100vh; /* Altura mínima igual al viewport */
+  display: flex;
+  align-items: center; /* Centrar verticalmente el contenido */
+  overflow: hidden; /* Ocultar el desbordamiento para el efecto de texto */
+}
+
+.container-fluid {
+  max-width: 1200px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 0 15px; /* Relleno lateral */
+}
+
+.descr {
+  text-align: left; /* Alinear texto a la izquierda */
+  padding: 20px; /* Espaciado interno */
+}
+
+.descr h2 {
+  font-size: 3.5rem; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de la fuente */
+  color: #333; /* Color de fuente */
+  margin-bottom: 20px; /* Ajuste de margen inferior */
+  opacity: 0; /* Inicialmente oculto */
+  transform: translateY(-20px); /* Movimiento inicial hacia arriba */
+  transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.descr p {
+  font-size: 1.1rem; /* Tamaño de fuente */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: #666; /* Color de fuente */
+  opacity: 0; /* Inicialmente oculto */
+  transform: translateY(-20px); /* Movimiento inicial hacia arriba */
+  transition: opacity 0.6s ease-out 0.4s, transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.img {
+  text-align: right; /* Alinear imagen a la derecha */
+  margin-top: 30px; /* Espaciado superior */
+}
+
+.img img {
+  max-width: 100%; /* Imagen ajustada al 100% del contenedor */
+  opacity: 0; /* Inicialmente oculta */
+  transform: translateY(20px); /* Movimiento inicial hacia abajo */
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Aplicar efectos cuando la sección es visible */
+.value-section.visible .descr h2,
+.value-section.visible .descr p,
+.value-section.visible .img img {
+  opacity: 1; /* Mostrar elemento */
+  transform: translateY(0); /* Devolver a posición original */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .descr {
+    text-align: center; /* Alinear texto al centro */
+  }
+
+  .descr h2 {
+    font-size: 2.5rem; /* Tamaño de fuente reducido para dispositivos móviles */
+    margin-bottom: 15px; /* Ajuste de margen inferior */
+  }
+
+  .descr p {
+    font-size: 1rem; /* Tamaño de fuente reducido para dispositivos móviles */
+    line-height: 1.5; /* Espaciado entre líneas ajustado */
+  }
+
+  .img {
+    text-align: center; /* Alinear imagen al centro */
+    margin-top: 20px; /* Espaciado superior reducido */
+  }
+}

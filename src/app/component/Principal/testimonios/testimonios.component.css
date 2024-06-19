@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    
   }
   
   .header {
@@ -24,7 +25,14 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     flex: 1;
     margin: 0 1rem;
+    transform: scale(1); /* Estado inicial */
+    transition: transform 0.3s ease; /* Transición suave */
   }
+  
+  .testimony:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+  }
+  
   
   .image {
     width: 100%;
@@ -47,11 +55,40 @@
   h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    cursor: default; /* Mantener el cursor predeterminado sobre los párrafos */
   }
   
   p {
     font-size: 1rem;
     line-height: 1.5;
+    cursor: default; /* Mantener el cursor predeterminado sobre los párrafos */
+  }
+  h1, h2{
+    cursor: default; /* Mantener el cursor predeterminado sobre los párrafos */
+
   }
 
+  @media (max-width: 768px) {
+  .testimonies {
+    flex-direction: column; /* Apila testimonios en dispositivos más pequeños */
+    align-items: center;
+  }
   
+  .testimony {
+    margin: 0 0 1rem 0; /* Reduce el margen inferior para separar los testimonios */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimony {
+    padding: 1.5rem; /* Reduce el padding en dispositivos muy pequeños */
+  }
+  
+  h3 {
+    font-size: 1.2rem; /* Reduce el tamaño del título en pantallas pequeñas */
+  }
+  
+  p {
+    font-size: 0.9rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+  }
+}

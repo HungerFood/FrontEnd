@@ -72,3 +72,6 @@ img {
     opacity: 1;
   }
   
+  .navbar{
+    position: unset;
+  }

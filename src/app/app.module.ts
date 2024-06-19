@@ -64,6 +64,10 @@ import { MisionComponent } from './component/Principal/sobre-nosotros/mision/mis
 import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros/sobre-nosotros.component';
 import { VisionComponent } from './component/Principal/sobre-nosotros/vision/vision.component';
 import { FundadoresComponent } from './component/Principal/sobre-nosotros/fundadores/fundadores.component';
+import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Privacidad/politica-de-privacidad/politica-de-privacidad.component';
+import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
+import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Condiciones/terminos-y-condiciones/terminos-y-condiciones.component';
+import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/libro-de-reclamos/libro-de-reclamos.component';
 
 
 
@@ -114,7 +118,11 @@ import { FundadoresComponent } from './component/Principal/sobre-nosotros/fundad
     MisionComponent,
     SobreNosotrosComponent,
     VisionComponent,
-    FundadoresComponent
+    FundadoresComponent,
+    PoliticaDePrivacidadComponent,
+    PoliticaDeCookiesComponent,
+    TerminosYCondicionesComponent,
+    LibroDeReclamosComponent
 
     //colocar tus componentes que creas
   ],

@@ -17,12 +17,12 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh; /* Ajusta según necesidades */
-  padding: 20px; /* Espaciado interior general */
+
+  height: 100vh; /* altura completa de la ventana */
 }
 
 .text-content {
-  max-width: 600px; /* Ancho máximo del contenido de texto */
+  max-width: 100%; /* Ancho máximo del contenido de texto */
   text-align: center; /* Alineación central por defecto */
 }
 
@@ -72,24 +72,62 @@ p {
   transform: translateY(0);
 }
 
-/* Media query para tablet y dispositivos grandes */
-@media (max-width: 1024px) {
+
+@media (max-width: 1280px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh; /* altura completa de la ventana */
+  }
+
+  .text-content {
+    max-width: 50%;
+    order: 1; /* Cambia el orden del elemento en la fila */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+
+  .image-content {
+    max-width: 50%;
+    order: 2; /* Cambia el orden del elemento en la fila */
+  }
+
   .text-content h1 {
-    font-size: 2.5rem; /* Reducir tamaño de título para tabletas */
+    font-size: 2.5rem; /* Tamaño de fuente para títulos en pantallas grandes */
   }
 
   .text-content p {
-    font-size: 1rem; /* Reducir tamaño de párrafo para tabletas */
+    font-size: 1rem; /* Tamaño de fuente para párrafos en pantallas grandes */
   }
 }
 
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    height: 100vh; /* altura completa de la ventana */
+  }
+
+  .text-content {
+    max-width: 100%;
+    text-align: center;
+    order: 1; /* Cambia el orden del elemento en la columna */
+    margin-bottom: 20px; /* Espacio entre el texto y la imagen */
+  }
+
+  .image-content {
+    max-width: 100%;
+    order: 2; /* Cambia el orden del elemento en la columna */
+  }
+
   .text-content h1 {
-    font-size: 2rem; /* Tamaño de fuente más pequeño para móviles */
+    font-size: 2rem; /* Tamaño de fuente para títulos en dispositivos móviles */
+    margin-bottom: 5px; /* Espacio inferior más pequeño */
   }
 
   .text-content p {
-    font-size: 0.9rem; /* Tamaño de fuente más pequeño para móviles */
+    font-size: 0.9rem; /* Tamaño de fuente para párrafos en dispositivos móviles */
+    line-height: 1.4; /* Espaciado entre líneas */
   }
+  
 }

@@ -2,42 +2,33 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div class="container">
     <!-- Logo -->
-    <img src="./assets/Images/Logo/HungerFood.png" class="logo-img"
-         [routerLink]="'/principal/home'" alt="HungerFood Logo">
+    <img src="./assets/Images/Logo/HungerFood.png" class="logo-img" [routerLink]="'/principal/home'" alt="HungerFood Logo">
     
     <!-- Toggle Btn (Hamburguesa) -->
-    <button class="navbar-toggler shadow-none border-0" type="button"
-            (click)="toggleNavbar()" aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation">
+    <button class="navbar-toggler shadow-none border-0" type="button" (click)="toggleNavbar()" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <!-- Sidebar -->
-    <div #offcanvasNavbar class="sidebar offcanvas offcanvas-end" tabindex="-1"
-         id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div #offcanvasNavbar class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <!-- Sidebar Header -->
       <div class="offcanvas-header text-dark border-bottom">
-        <img src="./assets/Images/Logo/HungerFood.png" class="logo-img"
-             [routerLink]="'/principal/home'" alt="HungerFood Logo">
-        <button type="button" class="btn-close btn-close-dark"
-                (click)="closeNavbar()" aria-label="Close"></button>
+        <img src="./assets/Images/Logo/HungerFood.png" class="logo-img" [routerLink]="'/principal/home'" alt="HungerFood Logo">
+        <button type="button" class="btn-close btn-close-dark" (click)="closeNavbar()" aria-label="Close"></button>
       </div>
       <!-- Sidebar Body -->
       <div class="offcanvas-body d-flex flex-column flex-lg-row p-3 p-lg-0">
         <ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3">
           <li class="nav-item mx-2">
-            <a class="nav-link active" [routerLink]="'/principal/sobre-nosotros'"
-               (click)="closeNavbar()">
+            <a class="nav-link active" [routerLink]="'/principal/sobre-nosotros'" (click)="closeNavbar()">
               Sobre Nosotros
             </a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link active" [routerLink]="'/principal/donar'"
-               (click)="closeNavbar()">Donar</a>
+            <a class="nav-link active" [routerLink]="'/principal/donar'" (click)="closeNavbar()">Donar</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link active" [routerLink]="'/principal/contactenos'"
-               (click)="closeNavbar()">Contáctenos</a>
+            <a class="nav-link active" [routerLink]="'/principal/contactenos'" (click)="closeNavbar()">Contáctenos</a>
           </li>
         </ul>
         <!-- Login / Sign up -->

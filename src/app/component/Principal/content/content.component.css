@@ -8,7 +8,6 @@
     background: var(--background-gradient);
     border-radius: 10px;
 	scroll-snap-align: start;
-
 }
 
 .text {

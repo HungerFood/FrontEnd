@@ -8,7 +8,7 @@ import { ContactenosComponent } from './component/Principal/contactenos/contacte
 import { DonarComponent } from './component/Principal/donar/donar.component';
 import { HolaIniciaSesionComponent } from './component/Principal/hola-inicia-sesion/hola-inicia-sesion.component';
 import { MAINComponent } from './component/Principal/main/main.component';
-import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros.component';
+import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros/sobre-nosotros.component';
 import { FooddonationCrearComponent } from './component/User/FoodDonation/fooddonation-crear/fooddonation-crear.component';
 import { FooddonationComponent } from './component/User/FoodDonation/fooddonation/fooddonation.component';
 import { MoneyDonationCrearComponent } from './component/User/MoneyDonation/money-donation-crear/money-donation-crear.component';
@@ -58,7 +58,7 @@ const routes: Routes = [
   //},
 
   { path: '', redirectTo: 'principal/home', pathMatch: 'full' }, // Ruta por defecto
-  { path: '**', redirectTo: '/principal/home' },
+  //{ path: '**', redirectTo: '/principal/home' },
 
   //{ path: 'admin/home', component:MainAdmComponent },
   { path: 'TypeOfFood/findAll/listar', component: TypeOfFoodListarComponent },

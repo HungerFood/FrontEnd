@@ -9,7 +9,7 @@ import { ContactenosComponent } from './component/Principal/contactenos/contacte
 import { DonarComponent } from './component/Principal/donar/donar.component';
 import { HolaIniciaSesionComponent } from './component/Principal/hola-inicia-sesion/hola-inicia-sesion.component';
 import { PrincipalComponent } from './component/Principal/principal/principal.component';
-import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros.component';
+import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros/sobre-nosotros.component';
 
 //importar los modulos de angular material
 import { HttpClientModule } from '@angular/common/http';
@@ -38,10 +38,14 @@ import { DialogComponent } from './component/Admin/TypeOfFood/type-of-food-lista
 import { TypeOfFoodListarComponent } from './component/Admin/TypeOfFood/type-of-food-listar/type-of-food-listar.component';
 import { TypeOfFoodComponent } from './component/Admin/TypeOfFood/type-of-food/type-of-food.component';
 import { MainAdmComponent } from './component/Admin/main-adm/main-adm.component';
+import { LoginComponent } from './component/Login/login/login.component';
 import { ContentComponent } from './component/Principal/content/content.component';
 import { DonacionAlimentoComponent } from './component/Principal/donacion-alimento/donacion-alimento.component';
 import { DonacionEconomicaComponent } from './component/Principal/donacion-economica/donacion-economica.component';
 import { MAINComponent } from './component/Principal/main/main.component';
+import { FundadoresComponent } from './component/Principal/sobre-nosotros/fundadores/fundadores.component';
+import { MisionComponent } from './component/Principal/sobre-nosotros/mision/mision.component';
+import { VisionComponent } from './component/Principal/sobre-nosotros/vision/vision.component';
 import { TestimoniosComponent } from './component/Principal/testimonios/testimonios.component';
 import { FooddonationCrearComponent } from './component/User/FoodDonation/fooddonation-crear/fooddonation-crear.component';
 import { DialogoFoodListarComponent } from './component/User/FoodDonation/fooddonation-listar/dialogo-food-listar/dialogo-food-listar.component';
@@ -60,7 +64,6 @@ import { RegistrarseComponent } from './component/User/Registrarse/registrarse/r
 import { TransactionvoucherCrearComponent } from './component/User/TransactionVoucher/transactionvoucher-crear/transactionvoucher-crear.component';
 import { TransactionvoucherListarComponent } from './component/User/TransactionVoucher/transactionvoucher-listar/transactionvoucher-listar.component';
 import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
-import { LoginComponent } from './component/Login/login/login.component';
 
 
 
@@ -108,7 +111,10 @@ import { LoginComponent } from './component/Login/login/login.component';
     PerfilListarComponent,
     DialogoFoodListarComponent,
     DialogoMoneyListarComponent,
-    LoginComponent
+    LoginComponent,
+    FundadoresComponent,
+    MisionComponent,
+    VisionComponent
 
     //colocar tus componentes que creas
   ],

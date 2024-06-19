@@ -1,42 +1,46 @@
-
-<mat-toolbar color="transparent"></mat-toolbar>
-
-<!--navbar-->
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div class="container">
-    <!--Logo-->
-    <img src="./assets/Images/Logo/HungerFood.png" mat-icon-button [routerLink]="'/principal/home'" alt="HungerFood Logo">
-    <!--Toggle Btn-->
-    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <!-- Logo -->
+    <img src="./assets/Images/Logo/HungerFood.png" class="logo-img" [routerLink]="'/principal/home'"
+      alt="HungerFood Logo">
+
+    <!-- Toggle Btn (Hamburguesa) -->
+    <button class="navbar-toggler shadow-none border-0" type="button" (click)="toggleNavbar()"
+      aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!--SileBar-->
-    <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <!--Slidebar Header-->
+    <!-- Sidebar -->
+    <div #offcanvasNavbar class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel">
+      <!-- Sidebar Header -->
       <div class="offcanvas-header text-dark border-bottom">
-        <button  [routerLink]="'/principal/home'">HUNGERFOOD</button>
-        <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <img src="./assets/Images/Logo/HungerFood.png" class="logo-img" [routerLink]="'/principal/home'"
+          alt="HungerFood Logo">
+        <button type="button" class="btn-close btn-close-dark" (click)="closeNavbar()" aria-label="Close"></button>
       </div>
-      <!--Slidebar Body-->
+      <!-- Sidebar Body -->
       <div class="offcanvas-body d-flex flex-column flex-lg-row p-3 p-lg-0">
         <ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3">
           <li class="nav-item mx-2">
-            <a class="nav-link active" aria-current="page" [routerLink]="'/principal/sobre-nosotros'">Sobre Nosotros</a>
+            <a class="nav-link active" [routerLink]="'/principal/sobre-nosotros'" (click)="closeNavbar()">
+              Sobre Nosotros
+            </a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link active" aria-current="page" [routerLink]="'/principal/donar'">Donar</a>
+            <a class="nav-link active" [routerLink]="'/principal/donar'" (click)="closeNavbar()">Donar</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link active" aria-current="page" [routerLink]="'/principal/contactenos'">Contáctenos</a>
+            <a class="nav-link active" [routerLink]="'/principal/contactenos'" (click)="closeNavbar()">Contáctenos</a>
           </li>
         </ul>
         <!-- Login / Sign up -->
         <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4">
-          <a [routerLink]="'/principal/hola-inicia-sesion'" class="text-dark">HOLA, Inicia Sesión</a>
+          <a [routerLink]="'/principal/hola-inicia-sesion'" class="text-dark">
+            HOLA, Inicia Sesión
+          </a>
         </div>
       </div>
     </div>
   </div>
 </nav>
-<router-outlet></router-outlet>

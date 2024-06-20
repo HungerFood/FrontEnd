@@ -1,12 +1,18 @@
-<!-- PANTALLA PRINCIPAL -->
- 
-<app-navbar-principal></app-navbar-principal>
+<ng-container *ngIf="!userRole; else loggedIn">
+    <app-navbar-principal></app-navbar-principal>
     <router-outlet></router-outlet>
-<app-footer-principal></app-footer-principal>
-
-
-<!-- PANTALLA PRINCIPAL DE ADMIN -->
-<!--<app-main-adm></app-main-adm>-->
-
-
-<!-- PANTALLA PRINCIPAL DE DONANTE -->
+    <app-footer-principal></app-footer-principal>
+  </ng-container>
+  <ng-template #loggedIn>
+    <ng-container *ngIf="userRole === 'DONANTE'; else adminView">
+      <app-navbar-donante></app-navbar-donante>
+      <!-- FALTARIA EL FOOTER PARA DONANTE -->
+      <router-outlet></router-outlet>
+      
+    </ng-container>
+    <ng-template #adminView>
+      <app-navbar-admin *ngIf="userRole === 'ADMIN'"></app-navbar-admin>
+      <router-outlet></router-outlet>
+    </ng-template>
+  </ng-template>
+  

@@ -20,9 +20,34 @@ import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Pr
 import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Condiciones/terminos-y-condiciones/terminos-y-condiciones.component';
 import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/libro-de-reclamos/libro-de-reclamos.component';
 import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
-;
+import { MainUserComponent } from './component/User/main-user/main-user.component';
+import { AuthGuardAdmin } from './security/admin/auth-guard-admin.guard';
+import { AuthGuardDonante } from './security/donante/auth-guard-donante.guard';
+import { DonanteComponent } from './component/User/donante/donante.component';
+import { AdminComponent } from './component/Admin/admin/admin.component';
+
 
 const routes: Routes = [
+
+
+  //--------------------------------------
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [AuthGuardAdmin]
+  },
+  {
+    path: 'donante',
+    component: DonanteComponent,
+    canActivate: [AuthGuardDonante]
+  },
+
+  { path: 'admin', component: AdminComponent, canActivate: [AuthGuardAdmin] },
+  { path: 'donante', component: DonanteComponent, canActivate: [AuthGuardDonante] },
+
+
+  //--------------------------------------
+
   
   //------------------------------------------------------------------RUTA POR DEFECTO----------------------------------------------------------------------------------------------
   { path: '', redirectTo: 'principal/home', pathMatch: 'full' }, // Ruta por defecto
@@ -45,19 +70,19 @@ const routes: Routes = [
 
   //------------------------------------------------------------------LOGIN----------------------------------------------------------------------------------------------
   { path: 'principal/login', component: LoginComponent },// INICIAR SESION
+  //---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
   //------------------------------------------------------------------REGISTRARSE----------------------------------------------------------------------------------------------
-  { path: 'principal/registrarse', component: RegistrarseComponent },// REGISTRARSE
+  { path: 'principal/login/registrarse', component: RegistrarseComponent },// REGISTRARSE
 
   //------------------------------------------------------------------PERFIL----------------------------------------------------------------------------------------------
-  { path: 'principal/perfil', component: PerfilComponent },// PERFIL PRINCIPAL, DESDE AQUI NAVEGA A TODOS LADOS
+  { path: 'principal/login/donante/perfil', component: PerfilComponent, canActivate: [AuthGuardDonante], data: { roles: ['DONANTE'] } },// PERFIL PRINCIPAL, DESDE AQUI NAVEGA A TODOS LADOS
 
   //------------------------------------------------------------------PERFIL DONANTE----------------------------------------------------------------------------------------------
-  { path: 'principal/perfilListar', component: PerfilListarComponent },// MUESTRA LOS DATOS BASICOS DEL DONANTE/USUARIO
+  { path: 'principal/login/donante/perfil/perfilListar', component: PerfilListarComponent, canActivate: [AuthGuardDonante], data: { roles: ['DONANTE'] }  },// MUESTRA LOS DATOS BASICOS DEL DONANTE/USUARIO
+  // { path: 'perfil', component: PerfilComponent, canActivate: [AuthGuardDonante] },
 
-
-  
-  
   
 
 
@@ -78,16 +103,7 @@ const routes: Routes = [
   //------------------------------------------------------------------ADMIN----------------------------------------------------------------------------------------------
   { path: 'TypeOfFood/findAll/listar', component: TypeOfFoodListarComponent },
   { path: 'TypeOfFood/findAll/nuevo', component: TypeOfFoodCrearComponent },
-  { path: 'TypeOfFood', component: TypeOfFoodComponent },
-
-
-
-
-
-
-
-
-
+  { path: 'TypeOfFood', component: TypeOfFoodComponent, canActivate: [AuthGuardAdmin], data: { roles: ['ADMIN'] }},
 
   //------------------------------------------------------------------FOOTER----------------------------------------------------------------------------------------------
   { path: 'footer/terminos-y-condiciones', component: TerminosYCondicionesComponent },// TERMINOS Y CONDICIONES

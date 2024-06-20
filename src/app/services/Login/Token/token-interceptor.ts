@@ -6,28 +6,29 @@ import { EMPTY, Observable, catchError, retry, throwError } from 'rxjs';
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
 
-  constructor(private loginService:LoginService) {}
+  constructor(private loginService: LoginService) {}
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const token = this.loginService.getToken();
-    if(token){
-      console.log("Intercepto!!");
+    if (token) {
       const cloned = request.clone({
-        headers: request.headers.set('Authorization', "Bearer "+ localStorage.getItem("token")?.toString())
-      })
+        headers: request.headers.set('Authorization', `Bearer ${token}`)
+      });
+
       return next.handle(cloned).pipe(
         catchError((error: HttpErrorResponse) => {
-          if (error.status === HttpStatusCode.Forbidden) {
-            //this.loginService.logout();
-            alert("No cuentas con los permisos!")
-            return EMPTY;
+          if (error.status === 403) {
+            alert("No cuentas con los permisos necesarios para acceder a este recurso.");
+            return EMPTY; // Retorna un observable vacío para cancelar la secuencia
           } else {
-            return throwError(() => error);
+            return throwError(() => error); // Propaga el error si no es un Forbidden
           }
         })
       );
-    };
-
-    return next.handle(request);
+    } else {
+      // Si no hay token, continua con la solicitud original
+      return next.handle(request);
+    }
   }
+
 }

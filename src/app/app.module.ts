@@ -11,7 +11,7 @@ import { HolaIniciaSesionComponent } from './component/Principal/hola-inicia-ses
 import { PrincipalComponent } from './component/Principal/principal/principal.component';
 
 //importar los modulos de angular material
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatButtonModule } from '@angular/material/button';
@@ -68,6 +68,10 @@ import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Pr
 import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
 import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Condiciones/terminos-y-condiciones/terminos-y-condiciones.component';
 import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/libro-de-reclamos/libro-de-reclamos.component';
+import { TokenInterceptor } from './services/Login/Token/token-interceptor';
+import { MainUserComponent } from './component/User/main-user/main-user.component';
+import { DonanteComponent } from './component/User/donante/donante.component';
+
 
 
 
@@ -122,8 +126,9 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
     PoliticaDePrivacidadComponent,
     PoliticaDeCookiesComponent,
     TerminosYCondicionesComponent,
-    LibroDeReclamosComponent
-
+    LibroDeReclamosComponent,
+    MainUserComponent,
+    DonanteComponent,
     //colocar tus componentes que creas
   ],
   imports: [
@@ -149,7 +154,7 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
     MatExpansionModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync()  ,{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

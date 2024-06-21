@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div class="container">
     <!-- Logo -->
-    <img src="./assets/Images/Logo/HungerFood.png" class="logo-img" [routerLink]="'/principal/home'" alt="HungerFood Logo">
+    <img src="./assets/Images/Logo/HungerFood.png" class="logo-img" [routerLink]="'/'" alt="HungerFood Logo">
     
     <!-- Toggle Btn (Hamburguesa) -->
     <button class="navbar-toggler shadow-none border-0" type="button" (click)="toggleNavbar()" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@
     <div #offcanvasNavbar class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <!-- Sidebar Header -->
       <div class="offcanvas-header text-dark border-bottom">
-        <img src="./assets/Images/Logo/HungerFood.png" class="logo-img" [routerLink]="'/principal/home'" alt="HungerFood Logo">
+        <img src="./assets/Images/Logo/HungerFood.png" class="logo-img" [routerLink]="'/'" alt="HungerFood Logo">
         <button type="button" class="btn-close btn-close-dark" (click)="closeNavbar()" aria-label="Close"></button>
       </div>
       <!-- Sidebar Body -->
@@ -33,10 +33,18 @@
         </ul>
         <!-- Login / Sign up -->
         <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4">
-          <a [routerLink]="'/principal/login'" class="text-dark">
+          <a [routerLink]="'/login1'" class="text-dark">
             HOLA, Inicia Sesión
           </a>
         </div>
+
+        <!-- logout -->
+        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4">
+          <a (click)="logout()" class="text-dark">
+            Cerrar Sesión
+          </a>
+        </div>
+
       </div>
     </div>
   </div>

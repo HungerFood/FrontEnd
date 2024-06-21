@@ -1,8 +1,8 @@
 <div class="botonesDonaciones">
-    <button mat-raised-button class="demo-button" routerLink="/principal/donacionesComidaCrear">Registrar
+    <button mat-raised-button class="demo-button" routerLink="/donante/perfil/donacionesComidaCrear">Registrar
         donacion</button>
     <!--<button mat-raised-button class="demo-button">Listar</button>-->
-    <button mat-raised-button class="demo-button" routerLink="/principal/login/donante/perfil">Volver al panel de Usuario</button>
+    <button mat-raised-button class="demo-button" routerLink="/donante/perfil">Volver al panel de Usuario</button>
 </div>
 
 <table mat-table [dataSource]="dataSource" class="tablaDonaciones">
@@ -47,7 +47,7 @@
     <ng-container matColumnDef="accion01">
         <th mat-header-cell *matHeaderCellDef> Editar </th>
         <td mat-cell *matCellDef="let element">
-            <button mat-raised-button color="warn" [routerLink]="['/principal/donacionesComidaEditar',element.id]"><span
+            <button mat-raised-button color="warn" [routerLink]="['/donante/perfil/donacionesComidaCrear/donacionesComidaListar/donacionesComidaEditar',element.id]"><span
                     class="material-icons">update</span></button>
         </td>
     </ng-container>

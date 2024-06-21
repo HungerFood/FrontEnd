@@ -60,6 +60,8 @@ import { TransactionvoucherCrearComponent } from './component/User/TransactionVo
 import { TransactionvoucherListarComponent } from './component/User/TransactionVoucher/transactionvoucher-listar/transactionvoucher-listar.component';
 import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
 import { LoginComponent } from './component/Login/login/login.component';
+import { TokenInterceptor } from './services/Login/Token/token-interceptor';
+import { Login1Component } from './component/Login/login1/login1.component';
 import { MisionComponent } from './component/Principal/sobre-nosotros/mision/mision.component';
 import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros/sobre-nosotros.component';
 import { VisionComponent } from './component/Principal/sobre-nosotros/vision/vision.component';
@@ -68,10 +70,6 @@ import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Pr
 import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
 import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Condiciones/terminos-y-condiciones/terminos-y-condiciones.component';
 import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/libro-de-reclamos/libro-de-reclamos.component';
-import { TokenInterceptor } from './services/Login/Token/token-interceptor';
-import { MainUserComponent } from './component/User/main-user/main-user.component';
-import { DonanteComponent } from './component/User/donante/donante.component';
-
 
 
 
@@ -119,16 +117,16 @@ import { DonanteComponent } from './component/User/donante/donante.component';
     DialogoFoodListarComponent,
     DialogoMoneyListarComponent,
     LoginComponent,
+    Login1Component,
+    FundadoresComponent,
     MisionComponent,
     SobreNosotrosComponent,
     VisionComponent,
-    FundadoresComponent,
     PoliticaDePrivacidadComponent,
     PoliticaDeCookiesComponent,
     TerminosYCondicionesComponent,
-    LibroDeReclamosComponent,
-    MainUserComponent,
-    DonanteComponent,
+    LibroDeReclamosComponent
+
     //colocar tus componentes que creas
   ],
   imports: [
@@ -154,7 +152,7 @@ import { DonanteComponent } from './component/User/donante/donante.component';
     MatExpansionModule
   ],
   providers: [
-    provideAnimationsAsync()  ,{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+    provideAnimationsAsync(), { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

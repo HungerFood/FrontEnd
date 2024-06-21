@@ -3,10 +3,10 @@ import { TransactionVoucherService } from './../../../../services/TransactionVou
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { TransactionVoucher } from '../../../../model/TransactionVoucher/transaction-voucher';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-transactionvoucher-listar',

@@ -8,6 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AppComponent {
   title = 'HungerFood_FrontEnd';
-    constructor(public route: ActivatedRoute){}
-  ngOnInit(): void { }
+  userRole: string | null = null;
+
+  ngOnInit() {
+    // SON DOS ROLES, ADMIN Y DONANTE, LA CUAL CUANDO INCIE SESION, USEN EL NAVBAR CORRESPONDIENTE CADA UNO
+    this.userRole = localStorage.getItem('role');
+    
+
+  }
 }

@@ -2,74 +2,75 @@
 
 /* Estilo básico para asegurar que el componente ocupe toda la pantalla */
 .image-container {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Ocupa toda la altura del viewport */
-  overflow: hidden; /* Para asegurar que las imágenes no se desborden */
-}
-
-/* Estilo para las imágenes */
-.slide-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
-  transition: opacity 1s ease-in-out; /* Transición suave de opacidad */
-}
-
-/* Estilo para la superposición de texto */
-.text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
-  color: white; /* Color de texto blanco para mejor contraste */
-  font-family: 'Courier New', Courier, monospace;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra de texto para mejorar legibilidad */
-}
-
-/* Estilo para el texto dinámico */
-#text {
-  font-size: 6vw; /* Tamaño de fuente relativo */
-  max-width: 90%; /* Ancho máximo del texto */
-  letter-spacing: 1px; /* Espaciado entre letras */
-  line-height: 1.2; /* Altura de línea */
-}
-
-/* Estilo para el cursor de consola */
-.console-underscore {
-  display: inline-block;
-  width: 8px;
-  background-color: white;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  50% {
-      opacity: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura del viewport */
+    overflow: hidden; /* Para asegurar que las imágenes no se desborden */
   }
-}
-
-/* Clase para ocultar elementos */
-.hidden {
-  visibility: hidden;
-}
-
-/* Media queries para dispositivos móviles y pantallas pequeñas */
-@media screen and (max-width: 768px) {
+  
+  /* Estilo para las imágenes */
+  .slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+    transition: opacity 1s ease-in-out; /* Transición suave de opacidad */
+  }
+  
+  /* Estilo para la superposición de texto */
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: white; /* Color de texto blanco para mejor contraste */
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra de texto para mejorar legibilidad */
+  }
+  
+  /* Estilo para el texto dinámico */
   #text {
-      font-size: 10vw; /* Tamaño de fuente mayor para dispositivos móviles */
+    font-size: 6vw; /* Tamaño de fuente relativo */
+    max-width: 90%; /* Ancho máximo del texto */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    line-height: 1.2; /* Altura de línea */
   }
-}
-
-@media screen and (max-width: 480px) {
-  #text {
-      font-size: 12vw; /* Aumentar tamaño de fuente para dispositivos más pequeños */
-      letter-spacing: 2px; /* Aumentar espaciado entre letras */
-      line-height: 1.5; /* Ajustar altura de línea */
+  
+  /* Estilo para el cursor de consola */
+  .console-underscore {
+    display: inline-block;
+    width: 8px;
+    background-color: white;
+    animation: blink 1s infinite;
   }
-}
+  
+  @keyframes blink {
+    50% {
+        opacity: 0;
+    }
+  }
+  
+  /* Clase para ocultar elementos */
+  .hidden {
+    visibility: hidden;
+  }
+  
+  /* Media queries para dispositivos móviles y pantallas pequeñas */
+  @media screen and (max-width: 768px) {
+    #text {
+        font-size: 10vw; /* Tamaño de fuente mayor para dispositivos móviles */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #text {
+        font-size: 12vw; /* Aumentar tamaño de fuente para dispositivos más pequeños */
+        letter-spacing: 2px; /* Aumentar espaciado entre letras */
+        line-height: 1.5; /* Ajustar altura de línea */
+    }
+  }
+  

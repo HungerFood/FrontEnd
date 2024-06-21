@@ -82,14 +82,14 @@ export class FooddonationCrearComponent implements OnInit {
         this.foodDonationService.update(this.foodDonation).subscribe(() => {
           this.foodDonationService.list().subscribe(data => {
             this.foodDonationService.setList(data);
-            this.router.navigate(['principal/donacionesComidaListar']);
+            this.router.navigate(['donante/perfil/donacionesComidaCrear/donacionesComidaListar']);
           });
         });
       } else {
         this.foodDonationService.insert(this.foodDonation).subscribe(() => {
           this.foodDonationService.list().subscribe(data => {
             this.foodDonationService.setList(data);
-            this.router.navigate(['principal/donacionesComidaListar']);
+            this.router.navigate(['donante/perfil/donacionesComidaCrear/donacionesComidaListar']);
           });
         });
       }

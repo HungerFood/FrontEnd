@@ -5,7 +5,7 @@ import { AfterViewInit, Component, ElementRef } from '@angular/core';
   templateUrl: './donacion-economica.component.html',
   styleUrl: './donacion-economica.component.css'
 })
-export class DonacionEconomicaComponent implements AfterViewInit {
+export class DonacionEconomicaComponent implements AfterViewInit{
   constructor(private el: ElementRef) {}
 
   ngAfterViewInit() {
@@ -24,4 +24,5 @@ export class DonacionEconomicaComponent implements AfterViewInit {
       observer.observe(container);
     }
   }
+
 }

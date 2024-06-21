@@ -1,18 +1,54 @@
-<div class="container py-5">
-    <form class="mx-autho" style="max-width: 25rem;" #form="ngForm" (ngSubmit)='login(form)'>
-        <h1 class="mb-5" text-center>Inicio del Curso</h1>
-        <div class="mb-3">
-            <label for="email">User</label>
-            <input id="email" name="email" type="username" class="form-control" [(ngModel)]="creds.username">
+<div class="container-login">
+    <form class="login-form" style="max-width: 25rem;" #form="ngForm" (ngSubmit)="login(form.value)">
+        <h1 class="title">Iniciar Sesión</h1>
+        
+        <div class="email">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" type="text" class="form-control" aria-describedby="emailHelp" [(ngModel)]="creds.email" required
+                #email="ngModel" pattern=".+@gmail\.com$">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
+                Por favor ingrese un correo válido
+            </div>
+            <div *ngIf="email.errors?.['pattern']" class="invalid-feedback">
+                El correo electrónico debe terminar con &#64;gmail.com
+            </div>
+        </div> 
+
+        <!-- <div class="email">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" type="email" class="form-control" aria-describedby="emailHelp" [(ngModel)]="creds.email" required
+                #email="ngModel" pattern=".+@org\.hungerfood\.com$">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
+                Por favor ingrese un correo válido.
+            </div>
+            <div *ngIf="email.errors?.['pattern']" class="invalid-feedback">
+                El correo electrónico debe terminar con &#64;org.hungerfood.com.
+            </div>
+        </div> -->
+        
+
+        <br>
+
+        <div class="password">
+            <label for="password" class="form-label">Contraseña</label>
+            <input id="password" name="password" type="password" class="form-control" [(ngModel)]="creds.password" required
+                #password="ngModel">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="invalid-feedback">
+                Por favor ingrese una contraseña
+            </div>
         </div>
 
-        <div class="mb-3">
-            <label for="password">Password</label>
-            <input id="password" name="password" type="password" class="form-control" [(ngModel)]="creds.password">
-        </div>
-        <div class="d-grid">
-            <button class="btn btn-lg btn-primary">Ingresar</button>
-        </div>
+        <br>
 
+        <!-- <div class="link">
+            <a href="reg" class="link-primary">¿Eres nuevo en HungerFood?</a>
+        </div> -->
+        <br>
+        <div class="btn-IniciarSesion">
+            <button type="submit" class="btn1">Iniciar Sesión</button>
+        </div>
+        <!-- <div class="btn-CrearCuenta">
+            <button type="button" class="btn2">Crear cuenta</button>
+        </div> -->
     </form>
 </div>

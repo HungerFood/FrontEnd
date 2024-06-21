@@ -76,14 +76,14 @@ export class MoneyDonationCrearComponent implements OnInit {
         this.moneyDonationService.update(this.moneyDonation).subscribe(() => {
           this.moneyDonationService.list().subscribe(data => {
             this.moneyDonationService.setList(data);
-            this.router.navigate(['principal/donacionesDineroListar']);
+            this.router.navigate(['donante/perfil/donacionesDineroCrear/donacionesDineroListar']);
           });
         });
       } else {
         this.moneyDonationService.insert(this.moneyDonation).subscribe(() => {
           this.moneyDonationService.list().subscribe(data => {
             this.moneyDonationService.setList(data);
-            this.router.navigate(['principal/donacionesDineroListar']);
+            this.router.navigate(['donante/perfil/donacionesDineroCrear/donacionesDineroListar']);
           });
         });
       }

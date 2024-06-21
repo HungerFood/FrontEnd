@@ -54,7 +54,7 @@ export class TypeOfFoodCrearComponent implements OnInit{
             this.TypeOfFoodService.setList(data); 
           });
         });
-        this.router.navigate(['/TypeOfFood/findAll/listar']);
+        this.router.navigate(['/admin/TypeOfFood/findAll/listar']);
       } else {
         this.mensaje = "Agregue campos omitidos";
       }

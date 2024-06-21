@@ -5,7 +5,7 @@ import { AfterViewInit, Component, ElementRef } from '@angular/core';
   templateUrl: './donacion-alimento.component.html',
   styleUrl: './donacion-alimento.component.css'
 })
-export class DonacionAlimentoComponent implements AfterViewInit {
+export class DonacionAlimentoComponent implements AfterViewInit{
   constructor(private el: ElementRef) {}
 
   ngAfterViewInit() {

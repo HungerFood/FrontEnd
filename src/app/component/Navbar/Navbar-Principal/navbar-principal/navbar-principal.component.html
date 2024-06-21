@@ -20,23 +20,31 @@
       <div class="offcanvas-body d-flex flex-column flex-lg-row p-3 p-lg-0">
         <ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3">
           <li class="nav-item mx-2">
-            <a class="nav-link active" [routerLink]="'/sobre-nosotros'" (click)="closeNavbar()">
+            <a class="nav-link active" [routerLink]="'/principal/sobre-nosotros'" (click)="closeNavbar()">
               Sobre Nosotros
             </a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link active" [routerLink]="'/donar'" (click)="closeNavbar()">Donar</a>
+            <a class="nav-link active" [routerLink]="'/principal/donar'" (click)="closeNavbar()">Donar</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link active" [routerLink]="'/contactenos'" (click)="closeNavbar()">Contáctenos</a>
+            <a class="nav-link active" [routerLink]="'/principal/contactenos'" (click)="closeNavbar()">Contáctenos</a>
           </li>
         </ul>
         <!-- Login / Sign up -->
         <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4">
-          <a [routerLink]="'/hola-inicia-sesion'" class="text-dark">
+          <a [routerLink]="'/login1'" class="text-dark">
             HOLA, Inicia Sesión
           </a>
         </div>
+
+        <!-- logout -->
+        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4">
+          <a (click)="logout()" class="text-dark">
+            Cerrar Sesión
+          </a>
+        </div>
+
       </div>
     </div>
   </div>

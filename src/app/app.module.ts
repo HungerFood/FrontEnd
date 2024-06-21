@@ -11,7 +11,7 @@ import { HolaIniciaSesionComponent } from './component/Principal/hola-inicia-ses
 import { PrincipalComponent } from './component/Principal/principal/principal.component';
 
 //importar los modulos de angular material
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatButtonModule } from '@angular/material/button';
@@ -60,6 +60,8 @@ import { TransactionvoucherCrearComponent } from './component/User/TransactionVo
 import { TransactionvoucherListarComponent } from './component/User/TransactionVoucher/transactionvoucher-listar/transactionvoucher-listar.component';
 import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
 import { LoginComponent } from './component/Login/login/login.component';
+import { TokenInterceptor } from './services/Login/Token/token-interceptor';
+import { Login1Component } from './component/Login/login1/login1.component';
 import { MisionComponent } from './component/Principal/sobre-nosotros/mision/mision.component';
 import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros/sobre-nosotros.component';
 import { VisionComponent } from './component/Principal/sobre-nosotros/vision/vision.component';
@@ -115,10 +117,11 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
     DialogoFoodListarComponent,
     DialogoMoneyListarComponent,
     LoginComponent,
+    Login1Component,
+    FundadoresComponent,
     MisionComponent,
     SobreNosotrosComponent,
     VisionComponent,
-    FundadoresComponent,
     PoliticaDePrivacidadComponent,
     PoliticaDeCookiesComponent,
     TerminosYCondicionesComponent,
@@ -149,7 +152,7 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
     MatExpansionModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(), { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

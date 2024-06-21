@@ -126,12 +126,15 @@
     cursor: not-allowed;
 }
 
-/* Query para móviles y que se muestre todo el formulario */
+/*Query para moviles la cual el fomrualrio se vea legibel, centrado y los botones esten uno enciima del otro respetando su espacio*/
 @media (max-width: 576px) {
     .login-form {
-        padding: 1rem;
+        width: 80%;
     }
-    .login-form h1 {
-        font-size: 1.5rem;
+
+    .btn-IniciarSesion button,
+    .btn-CrearCuenta button {
+        width: 100%;
     }
+    
 }

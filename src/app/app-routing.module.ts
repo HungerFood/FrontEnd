@@ -1,3 +1,4 @@
+
 import { MoneyDonationListarComponent } from './component/User/MoneyDonation/money-donation-listar/money-donation-listar.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -22,6 +23,8 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
 import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
 import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Privacidad/politica-de-privacidad/politica-de-privacidad.component';
 import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros/sobre-nosotros.component';
+import { PerfilAdmComponent } from './component/Admin/PerfilAdm/perfil-adm/perfil-adm.component';
+import { PerfilListarAdmComponent } from './component/Admin/PerfilAdm/perfil-listar-adm/perfil-listar-adm.component';
 
 
 const routes: Routes = [
@@ -43,9 +46,12 @@ const routes: Routes = [
  {
   path: 'admin',
   children: [
-    { path: 'TypeOfFood/findAll/listar', component: TypeOfFoodListarComponent },
-    { path: 'TypeOfFood/findAll/nuevo', component: TypeOfFoodCrearComponent },
-    { path: 'TypeOfFood', component: TypeOfFoodComponent },
+    { path: 'perfil/TypeOfFood/findAll/listar', component: TypeOfFoodListarComponent },
+    { path: 'perfil/TypeOfFood/findAll/nuevo', component: TypeOfFoodCrearComponent },
+    { path: 'perfil/TypeOfFood', component: TypeOfFoodComponent },
+    { path:'perfil', component:PerfilAdmComponent},
+    { path: 'perfil/perfilListar', component: PerfilListarAdmComponent },
+    { path: 'perfil/TypeOfFood/findAll/update/:id', component:TypeOfFoodCrearComponent},
   ],
 },
 //donante::================================================

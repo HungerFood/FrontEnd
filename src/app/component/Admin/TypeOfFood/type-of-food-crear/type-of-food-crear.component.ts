@@ -7,57 +7,68 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 @Component({
   selector: 'app-type-of-food-crear',
   templateUrl: './type-of-food-crear.component.html',
-  styleUrl: './type-of-food-crear.component.css'
+  styleUrls: ['./type-of-food-crear.component.css']
 })
-export class TypeOfFoodCrearComponent implements OnInit{
+export class TypeOfFoodCrearComponent implements OnInit {
   form: FormGroup = new FormGroup({});
   typeoffood: TypeOfFood = new TypeOfFood();
   mensaje: string = '';
   id: number = 0;
 
   constructor(
-    private TypeOfFoodService: TypeOfFoodService,
+    private typeOfFoodService: TypeOfFoodService,
     private router: Router,
-    private route : ActivatedRoute
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe((data:Params)=>
-    {
-      this.id = data['id']; 
-      this.init();
-     });
+    this.route.params.subscribe((data: Params) => {
+      this.id = data['id'];
+      if (this.id) {
+        this.init(this.id);
+      }
+    });
 
     this.form = new FormGroup({
       id: new FormControl(),
       food_type_name: new FormControl('', [Validators.required]),
-    })
+    });
   }
 
-  init() {
-    this.TypeOfFoodService.list().subscribe((data) => {
-     this.form = new FormGroup({
-      id: new FormControl(data.id),
-      food_type_name: new FormControl(data.food_type_name),
-     });
-     });
-    } 
+  init(id: number) {
+    this.typeOfFoodService.listId(id).subscribe((data) => {
+      this.form = new FormGroup({
+        id: new FormControl(data.id),
+        food_type_name: new FormControl(data.food_type_name, [Validators.required]),
+      });
+    });
+  }
 
-    aceptar(){
-      this.typeoffood.id = this.form.value['id'];
-      this.typeoffood.food_type_name = this.form.value['food_type_name'];
-  
-      if (this.form.valid) {
-        console.log(this.typeoffood);
-        this.TypeOfFoodService.insert(this.typeoffood).subscribe(() => {
-          this.TypeOfFoodService.list().subscribe((data: TypeOfFood[]) => {
-            this.TypeOfFoodService.setList(data); 
-          });
+  aceptar() {
+    this.typeoffood.id = this.form.value['id'];
+    this.typeoffood.food_type_name = this.form.value['food_type_name'];
+
+    if (this.form.valid) {
+      if (this.typeoffood.id) {
+        // Actualizar
+        this.typeOfFoodService.update(this.typeoffood).subscribe(() => {
+          this.postSave();
         });
-        this.router.navigate(['/admin/TypeOfFood/findAll/listar']);
       } else {
-        this.mensaje = "Agregue campos omitidos";
+        // Insertar
+        this.typeOfFoodService.insert(this.typeoffood).subscribe(() => {
+          this.postSave();
+        });
       }
+    } else {
+      this.mensaje = "Agregue campos omitidos";
     }
+  }
 
+  postSave() {
+    this.typeOfFoodService.list().subscribe((data: TypeOfFood[]) => {
+      this.typeOfFoodService.setList(data);
+    });
+    this.router.navigate(['/admin/perfil/TypeOfFood/findAll/listar']);
+  }
 }

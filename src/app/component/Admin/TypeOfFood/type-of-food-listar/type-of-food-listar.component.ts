@@ -15,7 +15,7 @@ import { DialogComponent } from './dialog/dialog.component';
 })
 export class TypeOfFoodListarComponent implements OnInit{
   lista:TypeOfFood[] = [];
-  displayedColumns = ['id', 'food_type_name', 'eliminar'];
+  displayedColumns = ['id', 'food_type_name', 'eliminar', 'actualizar'];
   dataSource = new MatTableDataSource<TypeOfFood>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;

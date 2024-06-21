@@ -70,6 +70,8 @@ import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Pr
 import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
 import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Condiciones/terminos-y-condiciones/terminos-y-condiciones.component';
 import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/libro-de-reclamos/libro-de-reclamos.component';
+import { PerfilAdmComponent } from './component/Admin/PerfilAdm/perfil-adm/perfil-adm.component';
+import { PerfilListarAdmComponent } from './component/Admin/PerfilAdm/perfil-listar-adm/perfil-listar-adm.component';
 
 
 
@@ -110,7 +112,6 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
     MainAdmComponent,
     MoneyDonationComponent,
     MoneyDonationCrearComponent,
-    PerfilComponent,
     RegistrarseComponent,
     MoneyDonationListarComponent,
     PerfilListarComponent,
@@ -125,8 +126,10 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
     PoliticaDePrivacidadComponent,
     PoliticaDeCookiesComponent,
     TerminosYCondicionesComponent,
-    LibroDeReclamosComponent
-
+    LibroDeReclamosComponent,
+    PerfilComponent,
+    PerfilAdmComponent,
+    PerfilListarAdmComponent
     //colocar tus componentes que creas
   ],
   imports: [
@@ -149,7 +152,8 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
     MatDialogContent,
     MatSelect,
     MatDialogModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatToolbarModule,
   ],
   providers: [
     provideAnimationsAsync(), { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }

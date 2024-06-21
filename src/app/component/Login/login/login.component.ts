@@ -22,15 +22,15 @@ export class LoginComponent {
   console.log('Form Value:',form.value);
   return this.LoginService.login(this.creds)
                 .subscribe(response => {
-                this.router.navigate(['/admin/TypeOfFood/findAll/nuevo']);
+                this.router.navigate(['/admin/perfil']);
                 })
   }
-
+  
 login(form:NgForm){
   console.log('form value', form.value);
    this.LoginService.login(this.creds)
     .subscribe(response => {
-      this.router.navigate(['/admin/TypeOfFood/findAll/nuevo']);
+      this.router.navigate(['/admin/perfil']);
     });
 }
 

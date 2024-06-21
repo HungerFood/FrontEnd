@@ -73,3 +73,7 @@ img {
     transform: scaleY(1);
     opacity: 1;
 }
+
+.navbar {
+    position: unset;
+}

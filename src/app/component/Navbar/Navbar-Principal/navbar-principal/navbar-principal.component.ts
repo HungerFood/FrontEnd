@@ -3,9 +3,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-navbar-principal',
   templateUrl: './navbar-principal.component.html',
-  styleUrl: './navbar-principal.component.css'
+  styleUrls: ['./navbar-principal.component.css']
 })
-export class NavbarPrincipalComponent{
+export class NavbarPrincipalComponent {
   @ViewChild('offcanvasNavbar') offcanvasNavbar!: ElementRef; // Referencia al elemento offcanvasNavbar
   isNavbarCollapsed = true; // Estado inicial del menú, colapsado por defecto
 

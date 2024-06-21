@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Mínima altura de la ventana */
     background-image: url('/assets/Images/Login/Login-User/img_background.jpg');
     background-size: cover;
     background-position: center;
@@ -28,7 +28,9 @@
 .login-form {
     position: relative;
     z-index: 2; /* Asegura que el formulario esté encima de la capa semitransparente */
-    margin: 0 auto;
+    width: 30%; /* Ancho del formulario */
+    max-width: 100rem; /* Máximo ancho deseado */
+    height: 50vh; /* Altura automática */
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);

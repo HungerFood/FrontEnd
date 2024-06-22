@@ -6,7 +6,7 @@ import { Component, ElementRef } from '@angular/core';
   styleUrl: './principal.component.css'
 })
 export class PrincipalComponent {
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef) {}
 
   ngAfterViewInit() {
     const observer = new IntersectionObserver((entries) => {

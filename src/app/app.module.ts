@@ -33,6 +33,8 @@ import { AppComponent } from './app.component';
 import { PaymentMethodCrearComponent } from './component/Admin/PaymentMethod/payment-method-crear/payment-method-crear.component';
 import { PaymentMethodListarComponent } from './component/Admin/PaymentMethod/payment-method-listar/payment-method-listar.component';
 import { PaymentMethodComponent } from './component/Admin/PaymentMethod/payment-method/payment-method.component';
+import { PerfilAdmComponent } from './component/Admin/PerfilAdm/perfil-adm/perfil-adm.component';
+import { PerfilListarAdmComponent } from './component/Admin/PerfilAdm/perfil-listar-adm/perfil-listar-adm.component';
 import { TypeOfFoodCrearComponent } from './component/Admin/TypeOfFood/type-of-food-crear/type-of-food-crear.component';
 import { DialogComponent } from './component/Admin/TypeOfFood/type-of-food-listar/dialog/dialog.component';
 import { TypeOfFoodListarComponent } from './component/Admin/TypeOfFood/type-of-food-listar/type-of-food-listar.component';
@@ -43,6 +45,7 @@ import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cooki
 import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Privacidad/politica-de-privacidad/politica-de-privacidad.component';
 import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Condiciones/terminos-y-condiciones/terminos-y-condiciones.component';
 import { LoginComponent } from './component/Login/login/login.component';
+import { Login1Component } from './component/Login/login1/login1.component';
 import { ContentComponent } from './component/Principal/content/content.component';
 import { DonacionAlimentoComponent } from './component/Principal/donacion-alimento/donacion-alimento.component';
 import { DonacionEconomicaComponent } from './component/Principal/donacion-economica/donacion-economica.component';
@@ -68,6 +71,7 @@ import { RegistrarseComponent } from './component/User/Registrarse/registrarse/r
 import { TransactionvoucherCrearComponent } from './component/User/TransactionVoucher/transactionvoucher-crear/transactionvoucher-crear.component';
 import { TransactionvoucherListarComponent } from './component/User/TransactionVoucher/transactionvoucher-listar/transactionvoucher-listar.component';
 import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
+import { PerfilEditarComponent } from './component/User/Perfil/perfil-editar/perfil-editar.component';
 
 
 
@@ -122,7 +126,11 @@ import { TransactionvoucherComponent } from './component/User/TransactionVoucher
     LibroDeReclamosComponent,
     PoliticaDeCookiesComponent,
     PoliticaDePrivacidadComponent,
-    TerminosYCondicionesComponent
+    TerminosYCondicionesComponent,
+    PerfilAdmComponent,
+    PerfilListarAdmComponent,
+    Login1Component,
+    PerfilEditarComponent
 
     //colocar tus componentes que creas
   ],

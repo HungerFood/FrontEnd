@@ -33,3 +33,54 @@ header.hiLuPb a.sc-df1abb3d-0 .sc-20885047-1 {
     margin-left: 8px; /* Espacio entre el icono y el texto */
     color: #fff; /* Asegurar que el texto también sea blanco */
 }
+
+
+.select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.clGGdv {
+    color: white;
+    border: none;
+    background: none; /* Asegura que no haya fondo para el botón */
+    transition: transform 0.3s ease;
+}
+.clGGdv svg {
+    fill: white;
+    transition: transform 0.3s ease;
+}
+.clGGdv:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del botón y su contenido */
+}
+.jQaeAA {
+    color: white;
+    border: none;
+    transition: transform 0.3s ease;
+}
+.jQaeAA svg {
+    fill: white;
+    transition: transform 0.3s ease;
+}
+.jQaeAA span {
+    color: white;
+    transition: transform 0.3s ease;
+}
+.jQaeAA:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del enlace y su contenido */
+}
+.items-center {
+    align-items: center;
+}
+
+.jQaeAA {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    border: 0.125rem solid transparent;
+    border-radius: 0.25rem;
+    height: 48px;
+    padding: 0px 1.5rem;
+    background: transparent;
+    color: rgb(242, 242, 242);
+}

@@ -25,6 +25,9 @@ import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Pr
 import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros/sobre-nosotros.component';
 import { PerfilAdmComponent } from './component/Admin/PerfilAdm/perfil-adm/perfil-adm.component';
 import { PerfilListarAdmComponent } from './component/Admin/PerfilAdm/perfil-listar-adm/perfil-listar-adm.component';
+import { DonorRegistrarComponent } from './component/Admin/Donor/donor-registrar/donor-registrar.component';
+import { DonorListarComponent } from './component/Admin/Donor/donor-listar/donor-listar.component';
+
 
 
 const routes: Routes = [
@@ -49,9 +52,13 @@ const routes: Routes = [
     { path: 'perfil/TypeOfFood/findAll/listar', component: TypeOfFoodListarComponent },
     { path: 'perfil/TypeOfFood/findAll/nuevo', component: TypeOfFoodCrearComponent },
     { path: 'perfil/TypeOfFood', component: TypeOfFoodComponent },
+    { path: 'perfil/TypeOfFood/findAll/update/:id', component:TypeOfFoodCrearComponent},  
+
     { path:'perfil', component:PerfilAdmComponent},
     { path: 'perfil/perfilListar', component: PerfilListarAdmComponent },
-    { path: 'perfil/TypeOfFood/findAll/update/:id', component:TypeOfFoodCrearComponent},
+
+    { path: 'perfil/registrar-donador', component: DonorRegistrarComponent},
+    { path: 'perfil/lista-donadores', component:DonorListarComponent},
   ],
 },
 //donante::================================================

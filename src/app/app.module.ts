@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 //importar tus componentes
@@ -72,10 +73,11 @@ import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Con
 import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/libro-de-reclamos/libro-de-reclamos.component';
 import { PerfilAdmComponent } from './component/Admin/PerfilAdm/perfil-adm/perfil-adm.component';
 import { PerfilListarAdmComponent } from './component/Admin/PerfilAdm/perfil-listar-adm/perfil-listar-adm.component';
-
-
-
-
+import { DonorComponent } from './component/Admin/Donor/donor/donor.component';
+import { DonorRegistrarComponent } from './component/Admin/Donor/donor-registrar/donor-registrar.component';
+import { MatIconModule } from '@angular/material/icon';
+import { DonorListarComponent } from './component/Admin/Donor/donor-listar/donor-listar.component';
+import { DialogoComponent } from './component/Admin/Donor/donor-listar/dialogo/dialogo.component';
 
 @NgModule({
   declarations: [
@@ -108,7 +110,6 @@ import { PerfilListarAdmComponent } from './component/Admin/PerfilAdm/perfil-lis
     ContentComponent,
     DonacionAlimentoComponent,
     DonacionEconomicaComponent,
-    DialogComponent,
     MainAdmComponent,
     MoneyDonationComponent,
     MoneyDonationCrearComponent,
@@ -129,7 +130,15 @@ import { PerfilListarAdmComponent } from './component/Admin/PerfilAdm/perfil-lis
     LibroDeReclamosComponent,
     PerfilComponent,
     PerfilAdmComponent,
-    PerfilListarAdmComponent
+    PerfilListarAdmComponent,
+    DonorComponent,
+    DonorRegistrarComponent,
+    DonorListarComponent,
+    DialogComponent,
+    DialogoComponent
+
+
+
     //colocar tus componentes que creas
   ],
   imports: [
@@ -154,6 +163,8 @@ import { PerfilListarAdmComponent } from './component/Admin/PerfilAdm/perfil-lis
     MatDialogModule,
     MatExpansionModule,
     MatToolbarModule,
+    MatIconModule,
+    
   ],
   providers: [
     provideAnimationsAsync(), { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }

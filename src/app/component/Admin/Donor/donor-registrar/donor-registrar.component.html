@@ -1,0 +1,32 @@
+<div class="registrar">
+    <form [formGroup]="form" (submit)="aceptar()">
+        <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput hidden placeholder="Id" formControlName="id">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre(s)</mat-label>
+            <input matInput required placeholder="First Name" formControlName="firstname">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Apellidos</mat-label>
+            <input matInput required placeholder="Second Name" formControlName="lastname">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Contraseña</mat-label>
+            <input matInput required placeholder="Password" formControlName="password">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Correo</mat-label>
+            <input matInput required placeholder="Email" formControlName="email">
+        </mat-form-field>
+        <br>
+        <button mat-raised-button type="submit">Registrar Donante </button>
+        <button mat-raised-button routerLink="/admin/perfil">Volver al Menu</button>
+
+    </form>
+</div>

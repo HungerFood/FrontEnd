@@ -61,13 +61,19 @@ export class RegistrarseComponent implements OnInit {
     this.user.email = this.form.value['email'];
 
     if (this.form.valid) {
-      console.log(this.user);
-      this.userService.insert(this.user).subscribe((data) => {
-        this.userService.list().subscribe(data => {
-          this.userService.setList(data);
-        })
-      });
-      this.router.navigate(['login1']);
+      if (this.edicion) {
+        // Actualizar usuario existente
+        this.userService.update(this.user).subscribe((data) => {
+          // Manejar la respuesta, por ejemplo, mostrar un mensaje de éxito
+          this.router.navigate(['donante/perfil/perfilListar']); // Redirigir al perfil del usuario
+        });
+      } else {
+        // Insertar nuevo usuario
+        this.userService.insert(this.user).subscribe((data) => {
+          // Manejar la respuesta, por ejemplo, mostrar un mensaje de éxito
+          this.router.navigate(['login1']); // Redirigir al login o a donde consideres apropiado
+        });
+      }
     } else {
       this.mensaje = "Agregue campos faltantes";
     }

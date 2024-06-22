@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, map } from 'rxjs';
 import { environment } from '../../../environments/environments';
 import { User } from '../../model/User/user';
 
@@ -35,5 +35,10 @@ export class UserService {
   }
   getList() {
     return this.listaCambio.asObservable();
+  }
+  getUserId(): Observable<number> {
+    return this.http.get<{userId: number}>('/api/userId').pipe(
+      map(response => response.userId)
+    );
   }
 }

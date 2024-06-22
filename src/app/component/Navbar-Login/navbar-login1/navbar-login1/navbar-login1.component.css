@@ -1,0 +1,35 @@
+header.hiLuPb {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    padding: 24px 18px;
+    box-sizing: border-box;
+}
+
+header.hiLuPb button.sc-c55f794a-0,
+header.hiLuPb a.sc-df1abb3d-0 {
+    display: flex;
+    align-items: center;
+    color: #fff; /* Color blanco para el texto */
+    text-decoration: none;
+    border: none;
+    background: none; /* Eliminar estilos por defecto de botones y enlaces */
+    cursor: pointer;
+}
+
+header.hiLuPb button.sc-c55f794a-0 svg,
+header.hiLuPb a.sc-df1abb3d-0 svg {
+    fill: #fff; /* Color blanco para los iconos */
+}
+
+header.hiLuPb a.sc-df1abb3d-0 .sc-20885047-1 {
+    margin-left: 8px; /* Espacio entre el icono y el texto */
+    color: #fff; /* Asegurar que el texto también sea blanco */
+}

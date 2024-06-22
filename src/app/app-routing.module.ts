@@ -27,11 +27,11 @@ import { PerfilAdmComponent } from './component/Admin/PerfilAdm/perfil-adm/perfi
 import { PerfilListarAdmComponent } from './component/Admin/PerfilAdm/perfil-listar-adm/perfil-listar-adm.component';
 import { DonorRegistrarComponent } from './component/Admin/Donor/donor-registrar/donor-registrar.component';
 import { DonorListarComponent } from './component/Admin/Donor/donor-listar/donor-listar.component';
+import { LoginMainComponent } from './component/Login/login-main/login-main.component';
 
 
 
 const routes: Routes = [
-  
   //inicio de la pagina::==============================
   { path: '', component: MAINComponent },
 
@@ -90,15 +90,14 @@ const routes: Routes = [
 },
 
 //login::================================================
-{ path: 'login', component: LoginComponent },
-{ path: 'login1', component: Login1Component },
+{ path: 'login/adm', component: LoginComponent },
+{ path: 'login/user', component: Login1Component },
+{ path: 'login/principal', component: LoginMainComponent},
 { path: 'login1/registrarse', component: RegistrarseComponent },
 { path: 'login1/hola-inicia-sesion', component: Login1Component },
 
 //principal::================================================
 { path: 'principal/home', component: MAINComponent },
-
-
 ];
 
 

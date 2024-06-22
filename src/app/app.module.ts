@@ -78,6 +78,10 @@ import { DonorRegistrarComponent } from './component/Admin/Donor/donor-registrar
 import { MatIconModule } from '@angular/material/icon';
 import { DonorListarComponent } from './component/Admin/Donor/donor-listar/donor-listar.component';
 import { DialogoComponent } from './component/Admin/Donor/donor-listar/dialogo/dialogo.component';
+import { LoginMainComponent } from './component/Login/login-main/login-main.component';
+import { NavbarLogin1Component } from './component/Navbar/Navbar-Login/navbar-login1/navbar-login1.component';
+import { NavbarLoginPrincipalComponent } from './component/Navbar/Navbar-Login/navbar-login-principal/navbar-login-principal.component';
+import { NavbarLoginComponent } from './component/Navbar/Navbar-Login/navbar-login/navbar-login.component';
 
 @NgModule({
   declarations: [
@@ -135,7 +139,11 @@ import { DialogoComponent } from './component/Admin/Donor/donor-listar/dialogo/d
     DonorRegistrarComponent,
     DonorListarComponent,
     DialogComponent,
-    DialogoComponent
+    DialogoComponent,
+    LoginMainComponent,
+    NavbarLogin1Component,
+    NavbarLoginPrincipalComponent,
+    NavbarLoginComponent
 
 
 

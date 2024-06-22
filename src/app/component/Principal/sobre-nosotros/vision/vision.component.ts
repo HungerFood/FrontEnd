@@ -3,7 +3,7 @@ import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angu
 @Component({
   selector: 'app-vision',
   templateUrl: './vision.component.html',
-  styleUrl: './vision.component.css'
+  styleUrls: ['./vision.component.css']
 })
 export class VisionComponent {
   @ViewChild('valueSection') valueSection!: ElementRef; // Referencia a la sección principal

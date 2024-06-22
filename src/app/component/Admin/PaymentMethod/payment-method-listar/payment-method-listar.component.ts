@@ -1,11 +1,11 @@
-import { PaymentMethodService } from './../../../../services/PaymentMethod/payment-method.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { PaymentMethod } from '../../../../model/PaymentMethod/payment-method';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
+import { PaymentMethod } from '../../../../model/PaymentMethod/payment-method';
+import { PaymentMethodService } from './../../../../services/PaymentMethod/payment-method.service';
 import { DialogComponent } from './dialog/dialog.component';
 
 @Component({

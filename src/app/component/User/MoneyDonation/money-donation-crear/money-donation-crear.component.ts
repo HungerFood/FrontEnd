@@ -12,7 +12,7 @@ import { PaymentMethodService } from '../../../../services/PaymentMethod/payment
   styleUrl: './money-donation-crear.component.css'
 })
 export class MoneyDonationCrearComponent implements OnInit {
-  form: FormGroup = new FormGroup({});
+  form: FormGroup;
   moneyDonation: MoneyDonation = new MoneyDonation();
   mensaje: string = '';
   lista: PaymentMethod[] = [];
@@ -23,7 +23,7 @@ export class MoneyDonationCrearComponent implements OnInit {
     private moneyDonationService: MoneyDonationService,
     private router: Router,
     private route: ActivatedRoute,
-    private paymentMethod: PaymentMethodService
+    private paymentMethodService: PaymentMethodService
   ) {
     this.form = new FormGroup({
       id: new FormControl(),
@@ -34,7 +34,7 @@ export class MoneyDonationCrearComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.paymentMethod.list().subscribe(data => {
+    this.paymentMethodService.list().subscribe(data => {
       this.lista = data;
       this.route.params.subscribe((data: Params) => {
         this.id = data['id'];
@@ -51,7 +51,7 @@ export class MoneyDonationCrearComponent implements OnInit {
           id: data.id,
           total_amount: data.total_amount,
           payment_date: data.payment_date,
-          paymentMethod: data.paymentMethod.id // Set as ID,
+          paymentMethod: data.paymentMethod.id // Set as ID
         });
       });
     }
@@ -63,7 +63,7 @@ export class MoneyDonationCrearComponent implements OnInit {
       const selectedPaymentMethod = this.lista.find(type => type.id === paymentMethodId);
 
       if (!selectedPaymentMethod) {
-        this.mensaje = "Tipo de comida seleccionado no válido.";
+        this.mensaje = "Método de pago seleccionado no válido.";
         return;
       }
 
@@ -92,3 +92,4 @@ export class MoneyDonationCrearComponent implements OnInit {
     }
   }
 }
+

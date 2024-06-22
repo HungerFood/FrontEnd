@@ -1,4 +1,4 @@
- <footer class="footer">
+<footer class="footer">
     <div class="footer-content">
         <div class="footer-section">
             <h2>HUNGERFOOD</h2>
@@ -20,10 +20,10 @@
         <div class="footer-section">
             <h3>Enlaces de ayuda</h3>
             <ul>
-                <li><a href="#">Términos y Condiciones</a></li>
-                <li><a href="#">Libro de reclamaciones</a></li>
-                <li><a href="#">Política de cookies</a></li>
-                <li><a href="#">Política de privacidad</a></li>
+                <li><a [routerLink]="'/footer/terminos-y-condiciones'">Términos y Condiciones</a></li>
+                <li><a [routerLink]="'/footer/libro-de-reclamaciones'">Libro de reclamaciones</a></li>
+                <li><a [routerLink]="'/footer/politica-de-cookies'">Política de cookies</a></li>
+                <li><a [routerLink]="'/footer/politica-de-privacidad'">Política de privacidad</a></li>
             </ul>
         </div>
         <div class="footer-section">
@@ -40,7 +40,8 @@
         <span>© Hungerfood 2024</span>
         <div class="social-links">
             <span>Síguenos en:</span>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-facebook"></i>
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </div>

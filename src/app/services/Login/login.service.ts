@@ -1,11 +1,10 @@
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject, map, throwError } from 'rxjs';
+import { Subject, map } from 'rxjs';
 import { environment } from '../../../environments/environments';
 
 import { Credentials } from '../../model/Login/Credencials/credencials';
 import { TypeOfFood } from '../../model/TypeOfFood/type-of-food';
-import { User } from '../../model/User/user';
 const baseUrl = environment.base;
 
 @Injectable({
@@ -41,30 +40,6 @@ export class LoginService {
   }
   closeSession(){
     localStorage.clear();
-  }
-
-  getUserData() {
-    const token = this.getToken(); // Usa el método getToken() existente
-    if (!token) {
-      return throwError('No token found');
-    }
-    return this.http.get<User>('http://localhost:8080/api/user/profile', {
-      headers: new HttpHeaders({
-        'Authorization': `Bearer ${token}`
-      })
-    });
-  }
-  
-  updateUserData(userData: User) {
-    const token = this.getToken();
-    if (!token) {
-      return throwError('No token found');
-    }
-    return this.http.put('http://localhost:8080/api/user/profile', userData, {
-      headers: new HttpHeaders({
-        'Authorization': `Bearer ${token}`
-      })
-    });
   }
 
 }

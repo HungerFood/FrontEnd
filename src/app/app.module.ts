@@ -20,6 +20,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogContent, MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
@@ -30,6 +31,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DialogoComponent } from './component/Admin/Donor/donor-listar/dialogo/dialogo.component';
+import { DonorListarComponent } from './component/Admin/Donor/donor-listar/donor-listar.component';
+import { DonorRegistrarComponent } from './component/Admin/Donor/donor-registrar/donor-registrar.component';
+import { DonorComponent } from './component/Admin/Donor/donor/donor.component';
 import { PaymentMethodCrearComponent } from './component/Admin/PaymentMethod/payment-method-crear/payment-method-crear.component';
 import { PaymentMethodListarComponent } from './component/Admin/PaymentMethod/payment-method-listar/payment-method-listar.component';
 import { PaymentMethodComponent } from './component/Admin/PaymentMethod/payment-method/payment-method.component';
@@ -44,8 +49,12 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
 import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
 import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Privacidad/politica-de-privacidad/politica-de-privacidad.component';
 import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Condiciones/terminos-y-condiciones/terminos-y-condiciones.component';
+import { LoginMainComponent } from './component/Login/login-main/login-main.component';
 import { LoginComponent } from './component/Login/login/login.component';
 import { Login1Component } from './component/Login/login1/login1.component';
+import { NavbarLoginPrincipalComponent } from './component/Navbar/Navbar-Login/navbar-login-principal/navbar-login-principal.component';
+import { NavbarLoginComponent } from './component/Navbar/Navbar-Login/navbar-login/navbar-login.component';
+import { NavbarLogin1Component } from './component/Navbar/Navbar-Login/navbar-login1/navbar-login1.component';
 import { ContentComponent } from './component/Principal/content/content.component';
 import { DonacionAlimentoComponent } from './component/Principal/donacion-alimento/donacion-alimento.component';
 import { DonacionEconomicaComponent } from './component/Principal/donacion-economica/donacion-economica.component';
@@ -71,9 +80,6 @@ import { RegistrarseComponent } from './component/User/Registrarse/registrarse/r
 import { TransactionvoucherCrearComponent } from './component/User/TransactionVoucher/transactionvoucher-crear/transactionvoucher-crear.component';
 import { TransactionvoucherListarComponent } from './component/User/TransactionVoucher/transactionvoucher-listar/transactionvoucher-listar.component';
 import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
-import { PerfilEditarComponent } from './component/User/Perfil/perfil-editar/perfil-editar.component';
-
-
 
 
 
@@ -84,7 +90,6 @@ import { PerfilEditarComponent } from './component/User/Perfil/perfil-editar/per
     NavbarDonanteComponent,
     NavbarPrincipalComponent,
     DonarComponent,
-    SobreNosotrosComponent,
     ContactenosComponent,
     HolaIniciaSesionComponent,
     PrincipalComponent,
@@ -109,28 +114,36 @@ import { PerfilEditarComponent } from './component/User/Perfil/perfil-editar/per
     ContentComponent,
     DonacionAlimentoComponent,
     DonacionEconomicaComponent,
-    DialogComponent,
     MainAdmComponent,
     MoneyDonationComponent,
     MoneyDonationCrearComponent,
-    PerfilComponent,
     RegistrarseComponent,
     MoneyDonationListarComponent,
     PerfilListarComponent,
     DialogoFoodListarComponent,
     DialogoMoneyListarComponent,
     LoginComponent,
+    Login1Component,
     FundadoresComponent,
     MisionComponent,
+    SobreNosotrosComponent,
     VisionComponent,
-    LibroDeReclamosComponent,
-    PoliticaDeCookiesComponent,
     PoliticaDePrivacidadComponent,
+    PoliticaDeCookiesComponent,
     TerminosYCondicionesComponent,
+    LibroDeReclamosComponent,
+    PerfilComponent,
     PerfilAdmComponent,
     PerfilListarAdmComponent,
-    Login1Component,
-    PerfilEditarComponent
+    DonorComponent,
+    DonorRegistrarComponent,
+    DonorListarComponent,
+    DialogComponent,
+    DialogoComponent,
+    LoginMainComponent,
+    NavbarLogin1Component,
+    NavbarLoginPrincipalComponent,
+    NavbarLoginComponent
 
     //colocar tus componentes que creas
   ],
@@ -154,7 +167,10 @@ import { PerfilEditarComponent } from './component/User/Perfil/perfil-editar/per
     MatDialogContent,
     MatSelect,
     MatDialogModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatToolbarModule,
+    MatIconModule
+
   ],
   providers: [
     provideAnimationsAsync()

@@ -1,8 +1,8 @@
-import { TypeOfFood } from './../../../../model/TypeOfFood/type-of-food';
-import { TypeOfFoodService } from './../../../../services/TypeOfFood/type-of-food.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { TypeOfFood } from './../../../../model/TypeOfFood/type-of-food';
+import { TypeOfFoodService } from './../../../../services/TypeOfFood/type-of-food.service';
 
 @Component({
   selector: 'app-type-of-food-crear',

@@ -1,8 +1,8 @@
-import { PaymentMethodService } from './../../../../services/PaymentMethod/payment-method.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { PaymentMethod } from '../../../../model/PaymentMethod/payment-method';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { PaymentMethod } from '../../../../model/PaymentMethod/payment-method';
+import { PaymentMethodService } from './../../../../services/PaymentMethod/payment-method.service';
 
 @Component({
   selector: 'app-payment-method-crear',

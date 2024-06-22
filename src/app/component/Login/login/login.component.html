@@ -1,31 +1,19 @@
+<app-navbar-login></app-navbar-login>
 <div class="container-login">
-    <form class="login-form" style="max-width: 25rem;" #form="ngForm" (ngSubmit)="login(form.value)">
+    <form class="login-form" #form="ngForm" (ngSubmit)="login(form.value)">
         <h1 class="title">Iniciar Sesión</h1>
         
         <div class="email">
             <label for="email" class="form-label">Email</label>
             <input id="email" name="email" type="text" class="form-control" aria-describedby="emailHelp" [(ngModel)]="creds.email" required
-                #email="ngModel" pattern=".+@gmail\.com$">
+                #email="ngModel" pattern=".+@org\.hungerfood\.com$">
             <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
                 Por favor ingrese un correo válido
             </div>
             <div *ngIf="email.errors?.['pattern']" class="invalid-feedback">
-                El correo electrónico debe terminar con &#64;gmail.com
+                El correo electrónico debe terminar con &#64;org.hungerfood.com
             </div>
-        </div> 
-
-        <!-- <div class="email">
-            <label for="email" class="form-label">Email</label>
-            <input id="email" name="email" type="email" class="form-control" aria-describedby="emailHelp" [(ngModel)]="creds.email" required
-                #email="ngModel" pattern=".+@org\.hungerfood\.com$">
-            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
-                Por favor ingrese un correo válido.
-            </div>
-            <div *ngIf="email.errors?.['pattern']" class="invalid-feedback">
-                El correo electrónico debe terminar con &#64;org.hungerfood.com.
-            </div>
-        </div> -->
-        
+        </div>
 
         <br>
 
@@ -40,15 +28,13 @@
 
         <br>
 
-        <!-- <div class="link">
-            <a href="reg" class="link-primary">¿Eres nuevo en HungerFood?</a>
-        </div> -->
         <br>
         <div class="btn-IniciarSesion">
-            <button type="submit" class="btn1">Iniciar Sesión</button>
+            <button mat-raised-button type="submit" class="btn1">Iniciar Sesión</button>
         </div>
-        <!-- <div class="btn-CrearCuenta">
-            <button type="button" class="btn2">Crear cuenta</button>
-        </div> -->
+        <div class="btn-CrearCuenta">
+            <button mat-raised-button routerLink="/login/user" type="button" class="btn2">Volver</button>
+        </div>
     </form>
 </div>
+<router-outlet></router-outlet>

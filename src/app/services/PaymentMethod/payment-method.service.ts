@@ -18,7 +18,9 @@ export class PaymentMethodService {
   list(): Observable<any> {
     return this.http.get<PaymentMethod[]>(this.url + "/PaymentMethod/findAll");
   }
-
+  listId(id: number) {
+    return this.http.get<PaymentMethod>(this.url + "/PaymentMethod/find/" + id);
+  }
   //*****NO HAY UN METODO PARA LISTAR POR ID EN EL BACKEND*****
   //listId(id: number) {
   //  return this.http.get<PaymentMethod>(this.url + "/payment_method/" + id);

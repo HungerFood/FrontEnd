@@ -3,9 +3,9 @@ import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@ang
 @Component({
   selector: 'app-mision',
   templateUrl: './mision.component.html',
-  styleUrl: './mision.component.css'
+  styleUrls: ['./mision.component.css']
 })
-export class MisionComponent implements AfterViewInit{
+export class MisionComponent implements AfterViewInit {
 
   @ViewChild('valueSection') valueSection!: ElementRef;
 

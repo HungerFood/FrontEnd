@@ -1,8 +1,8 @@
-import { TransactionVoucherService } from './../../../../services/TransactionVoucher/transaction-voucher.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { TransactionVoucher } from '../../../../model/TransactionVoucher/transaction-voucher';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { TransactionVoucher } from '../../../../model/TransactionVoucher/transaction-voucher';
+import { TransactionVoucherService } from './../../../../services/TransactionVoucher/transaction-voucher.service';
 
 @Component({
   selector: 'app-transactionvoucher-crear',

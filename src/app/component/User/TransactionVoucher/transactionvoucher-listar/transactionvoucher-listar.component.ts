@@ -1,12 +1,12 @@
-import { DialogComponent } from './../../../Admin/TypeOfFood/type-of-food-listar/dialog/dialog.component';
-import { TransactionVoucherService } from './../../../../services/TransactionVoucher/transaction-voucher.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { TransactionVoucher } from '../../../../model/TransactionVoucher/transaction-voucher';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
+import { TransactionVoucher } from '../../../../model/TransactionVoucher/transaction-voucher';
+import { TransactionVoucherService } from './../../../../services/TransactionVoucher/transaction-voucher.service';
+import { DialogComponent } from './../../../Admin/TypeOfFood/type-of-food-listar/dialog/dialog.component';
 
 @Component({
   selector: 'app-transactionvoucher-listar',

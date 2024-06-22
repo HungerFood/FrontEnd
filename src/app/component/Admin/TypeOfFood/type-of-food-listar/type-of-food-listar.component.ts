@@ -1,11 +1,11 @@
-import { TypeOfFoodService } from './../../../../services/TypeOfFood/type-of-food.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-import { TypeOfFood } from '../../../../model/TypeOfFood/type-of-food';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatDialog } from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
+import { TypeOfFood } from '../../../../model/TypeOfFood/type-of-food';
+import { TypeOfFoodService } from './../../../../services/TypeOfFood/type-of-food.service';
 import { DialogComponent } from './dialog/dialog.component';
 
 @Component({

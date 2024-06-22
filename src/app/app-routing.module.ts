@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DonorListarComponent } from './component/Admin/Donor/donor-listar/donor-listar.component';
+import { DonorRegistrarComponent } from './component/Admin/Donor/donor-registrar/donor-registrar.component';
 import { PerfilAdmComponent } from './component/Admin/PerfilAdm/perfil-adm/perfil-adm.component';
 import { PerfilListarAdmComponent } from './component/Admin/PerfilAdm/perfil-listar-adm/perfil-listar-adm.component';
 import { TypeOfFoodCrearComponent } from './component/Admin/TypeOfFood/type-of-food-crear/type-of-food-crear.component';
@@ -9,6 +11,7 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
 import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
 import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Privacidad/politica-de-privacidad/politica-de-privacidad.component';
 import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Condiciones/terminos-y-condiciones/terminos-y-condiciones.component';
+import { LoginMainComponent } from './component/Login/login-main/login-main.component';
 import { LoginComponent } from './component/Login/login/login.component';
 import { Login1Component } from './component/Login/login1/login1.component';
 import { ContactenosComponent } from './component/Principal/contactenos/contactenos.component';
@@ -22,10 +25,8 @@ import { MoneyDonationListarComponent } from './component/User/MoneyDonation/mon
 import { PerfilListarComponent } from './component/User/Perfil/perfil-listar/perfil-listar.component';
 import { PerfilComponent } from './component/User/Perfil/perfil/perfil.component';
 import { RegistrarseComponent } from './component/User/Registrarse/registrarse/registrarse.component';
-;
 
 const routes: Routes = [
-  
   //inicio de la pagina::==============================
   { path: '', component: MAINComponent },
 
@@ -36,59 +37,62 @@ const routes: Routes = [
       { path: 'donar', component: DonarComponent },
       { path: 'sobre-nosotros', component: SobreNosotrosComponent },
       { path: 'contactenos', component: ContactenosComponent },
-  ],
+    ],
   },
 
- //admin::================================================
- {
-  path: 'admin',
-  children: [
-    { path: 'perfil/TypeOfFood/findAll/listar', component: TypeOfFoodListarComponent },
-    { path: 'perfil/TypeOfFood/findAll/nuevo', component: TypeOfFoodCrearComponent },
-    { path: 'perfil/TypeOfFood', component: TypeOfFoodComponent },
-    { path:'perfil', component:PerfilAdmComponent},
-    { path: 'perfil/perfilListar', component: PerfilListarAdmComponent },
-    { path: 'perfil/TypeOfFood/findAll/update/:id', component:TypeOfFoodCrearComponent},
-  ],
-},
-//donante::================================================
-{
-  path: 'donante',
-  children: [
-    { path: 'perfil/donacionesComidaCrear', component: FooddonationCrearComponent },
-    { path: 'perfil/donacionesComidaCrear/donacionesComidaListar', component: FooddonationListarComponent },
-    { path: 'perfil/donacionesComidaCrear/donacionesComidaListar/donacionesComidaEditar/:id', component: FooddonationCrearComponent },
-    
-    { path:'perfil', component:PerfilComponent},
-    { path: 'perfil/perfilListar', component: PerfilListarComponent },
+  //admin::================================================
+  {
+    path: 'admin',
+    children: [
+      { path: 'perfil/TypeOfFood/findAll/listar', component: TypeOfFoodListarComponent },
+      { path: 'perfil/TypeOfFood/findAll/nuevo', component: TypeOfFoodCrearComponent },
+      { path: 'perfil/TypeOfFood', component: TypeOfFoodComponent },
+      { path: 'perfil/TypeOfFood/findAll/update/:id', component: TypeOfFoodCrearComponent },
 
-    { path: 'perfil/donacionesDineroCrear', component: MoneyDonationCrearComponent },// REGISTRAR DONACIONES DE DINERO
-    { path: 'perfil/donacionesDineroCrear/donacionesDineroListar', component: MoneyDonationListarComponent },// MUESTRA Y LISTA LAS DONACIONES DE DINERO
-    { path: 'perfil/donacionesDineroCrear/donacionesDineroListar/donacionesDineroEditar/:id', component: MoneyDonationCrearComponent },// EDITAR DONACIONES DE DINERO
+      { path: 'perfil', component: PerfilAdmComponent },
+      { path: 'perfil/perfilListar', component: PerfilListarAdmComponent },
 
-  ],
-},
-//footer::=================================================
-{
-  path: 'footer',
-  children: [
-    { path: 'terminos-y-condiciones', component: TerminosYCondicionesComponent },
-    { path: 'libro-de-reclamaciones', component: LibroDeReclamosComponent },
-    { path: 'politica-de-cookies', component: PoliticaDeCookiesComponent },
-    { path: 'politica-de-privacidad', component: PoliticaDePrivacidadComponent },
-  ],
-},
+      { path: 'perfil/registrar-donador', component: DonorRegistrarComponent },
+      { path: 'perfil/lista-donadores', component: DonorListarComponent },
+    ],
+  },
+  //donante::================================================
+  {
+    path: 'donante',
+    children: [
+      { path: 'perfil/donacionesComidaCrear', component: FooddonationCrearComponent },
+      { path: 'perfil/donacionesComidaCrear/donacionesComidaListar', component: FooddonationListarComponent },
+      { path: 'perfil/donacionesComidaCrear/donacionesComidaListar/donacionesComidaEditar/:id', component: FooddonationCrearComponent },
 
-//login::================================================
-{ path: 'login', component: LoginComponent },
-{ path: 'login1', component: Login1Component },
-{ path: 'login1/registrarse', component: RegistrarseComponent },
-{ path: 'login1/hola-inicia-sesion', component: Login1Component },
+      { path: 'perfil', component: PerfilComponent },
+      { path: 'perfil/perfilListar', component: PerfilListarComponent },
 
-//principal::================================================
-{ path: 'principal/home', component: MAINComponent },
+      { path: 'perfil/donacionesDineroCrear', component: MoneyDonationCrearComponent },// REGISTRAR DONACIONES DE DINERO
+      { path: 'perfil/donacionesDineroCrear/donacionesDineroListar', component: MoneyDonationListarComponent },// MUESTRA Y LISTA LAS DONACIONES DE DINERO
+      { path: 'perfil/donacionesDineroCrear/donacionesDineroListar/donacionesDineroEditar/:id', component: MoneyDonationCrearComponent },// EDITAR DONACIONES DE DINERO
 
+    ],
+  },
+  //footer::=================================================
+  {
+    path: 'footer',
+    children: [
+      { path: 'terminos-y-condiciones', component: TerminosYCondicionesComponent },
+      { path: 'libro-de-reclamaciones', component: LibroDeReclamosComponent },
+      { path: 'politica-de-cookies', component: PoliticaDeCookiesComponent },
+      { path: 'politica-de-privacidad', component: PoliticaDePrivacidadComponent },
+    ],
+  },
 
+  //login::================================================
+  { path: 'login/adm', component: LoginComponent },
+  { path: 'login/user', component: Login1Component },
+  { path: 'login/principal', component: LoginMainComponent },
+  { path: 'login1/registrarse', component: RegistrarseComponent },
+  { path: 'login1/hola-inicia-sesion', component: Login1Component },
+
+  //principal::================================================
+  { path: 'principal/home', component: MAINComponent },
 ];
 
 

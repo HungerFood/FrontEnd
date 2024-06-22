@@ -1,134 +1,133 @@
 /* Estilos base para todos los tamaños de pantalla */
 h1 {
-    font-family: var(--body-font);
-    font-weight: var(--h1-font-weight);
-    font-size: var(--h1-font-size);
-    text-align: center; /* Alineación central por defecto */
-  }
-  
-  p {
-    font-family: var(--body-font);
-    font-size: var(--small-font-size);
-    text-align: center; /* Alineación central por defecto */
-  }
-  
+  font-family: var(--body-font);
+  font-weight: var(--h1-font-weight);
+  font-size: var(--h1-font-size);
+  text-align: center; /* Alineación central por defecto */
+}
+
+p {
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+  text-align: center; /* Alineación central por defecto */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100vh; /* altura completa de la ventana */
+}
+
+.text-content {
+  max-width: 100%; /* Ancho máximo del contenido de texto */
+  text-align: center; /* Alineación central por defecto */
+}
+
+.text-content h1 {
+  font-size: 3.5rem; /* Tamaño de fuente grande para títulos */
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.text-content h1.a {
+  color: var(--third-color);
+  transition-delay: 0.2s;
+}
+
+.text-content h1.b {
+  color: var(--second-color);
+  transition-delay: 0.4s;
+}
+
+.text-content h1.c {
+  color: var(--primary-color);
+  transition-delay: 0.6s;
+}
+
+.text-content p {
+  font-size: 1.2rem; /* Tamaño de fuente para párrafos */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out 0.8s, transform 0.6s ease-out 0.8s;
+}
+
+/* Imagen */
+.image-content {
+  max-width: 100%; /* Imagen con ancho máximo */
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+}
+
+.container.visible .text-content h1,
+.container.visible .text-content p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 1280px) {
   .container {
-    display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    flex-direction: column;
-  
     height: 100vh; /* altura completa de la ventana */
   }
-  
+
   .text-content {
-    max-width: 100%; /* Ancho máximo del contenido de texto */
-    text-align: center; /* Alineación central por defecto */
+    max-width: 50%;
+    order: 1; /* Cambia el orden del elemento en la fila */
+    text-align: left; /* Alinea el texto a la izquierda */
   }
-  
-  .text-content h1 {
-    font-size: 3.5rem; /* Tamaño de fuente grande para títulos */
-    margin-bottom: 1rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-  
-  .text-content h1.a {
-    color: var(--third-color);
-    transition-delay: 0.2s;
-  }
-  
-  .text-content h1.b {
-    color: var(--second-color);
-    transition-delay: 0.4s;
-  }
-  
-  .text-content h1.c {
-    color: var(--primary-color);
-    transition-delay: 0.6s;
-  }
-  
-  .text-content p {
-    font-size: 1.2rem; /* Tamaño de fuente para párrafos */
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out 0.8s, transform 0.6s ease-out 0.8s;
-  }
-  
-  /* Imagen */
+
   .image-content {
-    max-width: 100%; /* Imagen con ancho máximo */
+    max-width: 50%;
+    order: 2; /* Cambia el orden del elemento en la fila */
   }
-  
-  .image-content img {
-    width: 100%;
+
+  .text-content h1 {
+    font-size: 2.5rem; /* Tamaño de fuente para títulos en pantallas grandes */
+  }
+
+  .text-content p {
+    font-size: 1rem; /* Tamaño de fuente para párrafos en pantallas grandes */
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column;
     height: auto;
+    height: 100vh; /* altura completa de la ventana */
+  }
+
+  .text-content {
+    max-width: 100%;
+    text-align: center;
+    order: 1; /* Cambia el orden del elemento en la columna */
+    margin-bottom: 20px; /* Espacio entre el texto y la imagen */
+  }
+
+  .image-content {
+    max-width: 100%;
+    order: 2; /* Cambia el orden del elemento en la columna */
+  }
+
+  .text-content h1 {
+    font-size: 2rem; /* Tamaño de fuente para títulos en dispositivos móviles */
+    margin-bottom: 5px; /* Espacio inferior más pequeño */
+  }
+
+  .text-content p {
+    font-size: 0.9rem; /* Tamaño de fuente para párrafos en dispositivos móviles */
+    line-height: 1.4; /* Espaciado entre líneas */
   }
   
-  .container.visible .text-content h1,
-  .container.visible .text-content p {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  
-  @media (max-width: 1280px) {
-    .container {
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      height: 100vh; /* altura completa de la ventana */
-    }
-  
-    .text-content {
-      max-width: 50%;
-      order: 1; /* Cambia el orden del elemento en la fila */
-      text-align: left; /* Alinea el texto a la izquierda */
-    }
-  
-    .image-content {
-      max-width: 50%;
-      order: 2; /* Cambia el orden del elemento en la fila */
-    }
-  
-    .text-content h1 {
-      font-size: 2.5rem; /* Tamaño de fuente para títulos en pantallas grandes */
-    }
-  
-    .text-content p {
-      font-size: 1rem; /* Tamaño de fuente para párrafos en pantallas grandes */
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .container {
-      flex-direction: column;
-      height: auto;
-      height: 100vh; /* altura completa de la ventana */
-    }
-  
-    .text-content {
-      max-width: 100%;
-      text-align: center;
-      order: 1; /* Cambia el orden del elemento en la columna */
-      margin-bottom: 20px; /* Espacio entre el texto y la imagen */
-    }
-  
-    .image-content {
-      max-width: 100%;
-      order: 2; /* Cambia el orden del elemento en la columna */
-    }
-  
-    .text-content h1 {
-      font-size: 2rem; /* Tamaño de fuente para títulos en dispositivos móviles */
-      margin-bottom: 5px; /* Espacio inferior más pequeño */
-    }
-  
-    .text-content p {
-      font-size: 0.9rem; /* Tamaño de fuente para párrafos en dispositivos móviles */
-      line-height: 1.4; /* Espaciado entre líneas */
-    }
-    
-  }
-  
+}

@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './donar.component.css'
 })
 export class DonarComponent implements OnInit{
-
   constructor() { }
 
   ngOnInit(): void {
@@ -80,5 +79,4 @@ export class DonarComponent implements OnInit{
       });
     }, 10000); // Cambiar cada 10 segundos (10000 milisegundos)
   }
-
 }

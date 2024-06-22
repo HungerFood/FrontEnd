@@ -1,19 +1,19 @@
 <div class="contenedor">
-    <form [formGroup]="form" (submit)="aceptar()">
-      <mat-form-field class="example-full-width">
-        <mat-label>Id</mat-label>
-        <input matInput hidden placeholder="Id" formControlName="id">
-      </mat-form-field>
-      <br>
-      <mat-form-field class="example-full-width">
-        <mat-label>Monto Total</mat-label>
-        <input matInput required placeholder="Monto Total" formControlName="total_amount">
-      </mat-form-field>
-      <br>
-     
-      <button mat-raised-button type="submit" color="primary">Aceptar</button>
-      <button mat-raised-button color="warn" routerLink="/TransactionVoucher">Cancelar</button>
-      <p>{{mensaje}}</p>
-  
-    </form>
-  </div>
+  <form [formGroup]="form" (submit)="aceptar()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput hidden placeholder="Id" formControlName="id">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Monto Total</mat-label>
+      <input matInput required placeholder="Monto Total" formControlName="total_amount">
+    </mat-form-field>
+    <br>
+   
+    <button mat-raised-button type="submit" color="primary">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/TransactionVoucher">Cancelar</button>
+    <p>{{mensaje}}</p>
+
+  </form>
+</div>

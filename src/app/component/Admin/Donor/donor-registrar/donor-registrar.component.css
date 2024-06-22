@@ -1,55 +1,34 @@
 .registrar {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 85vh;
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    /* Centra los elementos inline, como los botones */
+    height: 100vh; /* Centra verticalmente el formulario */
 }
 
-/* Resto del código... */
+form {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 20px; /* Espacio interno alrededor del formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor del formulario */
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos dentro del formulario estén en columna */
+    gap: 10px; /* Espacio entre los elementos del formulario */
+    width: 100%; /* Asegura que el formulario use el ancho completo */
+    max-width: 500px; /* Establece un ancho máximo para el formulario */
+}
+
+h2 {
+    text-align: center; /* Centra el título h2 */
+}
 
 mat-form-field {
-    width: 100%;
-    max-width: 300px;
-    margin: 0.8rem 0;
-}
-
-mat-form-field mat-label {
-    color: #333;
-}
-
-input {
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    background-color: #FFFFFF; /* Fondo blanco para los campos del formulario */
+    width: 100%; /* Asegura que los campos del formulario usen el ancho completo del contenedor */
 }
 
 button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #72c49d;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #72c49d;
-}
-
-#paginaPrincipal {
-    margin-top: 0.5rem;
-}
-
-#registrarUsuario,
-#paginaPrincipal {
-    display: block;
-    /* Hace que los botones se muestren uno debajo del otro */
-    margin-bottom: 1rem;
-    /* Ajusta la distancia entre los botones */
+    background-color: #FF5722 !important; /* Color de fondo para los botones */
+    color: #ffffff !important; /* Color del texto en los botones */
+    margin-top: 10px; /* Espacio superior para separar los botones entre sí */
+    width: 100%; /* Botones de ancho completo */
 }

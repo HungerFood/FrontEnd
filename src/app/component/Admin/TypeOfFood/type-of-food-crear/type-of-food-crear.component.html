@@ -3,7 +3,7 @@
   <button mat-raised-button class="demo-button" routerLink="/admin/perfil/TypeOfFood/findAll/listar">Listar Tipo de Comida</button>
 </div>
 <div class="contenedor">
-    <form [formGroup]="form" (submit)="aceptar()">
+    <form [formGroup]="form" (submit)="aceptar()" class="contenedorform">
       <mat-form-field class="example-full-width">
         <mat-label>Id</mat-label>
         <input matInput hidden placeholder="Id" formControlName="id">
@@ -15,8 +15,8 @@
       </mat-form-field>
       <br>
      
-      <button mat-raised-button type="submit" color="primary">Aceptar</button>
-      <button mat-raised-button color="warn" routerLink="/TypeOfFood">Cancelar</button>
+      <button mat-raised-button type="submit" color="primary" id="bt1">Aceptar</button>
+      <button mat-raised-button color="warn" routerLink="/TypeOfFood" id="bt2">Cancelar</button>
       <p>{{mensaje}}</p>
   
     </form>

@@ -1,0 +1,28 @@
+.div h1 {
+    background-color: #D9D9D9; /* Fondo gris para el h1 */
+    text-align: center; /* Centra el texto del h1 */
+    padding: 10px; /* Espacio interno alrededor del h1 */
+    border-radius: 4px; /* Bordes redondeados para el h1 */
+}
+
+table {
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+    border: 1px solid #e3dada; /* Bordes negros para la tabla */
+    border-collapse: collapse; /* Colapsa los bordes de la tabla */
+}
+
+table th, td {
+    border: 2px solid #464545; /* Bordes negros para las celdas de la tabla */
+    padding: 8px; /* Espacio interno alrededor del contenido de las celdas */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+td{
+    background-color: #72C49D; /* Fondo verde para los ng-container */
+}
+
+.mat-column-id, .mat-column-firstname, .mat-column-lastname, .mat-column-email, .mat-column-eliminar {
+    background-color: #D9D9D9; /* Fondo verde para los ng-container */
+}
+.mat-sort-header .Apellido{
+    background-color: #72C49D;
+}

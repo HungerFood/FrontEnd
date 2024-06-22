@@ -1,11 +1,43 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-    <span>HungerFood</span>
-    <button>Logout</button>
-    <button >HungerFood</button>
-    </mat-toolbar-row>
-</mat-toolbar> 
-
-<mat-toolbar color="transparent"></mat-toolbar>
-
-
+<!-- Navbar for User (DONANTE) -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container">
+      <!-- Logo -->
+      <img src="./assets/Images/Logo/HungerFood.png" class="logo-img" [routerLink]="'/user/home'" alt="HungerFood Logo">
+      
+      <!-- Toggle Btn (Hamburguesa) -->
+      <button class="navbar-toggler shadow-none border-0" type="button" (click)="toggleNavbar()" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Sidebar -->
+      <div #offcanvasNavbar class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <!-- Sidebar Header -->
+        <div class="offcanvas-header text-dark border-bottom">
+          <img src="./assets/Images/Logo/HungerFood.png" class="logo-img" [routerLink]="'/user/home'" alt="HungerFood Logo">
+          <button type="button" class="btn-close btn-close-dark" (click)="closeNavbar()" aria-label="Close"></button>
+        </div>
+        <!-- Sidebar Body -->
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-3 p-lg-0">
+          <ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3">
+            <li class="nav-item mx-2">
+              <!-- <a class="nav-link active" [routerLink]="'/user/donar'" (click)="closeNavbar()"></a> -->
+            </li>
+            <li class="nav-item mx-2">
+              <!-- <a class="nav-link active" [routerLink]="'/user/contactenos'" (click)="closeNavbar()"></a> -->
+            </li>
+          </ul>
+          <!-- Logout -->
+          <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4">
+            <a>ADMINISTRADOR SOY YO</a>
+                    <!-- logout -->
+        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4">
+          <a (click)="logout()" class="text-dark">
+            Cerrar Sesión
+          </a>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  

@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-donante',
@@ -9,7 +10,7 @@ export class NavbarDonanteComponent {
   @ViewChild('offcanvasNavbar') offcanvasNavbar!: ElementRef; // Referencia al elemento offcanvasNavbar
   isNavbarCollapsed = true; // Estado inicial del menú, colapsado por defecto
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   toggleNavbar(): void {
     this.isNavbarCollapsed = !this.isNavbarCollapsed; // Cambia el estado al contrario del estado actual
@@ -27,5 +28,13 @@ export class NavbarDonanteComponent {
     if (this.offcanvasNavbar && this.offcanvasNavbar.nativeElement) {
       this.offcanvasNavbar.nativeElement.classList.remove('show'); // Oculta la barra lateral
     }
+  }
+  logout():void{
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    localStorage.removeItem('role');
+    localStorage.removeItem('id');
+    this.router.navigate(['/login/adm']);
+    
   }
 }

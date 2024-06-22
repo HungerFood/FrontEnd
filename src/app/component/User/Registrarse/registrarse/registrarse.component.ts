@@ -67,7 +67,7 @@ export class RegistrarseComponent implements OnInit {
           this.userService.setList(data);
         })
       });
-      this.router.navigate(['login1/hola-inicia-sesion']);
+      this.router.navigate(['login/user']);
     } else {
       this.mensaje = "Agregue campos faltantes";
     }

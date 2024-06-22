@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 //importar tus componentes
@@ -70,14 +71,17 @@ import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Pr
 import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
 import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Condiciones/terminos-y-condiciones/terminos-y-condiciones.component';
 import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/libro-de-reclamos/libro-de-reclamos.component';
+import { PerfilAdmComponent } from './component/Admin/PerfilAdm/perfil-adm/perfil-adm.component';
+import { PerfilListarAdmComponent } from './component/Admin/PerfilAdm/perfil-listar-adm/perfil-listar-adm.component';
+import { DonorComponent } from './component/Admin/Donor/donor/donor.component';
+import { DonorRegistrarComponent } from './component/Admin/Donor/donor-registrar/donor-registrar.component';
+import { MatIconModule } from '@angular/material/icon';
+import { DonorListarComponent } from './component/Admin/Donor/donor-listar/donor-listar.component';
+import { DialogoComponent } from './component/Admin/Donor/donor-listar/dialogo/dialogo.component';
 import { LoginMainComponent } from './component/Login/login-main/login-main.component';
-import { NavbarLoginComponent } from './component/Navbar/Navbar-Login/navbar-login/navbar-login.component';
 import { NavbarLogin1Component } from './component/Navbar/Navbar-Login/navbar-login1/navbar-login1.component';
 import { NavbarLoginPrincipalComponent } from './component/Navbar/Navbar-Login/navbar-login-principal/navbar-login-principal.component';
-
-
-
-
+import { NavbarLoginComponent } from './component/Navbar/Navbar-Login/navbar-login/navbar-login.component';
 
 @NgModule({
   declarations: [
@@ -110,11 +114,9 @@ import { NavbarLoginPrincipalComponent } from './component/Navbar/Navbar-Login/n
     ContentComponent,
     DonacionAlimentoComponent,
     DonacionEconomicaComponent,
-    DialogComponent,
     MainAdmComponent,
     MoneyDonationComponent,
     MoneyDonationCrearComponent,
-    PerfilComponent,
     RegistrarseComponent,
     MoneyDonationListarComponent,
     PerfilListarComponent,
@@ -130,10 +132,20 @@ import { NavbarLoginPrincipalComponent } from './component/Navbar/Navbar-Login/n
     PoliticaDeCookiesComponent,
     TerminosYCondicionesComponent,
     LibroDeReclamosComponent,
+    PerfilComponent,
+    PerfilAdmComponent,
+    PerfilListarAdmComponent,
+    DonorComponent,
+    DonorRegistrarComponent,
+    DonorListarComponent,
+    DialogComponent,
+    DialogoComponent,
     LoginMainComponent,
-    NavbarLoginComponent,
     NavbarLogin1Component,
-    NavbarLoginPrincipalComponent
+    NavbarLoginPrincipalComponent,
+    NavbarLoginComponent
+
+
 
     //colocar tus componentes que creas
   ],
@@ -157,7 +169,10 @@ import { NavbarLoginPrincipalComponent } from './component/Navbar/Navbar-Login/n
     MatDialogContent,
     MatSelect,
     MatDialogModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatToolbarModule,
+    MatIconModule,
+    
   ],
   providers: [
     provideAnimationsAsync(), { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }

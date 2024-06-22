@@ -1,3 +1,8 @@
+<div class="botonTipodeComida">
+  <button mat-raised-button class="demo-button" routerLink="/admin/perfil/TypeOfFood/findAll/nuevo">Crear Tipo de Comida</button>
+  <button mat-raised-button class="demo-button" routerLink="/admin/perfil">Volver al panel de Admin</button>
+</div>
+
 <div class="contenedor">
     <h1 style="text-align: center;">Tipo de comida</h1>
   
@@ -21,6 +26,14 @@
               (click)="openDialog(element.id)"><span class="material-icons">delete_sweep</span></button>
           </td>
         </ng-container>
+
+        <ng-container matColumnDef="actualizar">
+          <th mat-header-cell *matHeaderCellDef> Editar </th>
+          <td mat-cell *matCellDef="let element">
+              <button mat-raised-button color="warn" [routerLink]="['/admin/perfil/TypeOfFood/findAll/update', element.id]"><span
+                      class="material-icons">update</span></button>
+          </td>
+      </ng-container>
         
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

@@ -1,0 +1,34 @@
+.registrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centra verticalmente el formulario */
+}
+
+form {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 20px; /* Espacio interno alrededor del formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor del formulario */
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos dentro del formulario estén en columna */
+    gap: 10px; /* Espacio entre los elementos del formulario */
+    width: 100%; /* Asegura que el formulario use el ancho completo */
+    max-width: 500px; /* Establece un ancho máximo para el formulario */
+}
+
+h2 {
+    text-align: center; /* Centra el título h2 */
+}
+
+mat-form-field {
+    background-color: #FFFFFF; /* Fondo blanco para los campos del formulario */
+    width: 100%; /* Asegura que los campos del formulario usen el ancho completo del contenedor */
+}
+
+button {
+    background-color: #FF5722 !important; /* Color de fondo para los botones */
+    color: #ffffff !important; /* Color del texto en los botones */
+    margin-top: 10px; /* Espacio superior para separar los botones entre sí */
+    width: 100%; /* Botones de ancho completo */
+}

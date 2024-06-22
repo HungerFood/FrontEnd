@@ -70,6 +70,10 @@ import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Pr
 import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
 import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Condiciones/terminos-y-condiciones/terminos-y-condiciones.component';
 import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/libro-de-reclamos/libro-de-reclamos.component';
+import { LoginMainComponent } from './component/Login/login-main/login-main.component';
+import { NavbarLoginComponent } from './component/Navbar/Navbar-Login/navbar-login/navbar-login.component';
+import { NavbarLogin1Component } from './component/Navbar/Navbar-Login/navbar-login1/navbar-login1.component';
+import { NavbarLoginPrincipalComponent } from './component/Navbar/Navbar-Login/navbar-login-principal/navbar-login-principal.component';
 
 
 
@@ -125,7 +129,11 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
     PoliticaDePrivacidadComponent,
     PoliticaDeCookiesComponent,
     TerminosYCondicionesComponent,
-    LibroDeReclamosComponent
+    LibroDeReclamosComponent,
+    LoginMainComponent,
+    NavbarLoginComponent,
+    NavbarLogin1Component,
+    NavbarLoginPrincipalComponent
 
     //colocar tus componentes que creas
   ],

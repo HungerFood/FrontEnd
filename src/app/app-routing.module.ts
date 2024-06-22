@@ -22,6 +22,7 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
 import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
 import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Privacidad/politica-de-privacidad/politica-de-privacidad.component';
 import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros/sobre-nosotros.component';
+import { LoginMainComponent } from './component/Login/login-main/login-main.component';
 
 
 const routes: Routes = [
@@ -77,8 +78,9 @@ const routes: Routes = [
 },
 
 //login::================================================
-{ path: 'login', component: LoginComponent },
-{ path: 'login1', component: Login1Component },
+{ path: 'login/adm', component: LoginComponent },
+{ path: 'login/user', component: Login1Component },
+{ path: 'login/principal', component: LoginMainComponent},
 { path: 'login1/registrarse', component: RegistrarseComponent },
 { path: 'login1/hola-inicia-sesion', component: Login1Component },
 

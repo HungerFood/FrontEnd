@@ -1,3 +1,4 @@
+<app-navbar-login1></app-navbar-login1>
 <div class="container-login">
     <form class="login-form" #form="ngForm" (ngSubmit)="login(form.value)">
         <h1 class="title">Iniciar Sesión</h1>
@@ -28,7 +29,7 @@
         <br>
 
         <div class="link">
-            <a href="/login" class="link-primary">¿Quieres ingresar como administrador?</a>
+            <a href="/login/adm" class="link-primary">¿Quieres ingresar como administrador?</a>
         </div>
         <br>
         <div class="btn-IniciarSesion">
@@ -39,3 +40,4 @@
         </div>
     </form>
 </div>
+<router-outlet></router-outlet>

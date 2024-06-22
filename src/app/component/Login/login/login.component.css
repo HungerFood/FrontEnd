@@ -11,7 +11,9 @@
     background-repeat: no-repeat;
     overflow: hidden; /* Asegura que el pseudo-elemento no se salga del contenedor */
 }
-
+.icon-container {
+    margin-right: 20px;
+}
 /* Añadir un pseudo-elemento para la capa negra semitransparente */
 .container-login::before {
     content: "";

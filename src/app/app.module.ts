@@ -11,7 +11,6 @@ import { DonarComponent } from './component/Principal/donar/donar.component';
 import { HolaIniciaSesionComponent } from './component/Principal/hola-inicia-sesion/hola-inicia-sesion.component';
 import { PrincipalComponent } from './component/Principal/principal/principal.component';
 
-
 //importar los modulos de angular material
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -83,7 +82,6 @@ import { LoginMainComponent } from './component/Login/login-main/login-main.comp
 import { NavbarLogin1Component } from './component/Navbar/Navbar-Login/navbar-login1/navbar-login1.component';
 import { NavbarLoginPrincipalComponent } from './component/Navbar/Navbar-Login/navbar-login-principal/navbar-login-principal.component';
 import { NavbarLoginComponent } from './component/Navbar/Navbar-Login/navbar-login/navbar-login.component';
-import { RegistroExitoDialogComponent } from './component/User/Registrarse/registro-exito-dialog/registro-exito-dialog.component';
 
 @NgModule({
   declarations: [
@@ -145,8 +143,7 @@ import { RegistroExitoDialogComponent } from './component/User/Registrarse/regis
     LoginMainComponent,
     NavbarLogin1Component,
     NavbarLoginPrincipalComponent,
-    NavbarLoginComponent,
-    RegistroExitoDialogComponent
+    NavbarLoginComponent
 
 
 
@@ -177,7 +174,6 @@ import { RegistroExitoDialogComponent } from './component/User/Registrarse/regis
     MatIconModule,
     
   ],
-
   providers: [
     provideAnimationsAsync(), { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],

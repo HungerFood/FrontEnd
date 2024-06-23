@@ -1,5 +1,6 @@
 <div class="registrarse">
     <form [formGroup]="form" (submit)="aceptar()">
+        <h2>BIENVENIDOS A HUNGERFOOD <br> Completa el formulario</h2>
         <mat-form-field class="example-full-width">
             <mat-label>Id</mat-label>
             <input matInput hidden placeholder="Id" formControlName="id">
@@ -25,11 +26,6 @@
             <input matInput required placeholder="Email" formControlName="email">
         </mat-form-field>
         <br>
-        <!-- <mat-form-field class="example-full-width"> -->
-        <!-- <mat-label>Confirmar contraseña</mat-label> -->
-        <!-- <input matInput required placeholder="" formControlName="confirmarContrasenia"> -->
-        <!-- </mat-form-field> -->
-        <!-- <br> -->
         <button mat-raised-button type="submit">Registrarse</button>
         <button mat-raised-button routerLink="/login1/hola-inicia-sesion">Volver a Iniciar Sesion</button>
 

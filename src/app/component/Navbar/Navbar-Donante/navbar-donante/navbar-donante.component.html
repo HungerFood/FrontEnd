@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container">
       <!-- Logo -->
-      <img src="./assets/Images/Logo/HungerFood.png" class="logo-img" [routerLink]="'/user/home'" alt="HungerFood Logo">
+      <img src="./assets/Images/Logo/HungerFood.png" class="logo-img"  alt="HungerFood Logo">
       
       <!-- Toggle Btn (Hamburguesa) -->
       <button class="navbar-toggler shadow-none border-0" type="button" (click)="toggleNavbar()" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -19,16 +19,16 @@
         <!-- Sidebar Body -->
         <div class="offcanvas-body d-flex flex-column flex-lg-row p-3 p-lg-0">
           <ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3">
-            <li class="nav-item mx-2">
+            <!-- <li class="nav-item mx-2">
               <a class="nav-link active" [routerLink]="'/user/donar'" (click)="closeNavbar()">Donar</a>
             </li>
             <li class="nav-item mx-2">
               <a class="nav-link active" [routerLink]="'/user/contactenos'" (click)="closeNavbar()">Contáctenos</a>
-            </li>
+            </li> -->
           </ul>
           <!-- Logout -->
           <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4">
-            <a href="">DONANTE SOY YO</a>
+            <a>DONANTE SOY YO</a>
                     <!-- logout -->
         <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4">
           <a (click)="logout()" class="text-dark">

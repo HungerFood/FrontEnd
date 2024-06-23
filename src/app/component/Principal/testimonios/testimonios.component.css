@@ -1,94 +1,87 @@
 .container {
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  height: 100vh; /* Ajusta la altura como necesites */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+
 }
 
 .header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 .testimonies {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 900px;
+  transition: transform 0.5s ease;
 }
 
 .testimony {
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  margin: 0 1rem;
-  transform: scale(1); /* Estado inicial */
-  transition: transform 0.3s ease; /* Transición suave */
+  flex: 0 0 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  max-width: 100%; /* Ajusta el ancho máximo si es necesario */
+  background-color: #c5c0c0;
 }
-
-.testimony:hover {
-  transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
-}
-
 
 .image {
-  width: 100%;
-  height: auto;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .content {
-  text-align: center;
-
+  flex: 1;
 }
 
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  cursor: default; /* Mantener el cursor predeterminado sobre los párrafos */
+/*Quiero que h1 tenga un tamaño enorme*/
+h1 {
+  font-size: 5em;
 }
 
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-  cursor: default; /* Mantener el cursor predeterminado sobre los párrafos */
-}
-h1, h2{
-  cursor: default; /* Mantener el cursor predeterminado sobre los párrafos */
 
-}
+@media (max-width: 600px) {
+  .testimony {
+    padding: 10px; /* Reducción de espacio interior en dispositivos pequeños */
+    flex-direction: column-reverse; /* Cambia el orden de imagen y contenido */
+    text-align: center; /* Alinea el contenido al centro */
+  }
 
-@media (max-width: 768px) {
-.testimonies {
-  flex-direction: column; /* Apila testimonios en dispositivos más pequeños */
-  align-items: center;
-}
+  .image {
+    width: 80px;
+    height: 80px;
+    /*Imagen centrada*/
+    margin: 0 auto;
+    order: 2; /* Cambia el orden de la imagen */
+    margin-bottom: 0; /* Elimina el espacio inferior de la imagen */
+  }
 
-.testimony {
-  margin: 0 0 1rem 0; /* Reduce el margen inferior para separar los testimonios */
-}
-}
+  .content {
+    order: 1; /* Cambia el orden del contenido */
+  }
 
-@media (max-width: 480px) {
-.testimony {
-  padding: 1.5rem; /* Reduce el padding en dispositivos muy pequeños */
-}
+  h3 {
+    font-size: 1.5em; /* Ajuste de tamaño de título para dispositivos pequeños */
+  }
 
-h3 {
-  font-size: 1.2rem; /* Reduce el tamaño del título en pantallas pequeñas */
-}
-
-p {
-  font-size: 0.9rem; /* Reduce el tamaño del texto en pantallas pequeñas */
-}
+  p {
+    font-size: 1em; /* Ajuste de tamaño de contenido para dispositivos pequeños */
+  }
+  h1{
+    font-size: 4.5em; /* Ajuste de tamaño de contenido para dispositivos pequeños */
+  }
 }

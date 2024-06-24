@@ -7,4 +7,4 @@ COPY . /app
 RUN npm run build --prod
 #Segunda Etapa
 FROM nginx:1.17.1-alpine
-COPY --from=build-step /app/dist/app-crud /usr/share/nginx/html
+COPY --from=build-step /app/dist/hunger-food-front-end /usr/share/nginx/html

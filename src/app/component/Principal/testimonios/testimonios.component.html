@@ -1,35 +1,17 @@
 <div class="container">
-    <div class="header">
-      <h1>TESTIMONIOS</h1>
-      <h2>Lee Lo Que Otros Tienen Que Decir</h2>
-    </div>
-    <div class="testimonies">
-      <div class="testimony">
-        <div class="image">
-          <img src="./assets/Images/Main/img_testimonios/img_PauStanley.png" alt="Paul Stanley">
-        </div>
-        <div class="content">
-          <h3>PAUL STANLEY</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ISTE corporis fugit saepe necessitatibus sit dolores ea delectus, iure nesciunt nam?</p>
-        </div>
+  <div class="header">
+    <h1>TESTIMONIOS</h1>
+    <h2>Lee Lo Que Otros Tienen Que Decir</h2>
+  </div>
+  <div class="testimonies" [style.transform]="'translateX(' + (-activeIndex * 100) + '%)'">
+    <div *ngFor="let testimonio of testimonios" class="testimony">
+      <div class="image">
+        <img [src]="testimonio.imagen" [alt]="testimonio.nombre">
       </div>
-      <div class="testimony">
-        <div class="image">
-          <img src="./assets/Images/Main/img_testimonios/img_SteveJobs.png" alt="Steve Jobs">
-        </div>
-        <div class="content">
-          <h3>PAUL STANLEY</h3>
-          <p>Elegir HungerFood es más que una elección de comida; es una decisión ética. Su enfoque en donaciones de alimentos muestra su verdadero compromiso con ayudar a la comunidad, y eso es algo que me motiva a seguir apoyándolos.</p>
-        </div>
-      </div>
-      <div class="testimony">
-        <div class="image">
-          <img src="./assets/Images/Main/img_testimonios/img_ElonMusk.png" alt="Elon Musk">
-        </div>
-        <div class="content">
-          <h3>PAUL STANLEY</h3>
-          <p>Estoy impresionado con HungerFood por su compromiso continuo con la donación de alimentos. Cada vez que ordeno con ellos, sé que mi apoyo ayuda a alimentar a quienes más lo necesitan.</p>
-        </div>
+      <div class="content">
+        <h3>{{ testimonio.nombre }}</h3>
+        <p>{{ testimonio.contenido }}</p>
       </div>
     </div>
   </div>
+</div>

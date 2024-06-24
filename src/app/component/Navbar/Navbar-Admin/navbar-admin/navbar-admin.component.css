@@ -75,3 +75,24 @@ img {
   .navbar{
     position: unset;
   }
+/* Estilos para el enlace "Cerrar Sesión" */
+a.text-dark {
+  cursor: pointer;
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Transición suave */
+  display: inline-block; /* Para que ocupe solo el ancho del contenido */
+  
+}
+
+/* Cambia el cursor a pointer cuando se pasa sobre el enlace "Cerrar Sesión" */
+a.text-dark:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Cambia el tono del color de fondo al pasar el ratón */
+  font-weight: bold; /* Texto en negrita */
+
+}
+
+/* Restaura el cursor predeterminado para el enlace "ADMINISTRADOR SOY YO" */
+a.admin-link {
+  cursor: default; /* Puedes usar 'default' también */
+}

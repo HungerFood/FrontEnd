@@ -34,7 +34,7 @@ export class NavbarDonanteComponent {
     localStorage.removeItem('user');
     localStorage.removeItem('role');
     localStorage.removeItem('id');
-    this.router.navigate(['/login/user']);
+    this.router.navigate(['/login/adm']);
     
   }
 }

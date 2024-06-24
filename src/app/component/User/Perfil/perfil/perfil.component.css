@@ -1,44 +1,53 @@
-.contenedorfull{
-    position: relative;
+.perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.perfil button {
+    font-size: 1.5rem;
+    /* Ajusta el tamaño de la fuente */
+    padding: 1rem 2rem;
+    /* Ajusta el relleno del botón */
+    margin-bottom: 5rem;
+}
+
+button:hover {
+    background-color: #72c49d;
+}
+
+mat-expansion-panel {
+    width: 20%;
+    margin: 1rem auto;
+    /* Ajusta el margen del mat-expansion-panel */
+}
+
+mat-expansion-panel:hover {
+    background-color: #72c49d;
+}
+
+mat-expansion-panel p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/assets/Images/Donante/background/img_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden; /* Asegura que el pseudo-elemento no se salga del contenedor */
 }
 
-.perfil {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    /* background-color: #D9D9D9; Color de fondo para el perfil */
+mat-expansion-panel button {
+    margin-bottom: 0.005rem;
+    padding: 0.5em 1em
+        /* Ajusta el margen inferior de los botones */
 }
 
-.contenedor {
-    text-align: center; /* Centra el contenido horizontalmente */
-    background-color: inherit; /* Hereda el color de fondo de .perfil */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 8px; /* Bordes redondeados */
-    background-color: #D9D9D9;
-
+mat-panel-title {
+    text-align: center;
+    /* Centra el título */
+    font-size: 1.5rem;
+    /* Ajusta el tamaño del título */
 }
 
-.contenedor h2 {
-    margin-bottom: 20px; /* Espacio inferior para separar del primer botón */
-}
-
-.contenedor button {
-    width: 100%;
-    max-width: 300px; /* Ancho máximo para los botones */
-    background-color: #FF5722 !important; /* Color de fondo para los botones */
-    color: #FFFFFF !important; /* Color del texto de los botones */
-    padding: 10px 20px; /* Espacio interno para los botones */
-    text-align: center; /* Centrar el texto dentro de los botones */
-    border-radius: 4px; /* Bordes redondeados */
-    border: none; /* Sin bordes */
-    margin: 5px 0; /* Espacio vertical entre los botones */
+mat-expansion-panel button:hover {
+    background-color: #cccccc;
+    /* Cambia el color de fondo al pasar el cursor */
 }

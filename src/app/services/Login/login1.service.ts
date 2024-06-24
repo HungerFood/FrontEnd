@@ -12,14 +12,14 @@ const baseUrl = environment.base;
 export class LoginService {
 
   private url = `${baseUrl}`;//alt+96
-  private httpHeaders = new HttpHeaders({'Access-Control-Allow-Origin': 'http://localhost:8080/api'});
+  private httpHeaders = new HttpHeaders({'Access-Control-Allow-Origin': 'http://34.205.157.28:6868/api'});
   constructor(private http:HttpClient) { } //inyectar httpClient
 
   private listaCambio = new Subject<FoodDonation[]>();
 
   login(creds: Credentials)
   {
-      return this.http.post('http://localhost:8080/api/auth/login', creds, {
+      return this.http.post('http://34.205.157.28:6868/api/auth/login', creds, {
         observe:'response'
       }).pipe(map((response: HttpResponse<any>) => {
         const body = response.body;

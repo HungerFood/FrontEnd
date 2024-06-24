@@ -14,7 +14,6 @@ export class LoginService {
   private url = `${baseUrl}`;//alt+96
   private httpHeaders = new HttpHeaders({'Access-Control-Allow-Origin': 'http://34.205.157.28:6868/api'});
   constructor(private http:HttpClient) { } //inyectar httpClient
-
   private listaCambio = new Subject<FoodDonation[]>();
 
   login(creds: Credentials)

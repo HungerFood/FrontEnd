@@ -1,0 +1,18 @@
+<app-navbar-login-principal></app-navbar-login-principal>
+<body>
+    <div class="title">Quieres realizar <span>Donación</span> ?</div>
+    <div class="subtitle">Las donaciones que puedes son:</div>
+    <ul class="benefits">
+        <li>Donación económica</li>
+        <li>Donación de alimentos</li>
+    </ul>
+    <button class="button" [routerLink]="'/login1/registrarse'">Crea tu cuenta para realizar donaciones</button>
+        <!-- <a [routerLink]="'/login/user'">Inicia Sesión</a> -->
+
+    <div class="footer">
+        <a [routerLink]="'/footer/terminos-y-condiciones'">Términos y Condiciones</a>
+        <a [routerLink]="'/footer/libro-de-reclamaciones'">Libro de reclamaciones</a>
+        <a [routerLink]="'/footer/politica-de-cookies'">Política de cookies</a>
+        <a [routerLink]="'/footer/politica-de-privacidad'">Política de privacidad</a>
+    </div>
+</body>

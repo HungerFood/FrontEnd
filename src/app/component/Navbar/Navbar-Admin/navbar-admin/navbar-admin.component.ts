@@ -1,10 +1,41 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-admin',
   templateUrl: './navbar-admin.component.html',
   styleUrl: './navbar-admin.component.css'
 })
-export class NavbarAdminComponent {
+export class NavbarAdminComponent{
+  @ViewChild('offcanvasNavbar') offcanvasNavbar!: ElementRef; // Referencia al elemento offcanvasNavbar
+  isNavbarCollapsed = true; // Estado inicial del menú, colapsado por defecto
+
+  constructor(private router: Router) {}
+
+  toggleNavbar(): void {
+    this.isNavbarCollapsed = !this.isNavbarCollapsed; // Cambia el estado al contrario del estado actual
+    if (this.offcanvasNavbar && this.offcanvasNavbar.nativeElement) {
+      if (this.isNavbarCollapsed) {
+        this.offcanvasNavbar.nativeElement.classList.remove('show'); // Oculta la barra lateral si está colapsada
+      } else {
+        this.offcanvasNavbar.nativeElement.classList.add('show'); // Muestra la barra lateral si no está colapsada
+      }
+    }
+  }
+
+  closeNavbar(): void {
+    this.isNavbarCollapsed = true; // Asegura que el menú esté colapsado
+    if (this.offcanvasNavbar && this.offcanvasNavbar.nativeElement) {
+      this.offcanvasNavbar.nativeElement.classList.remove('show'); // Oculta la barra lateral
+    }
+  }
+  logout():void{
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    localStorage.removeItem('role');
+    localStorage.removeItem('id');
+    this.router.navigate(['/login/adm']);
+    
+  }
 
 }

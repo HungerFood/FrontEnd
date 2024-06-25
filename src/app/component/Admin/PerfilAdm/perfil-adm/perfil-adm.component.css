@@ -1,0 +1,44 @@
+.contenedorfull{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/assets/Images/Admin/background/img_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Asegura que el pseudo-elemento no se salga del contenedor */
+}
+
+.perfil {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    /* background-color: #D9D9D9; Color de fondo para el perfil */
+}
+
+.contenedor {
+    text-align: center; /* Centra el contenido horizontalmente */
+    background-color: inherit; /* Hereda el color de fondo de .perfil */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #D9D9D9;
+
+}
+
+.contenedor h2 {
+    margin-bottom: 20px; /* Espacio inferior para separar del primer botón */
+}
+
+.contenedor button {
+    width: 100%;
+    max-width: 300px; /* Ancho máximo para los botones */
+    background-color: #FF5722 !important; /* Color de fondo para los botones */
+    color: #FFFFFF !important; /* Color del texto de los botones */
+    padding: 10px 20px; /* Espacio interno para los botones */
+    text-align: center; /* Centrar el texto dentro de los botones */
+    border-radius: 4px; /* Bordes redondeados */
+    border: none; /* Sin bordes */
+    margin: 5px 0; /* Espacio vertical entre los botones */
+}

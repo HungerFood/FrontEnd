@@ -16,7 +16,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   list(): Observable<any> {
-    return this.http.get<User[]>(this.url + "/users");
+    return this.http.get<User[]>(this.url + "/users/donante");
   }
   listId(id: number) {
     return this.http.get<User>(this.url + "/users/donante/" + id);
@@ -25,7 +25,7 @@ export class UserService {
     return this.http.post(this.url + '/auth/register', user);
   }
   update(user: User) {
-    return this.http.put(this.url + "/users", user);
+    return this.http.put(this.url + "/user", user);
   }
   delete(id: string) {
     return this.http.delete(this.url + "/user/" + id);

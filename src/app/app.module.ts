@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 //importar tus componentes
@@ -11,7 +12,7 @@ import { HolaIniciaSesionComponent } from './component/Principal/hola-inicia-ses
 import { PrincipalComponent } from './component/Principal/principal/principal.component';
 
 //importar los modulos de angular material
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatButtonModule } from '@angular/material/button';
@@ -60,6 +61,8 @@ import { TransactionvoucherCrearComponent } from './component/User/TransactionVo
 import { TransactionvoucherListarComponent } from './component/User/TransactionVoucher/transactionvoucher-listar/transactionvoucher-listar.component';
 import { TransactionvoucherComponent } from './component/User/TransactionVoucher/transactionvoucher/transactionvoucher.component';
 import { LoginComponent } from './component/Login/login/login.component';
+import { TokenInterceptor } from './services/Login/Token/token-interceptor';
+import { Login1Component } from './component/Login/login1/login1.component';
 import { MisionComponent } from './component/Principal/sobre-nosotros/mision/mision.component';
 import { SobreNosotrosComponent } from './component/Principal/sobre-nosotros/sobre-nosotros/sobre-nosotros.component';
 import { VisionComponent } from './component/Principal/sobre-nosotros/vision/vision.component';
@@ -68,10 +71,17 @@ import { PoliticaDePrivacidadComponent } from './component/Footer/Politica-De-Pr
 import { PoliticaDeCookiesComponent } from './component/Footer/Politica-De-Cookies/politica-de-cookies/politica-de-cookies.component';
 import { TerminosYCondicionesComponent } from './component/Footer/Terminos-Y-Condiciones/terminos-y-condiciones/terminos-y-condiciones.component';
 import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/libro-de-reclamos/libro-de-reclamos.component';
-
-
-
-
+import { PerfilAdmComponent } from './component/Admin/PerfilAdm/perfil-adm/perfil-adm.component';
+import { PerfilListarAdmComponent } from './component/Admin/PerfilAdm/perfil-listar-adm/perfil-listar-adm.component';
+import { DonorComponent } from './component/Admin/Donor/donor/donor.component';
+import { DonorRegistrarComponent } from './component/Admin/Donor/donor-registrar/donor-registrar.component';
+import { MatIconModule } from '@angular/material/icon';
+import { DonorListarComponent } from './component/Admin/Donor/donor-listar/donor-listar.component';
+import { DialogoComponent } from './component/Admin/Donor/donor-listar/dialogo/dialogo.component';
+import { LoginMainComponent } from './component/Login/login-main/login-main.component';
+import { NavbarLogin1Component } from './component/Navbar/Navbar-Login/navbar-login1/navbar-login1.component';
+import { NavbarLoginPrincipalComponent } from './component/Navbar/Navbar-Login/navbar-login-principal/navbar-login-principal.component';
+import { NavbarLoginComponent } from './component/Navbar/Navbar-Login/navbar-login/navbar-login.component';
 
 @NgModule({
   declarations: [
@@ -104,25 +114,38 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
     ContentComponent,
     DonacionAlimentoComponent,
     DonacionEconomicaComponent,
-    DialogComponent,
     MainAdmComponent,
     MoneyDonationComponent,
     MoneyDonationCrearComponent,
-    PerfilComponent,
     RegistrarseComponent,
     MoneyDonationListarComponent,
     PerfilListarComponent,
     DialogoFoodListarComponent,
     DialogoMoneyListarComponent,
     LoginComponent,
+    Login1Component,
+    FundadoresComponent,
     MisionComponent,
     SobreNosotrosComponent,
     VisionComponent,
-    FundadoresComponent,
     PoliticaDePrivacidadComponent,
     PoliticaDeCookiesComponent,
     TerminosYCondicionesComponent,
-    LibroDeReclamosComponent
+    LibroDeReclamosComponent,
+    PerfilComponent,
+    PerfilAdmComponent,
+    PerfilListarAdmComponent,
+    DonorComponent,
+    DonorRegistrarComponent,
+    DonorListarComponent,
+    DialogComponent,
+    DialogoComponent,
+    LoginMainComponent,
+    NavbarLogin1Component,
+    NavbarLoginPrincipalComponent,
+    NavbarLoginComponent
+
+
 
     //colocar tus componentes que creas
   ],
@@ -146,10 +169,13 @@ import { LibroDeReclamosComponent } from './component/Footer/Libro-De-Reclamos/l
     MatDialogContent,
     MatSelect,
     MatDialogModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatToolbarModule,
+    MatIconModule,
+    
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(), { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

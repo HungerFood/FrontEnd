@@ -75,3 +75,14 @@ img {
   .navbar{
     position: unset;
   }
+  /* Estilo para el ícono de usuario */
+.bi-person-circle {
+  font-size: 3rem; /* Tamaño del ícono */
+  color: #262626; /* Color del ícono */
+  transition: color 0.3s ease; /* Transición suave del color */
+}
+
+.bi-person-circle:hover {
+  color: var(--primary-color); /* Color al pasar el mouse */
+  cursor: pointer; /* Cursor cambia a puntero */
+}

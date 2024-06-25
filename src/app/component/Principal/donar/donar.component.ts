@@ -1,14 +1,11 @@
-// donar.component.ts
-
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-donar',
   templateUrl: './donar.component.html',
-  styleUrls: ['./donar.component.css']
+  styleUrl: './donar.component.css'
 })
-export class DonarComponent implements OnInit {
-
+export class DonarComponent implements OnInit{
   constructor() { }
 
   ngOnInit(): void {
@@ -82,5 +79,4 @@ export class DonarComponent implements OnInit {
       });
     }, 10000); // Cambiar cada 10 segundos (10000 milisegundos)
   }
-
 }

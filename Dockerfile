@@ -8,4 +8,4 @@ RUN npm run build
 #Segunda Etapa
 FROM httpd:alpine3.15
 WORKDIR /usr/local/apache2/htdocs/
-COPY --from=angular /app/dist/hungerfood-frontend/browser .
+COPY --from=angular /app/dist/hunger-food-front-end/browser .

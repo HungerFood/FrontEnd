@@ -1,12 +1,11 @@
-# Primera Etapa: Construcción de la aplicación Angular
-FROM node:18-alpine as build-step
+#Primera Etapa
+FROM node:18-alpine as angular
 WORKDIR /app
-COPY package.json /app
+
+COPY . .
 RUN npm install
-COPY . /app
-RUN npm run build --prod
-
-# Segunda Etapa: Configuración del servidor Nginx
-FROM nginx:1.17.1-alpine
-COPY --from=build-step /app/dist/hunger-food-front-end /usr/share/nginx/html
-
+RUN npm run build
+#Segunda Etapa
+FROM httpd:alpine3.15
+WORKDIR /usr/local/apache2/htdocs/
+COPY --from=angular /app/dist/hungerfood-frontend/browser .
